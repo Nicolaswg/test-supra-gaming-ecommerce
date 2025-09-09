@@ -83,7 +83,7 @@ const Header = () => {
                         type="search"
                         name="search"
                         id="search"
-                        placeholder="I am shopping for..."
+                        placeholder="Estoy buscando..."
                         autoComplete="off"
                         className="custom-search  w-full rounded-full bg-gray-1  border border-gray-3 h-[42px] py-2.5 pl-5 pr-10 outline-hidden ease-in duration-200"
                       />
@@ -127,11 +127,11 @@ const Header = () => {
                     </div>
                     <div className="group">
                       <span className="block uppercase font-medium text-2xs text-dark-4">
-                        account
+                        cuenta
                       </span>
                       <p className="font-medium text-custom-sm text-dark hover:text-blue">
                         {session?.user.name?.split(" ")[0] ||
-                          "Sign In / Register"}
+                          "Iniciar Sesión / Registrar Cuenta"}
                       </p>
                     </div>
                   </Link>
@@ -276,9 +276,9 @@ const Header = () => {
                   href="/popular?sort=popular"
                   className="text-sm text-dark flex items-center font-medium hover:text-blue"
                 >
-                  Best Selling
+                  Ofertas del día
                   <span className="bg-red text-white font-semibold text-[10px] inline-flex items-center justify-center rounded-full ml-2.5  px-2 h-5 uppercase">
-                    SALE
+                    50% OFF
                   </span>
                 </Link>
               </div>

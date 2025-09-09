@@ -15,7 +15,7 @@ const Dropdown = ({ menuItem, stickyMenu }: any) => {
       }`}
     >
       <Link
-        href="#"
+        href=""
         className={`hover:text-blue text-custom-sm font-medium text-dark flex items-center gap-1.5 capitalize ${
           stickyMenu ? "xl:py-4" : "xl:py-6"
         } ${pathUrl.includes(menuItem.title) && "text-blue!"}`}

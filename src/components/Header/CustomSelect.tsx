@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 const CustomSelect = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [selectedOption, setSelectedOption] = useState({
-    title: "All Categories",
+    title: "Categorías",
   });
   const { data = [] } = useGetCategoriesQuery();
 
