@@ -29,7 +29,7 @@ const Signin = () => {
         if (callback?.error) {
           toast.error(callback?.error);
         } else if (callback?.ok) {
-          toast.success("Sign in Successful!");
+          toast.success("Inicio de sesión exitoso!");
           reset();
 
           router.push("/my-account");
@@ -45,15 +45,15 @@ const Signin = () => {
 
   return (
     <>
-      <Breadcrumb title={"Sign in"} pages={["Signin"]} />
+      <Breadcrumb title={"inicio de sesión"} pages={["Signin"]} />
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="max-w-[570px] w-full mx-auto rounded-xl bg-white shadow-1 p-4 sm:p-7.5 xl:p-11">
             <div className="text-center mb-11">
               <h2 className="font-semibold text-xl sm:text-2xl xl:text-heading-5 text-dark mb-1.5">
-                Sign In to Your Account
+                Ingresa a tu cuenta
               </h2>
-              <p>Enter your detail below</p>
+              <p>Ingresa tus datos a continuación</p>
             </div>
 
             <div>
@@ -73,13 +73,15 @@ const Signin = () => {
                   />
 
                   {formState.errors.email && (
-                    <p className="text-sm text-red mt-1.5">Email is required</p>
+                    <p className="text-sm text-red mt-1.5">
+                      El email es requerido
+                    </p>
                   )}
                 </div>
 
                 <div className="mb-5">
                   <label htmlFor="password" className="block mb-2.5">
-                    Password
+                    Contraseña
                   </label>
 
                   <input
@@ -96,8 +98,8 @@ const Signin = () => {
 
                   {formState.errors.password && (
                     <p className="text-sm text-red mt-1.5">
-                      Minimum 6 characters with 1 uppercase, 1 lowercase, and 1
-                      number.
+                      Mínimo 6 caracteres con 1 mayúscula, 1 minúscula y 1
+                      número.
                     </p>
                   )}
                 </div>
@@ -112,19 +114,19 @@ const Signin = () => {
                   )}
                   disabled={isLoading}
                 >
-                  Sign in {isLoading && <Loader />}
+                  Inicia Sesion {isLoading && <Loader />}
                 </button>
 
                 <Link
                   href="/forgot-password"
                   className="block text-center text-dark-4 mt-4.5 ease-out duration-200 hover:text-dark"
                 >
-                  Forgot your password?
+                  ¿Olvidaste tu contraseña?
                 </Link>
 
                 <span className="relative z-1 block font-medium text-center mt-4.5">
                   <span className="block absolute -z-1 left-0 top-1/2 h-px w-full bg-gray-3"></span>
-                  <span className="inline-block px-3 bg-white">Or</span>
+                  <span className="inline-block px-3 bg-white">O</span>
                 </span>
 
                 <div className="flex flex-col gap-4.5 mt-4.5">
@@ -137,7 +139,7 @@ const Signin = () => {
                     disabled={isLoading}
                   >
                     <GoogleIcon />
-                    Sign In with Google
+                    Inicia Sesión con Google
                   </button>
 
                   <button
@@ -149,17 +151,17 @@ const Signin = () => {
                     disabled={isLoading}
                   >
                     <GitHubIcon />
-                    Sign In with Github
+                    Inicia Sesión con Github
                   </button>
                 </div>
 
                 <p className="text-center mt-6">
-                  Don&apos;t have an account?
+                  ¿No tienes una cuenta?
                   <Link
                     href="/signup"
                     className="text-dark ease-out duration-200 hover:text-blue pl-1"
                   >
-                    Sign Up Now!
+                    Regístrate ahora!
                   </Link>
                 </p>
               </form>
