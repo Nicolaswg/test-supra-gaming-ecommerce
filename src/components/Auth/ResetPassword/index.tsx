@@ -87,9 +87,9 @@ export default function ResetPassword({ token }: { token: string }) {
           <div className="max-w-[570px] w-full mx-auto rounded-xl bg-white shadow-1 p-4 sm:p-7.5 xl:p-11">
             <div className="text-center mb-11">
               <h2 className="font-semibold text-xl sm:text-2xl xl:text-heading-5 text-dark mb-1.5">
-                Update Password
+                Restaura tu contraseña
               </h2>
-              <p>Enter your password below</p>
+              <p>Ingresa tu nueva contraseña a continuación</p>
             </div>
 
             <div>
@@ -100,7 +100,7 @@ export default function ResetPassword({ token }: { token: string }) {
                       htmlFor="newPassword"
                       className="block mb-2.5 font-satoshi text-base font-medium text-dark dark:text-white"
                     >
-                      New Password
+                      Nueva Contraseña
                     </label>
                     <input
                       type="password"
@@ -118,7 +118,7 @@ export default function ResetPassword({ token }: { token: string }) {
                       htmlFor="ReNewPassword"
                       className="block mb-2.5 font-satoshi text-base font-medium text-dark dark:text-white"
                     >
-                      Re-enter New Password
+                      Confirma tu nueva contraseña
                     </label>
                     <input
                       type="password"
@@ -141,17 +141,17 @@ export default function ResetPassword({ token }: { token: string }) {
                     )}
                     disabled={loading}
                   >
-                    Update Password {loading && <Loader />}
+                    Actualiza tu contraseña{loading && <Loader />}
                   </button>
                 </div>
 
                 <p className="text-center font-satoshi text-base font-medium text-dark dark:text-white">
-                  Already have an account?{" "}
+                  ¿Ya tienes una cuenta?{" "}
                   <Link
                     href="/auth/signin"
                     className="ml-1 inline-block text-primary"
                   >
-                    Sign In →
+                    Inicia Sesión →
                   </Link>
                 </p>
               </form>

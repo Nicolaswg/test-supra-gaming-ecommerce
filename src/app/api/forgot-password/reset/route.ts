@@ -1,14 +1,14 @@
-import { sendEmail } from '@/lib/email';
-import { prisma } from '@/lib/prismaDB';
-import crypto from 'crypto';
-import { NextResponse } from 'next/server';
+import { sendEmail } from "@/lib/email";
+import { prisma } from "@/lib/prismaDB";
+import crypto from "crypto";
+import { NextResponse } from "next/server";
 
 export async function POST(request: Request) {
   const body = await request.json();
   const { email } = body;
 
   if (!email) {
-    return new NextResponse('Missing Fields', { status: 400 });
+    return new NextResponse("Missing Fields", { status: 400 });
   }
 
   const formatedEmail = email.toLowerCase();
@@ -23,7 +23,7 @@ export async function POST(request: Request) {
     return new NextResponse("User doesn't exist", { status: 400 });
   }
 
-  const resetToken = crypto.randomBytes(20).toString('hex');
+  const resetToken = crypto.randomBytes(20).toString("hex");
 
   const passwordResetTokenExp = new Date();
   passwordResetTokenExp.setMinutes(passwordResetTokenExp.getMinutes() + 10);
@@ -43,22 +43,28 @@ export async function POST(request: Request) {
   try {
     await sendEmail({
       to: formatedEmail,
-      subject: 'Reset your password',
+      subject: "Restaura tu contraseña",
       html: ` 
       <div>
-        <h1>You requested a password reset</h1>
-        <p>Click the link below to reset your password</p>
-        <a href="${resetURL}" target="_blank">Reset Password</a>
+        <h1>Solicitaste una restauración de contraseña</h1>
+        <p>Haz clic en el siguiente enlace para restaurar tu contraseña</p>
+        <a href="${resetURL}" target="_blank">Restaurar Contraseña</a>
       </div>
       `,
     });
 
-    return NextResponse.json('An email has been sent to your email', {
-      status: 200,
-    });
+    return NextResponse.json(
+      "Un correo ha sido enviado a tu bandeja de entrada",
+      {
+        status: 200,
+      }
+    );
   } catch (error) {
-    return NextResponse.json('An error has occurred. Please try again!', {
-      status: 500,
-    });
+    return NextResponse.json(
+      "Ha ocurrido un error. Por favor intenta de nuevo!",
+      {
+        status: 500,
+      }
+    );
   }
 }

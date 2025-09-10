@@ -19,13 +19,13 @@ export default function ForgotPassword() {
     e.preventDefault();
 
     if (!email) {
-      toast.error("Please enter your email address.");
+      toast.error("Por favor ingresa tu correo electrónico.");
 
       return;
     }
 
     if (!validateEmail(email)) {
-      toast.error("Please enter a valid email address.");
+      toast.error("Por favor ingresa un correo electrónico válido.");
       return;
     }
 
@@ -36,7 +36,7 @@ export default function ForgotPassword() {
       });
 
       if (res.status === 404) {
-        toast.error("User not found.");
+        toast.error("Usuario no encontrado.");
         setEmail("");
         setLoading(false);
         return;
@@ -56,15 +56,15 @@ export default function ForgotPassword() {
   };
   return (
     <>
-      <Breadcrumb title={"Forgot Password"} pages={["forgot password"]} />
+      <Breadcrumb title={"Olvide mi contraseña"} pages={["forgot password"]} />
       <section className="overflow-hidden py-20 bg-gray-2">
         <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
           <div className="max-w-[570px] w-full mx-auto rounded-xl bg-white shadow-1 p-4 sm:p-7.5 xl:p-11">
             <div className="text-center mb-11">
               <h2 className="font-semibold text-xl sm:text-2xl xl:text-heading-5 text-dark mb-1.5">
-                Forgot Password
+                Olvide mi contraseña
               </h2>
-              <p>Enter your email below</p>
+              <p>Ingresa tu correo electrónico a continuación</p>
             </div>
 
             <div>
@@ -78,7 +78,7 @@ export default function ForgotPassword() {
                     type="email"
                     name="email"
                     id="email"
-                    placeholder="Enter your email"
+                    placeholder="Ingresa tu correo electrónico"
                     onChange={handleChange}
                     value={email}
                     required
@@ -96,7 +96,7 @@ export default function ForgotPassword() {
                   )}
                   disabled={loading}
                 >
-                  Send email {loading && <Loader />}
+                  Enviar Correo{loading && <Loader />}
                 </button>
               </form>
             </div>
