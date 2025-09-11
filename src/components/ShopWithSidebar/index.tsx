@@ -39,6 +39,7 @@ const ShopWithSidebar = ({ data }: PropsType) => {
   const [stickyMenu, setStickyMenu] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
 
+
   const availableSizes = useMemo(() => {
     const sizes = allProducts.flatMap((product) => product.sizes || []);
     return [...new Set(sizes)];

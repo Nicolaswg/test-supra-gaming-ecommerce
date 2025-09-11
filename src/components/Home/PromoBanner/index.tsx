@@ -74,7 +74,7 @@ const PromoBanner = () => {
           title="UP TO 30% OFF"
           description="iPhone 14 has the same superspeedy chip that's in iPhone 13 Pro, A15 Bionic, with a 5‑core GPU, powers all the latest features."
           link="iphone-14-plus--6128gb"
-          buttonText="Buy Now"
+          buttonText="Comprar Ahora"
         />
         <div className="grid gap-7.5 grid-cols-1 lg:grid-cols-2">
           <SmallPromoBanner

@@ -16,7 +16,7 @@ const CheckoutSuccess = () => {
       setLoading(false);
       clearCart();
     }, 1000);
-  }, []);
+  }, [clearCart]);
 
   return (
     <section className="overflow-hidden py-20 bg-gray-2">
@@ -26,16 +26,16 @@ const CheckoutSuccess = () => {
             <div className="bg-white rounded-xl shadow-1 px-4 py-10 sm:py-15 lg:py-20 xl:py-25">
               <div className="text-center">
                 <h2 className="font-bold text-blue text-4xl lg:text-[45px] lg:leading-[57px] mb-5">
-                  Successful!
+                  Gracias!
                 </h2>
 
                 <h3 className="font-medium text-dark text-xl sm:text-2xl mb-3">
-                  Order Placed Successfully!
+                  Orden Enviada Correctamente!
                 </h3>
 
                 <p className="max-w-[491px] w-full mx-auto mb-7.5">
-                  Wait a second while we save the order. You will receive an
-                  email with details of your order.
+                  Espera un segundo mientras guardamos la orden. Recibirás un
+                  correo electrónico con los detalles de tu orden.
                 </p>
 
                 <div className="flex justify-center gap-5">
@@ -70,16 +70,16 @@ const CheckoutSuccess = () => {
             <div className="bg-white rounded-xl shadow-1 px-4 py-10 sm:py-15 lg:py-20 xl:py-25">
               <div className="text-center">
                 <h2 className="font-bold text-blue text-4xl lg:text-[45px] lg:leading-[57px] mb-5">
-                  Successful!
+                  Gracias!
                 </h2>
 
                 <h3 className="font-medium text-dark text-xl sm:text-2xl mb-3">
-                  Order Placed Successfully!
+                  Orden Enviada Correctamente!
                 </h3>
 
                 <p className="max-w-[491px] w-full mx-auto mb-7.5">
-                  Sign In with & Track the order. If you are not already Signed
-                  Up use the purchase email to Sign up.
+                  Ingresa a tu cuenta para ver el estado de tu orden. Si no posees una cuenta,
+                  puedes crear una con el mismo correo de la compra.
                 </p>
 
                 <div className="flex justify-center gap-5">
@@ -88,14 +88,14 @@ const CheckoutSuccess = () => {
                     className="inline-flex items-center gap-2 font-medium text-white bg-blue-light py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue-dark"
                   >
                     <ArrowLeftIcon />
-                    {`${session?.user ? "Account" : "Sign In"}`}
+                    {`${session?.user ? "Mi cuenta" : "Iniciar Sesión"}`}
                   </Link>
 
                   <Link
                     href="/shop-with-sidebar"
                     className="inline-flex items-center gap-2 font-medium text-white bg-blue py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue-dark"
                   >
-                    Continue Shopping
+                    Continuar Comprando
                     <ArrowLeftIcon className="rotate-180" />
                   </Link>
                 </div>

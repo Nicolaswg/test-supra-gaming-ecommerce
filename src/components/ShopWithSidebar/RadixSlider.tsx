@@ -39,16 +39,14 @@ export default function RadixSlider({ highestPrice }: PropsType) {
     <div className="bg-white rounded-lg shadow-1">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 w-full ${
-          isOpen && "shadow-filter"
-        }`}
+        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 w-full ${isOpen && "shadow-filter"
+          }`}
       >
-        <span className="text-dark">Price</span>
+        <span className="text-dark">Precio</span>
 
         <ChevronDown
-          className={`text-dark ease-out duration-200 ${
-            isOpen && "rotate-180"
-          }`}
+          className={`text-dark ease-out duration-200 ${isOpen && "rotate-180"
+            }`}
         />
       </button>
 
@@ -74,7 +72,7 @@ export default function RadixSlider({ highestPrice }: PropsType) {
             <div className="flex items-center justify-between pt-4 price-amount">
               <div className="flex border rounded-sm text-custom-xs text-dark-4 border-gray-3/80">
                 <span className="block border-r border-gray-3/80 px-2.5 py-1.5">
-                  $
+                  €
                 </span>
                 <span id="minAmount" className="block px-3 py-1.5">
                   {value[0]}
@@ -83,7 +81,7 @@ export default function RadixSlider({ highestPrice }: PropsType) {
 
               <div className="flex border rounded-sm text-custom-xs text-dark-4 border-gray-3/80">
                 <span className="block border-r border-gray-3/80 px-2.5 py-1.5">
-                  $
+                  €
                 </span>
                 <span id="maxAmount" className="block px-3 py-1.5">
                   {value[1]}

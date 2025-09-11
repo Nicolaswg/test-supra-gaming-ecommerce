@@ -46,11 +46,10 @@ const CategoryDropdown = ({ categories }: PropsType) => {
     <div className="bg-white rounded-lg shadow-1">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 w-full ${
-          isOpen && "shadow-filter"
-        }`}
+        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 w-full ${isOpen && "shadow-filter"
+          }`}
       >
-        <span className="text-dark">Category</span>
+        <span className="text-dark">Categorias</span>
 
         <ChevronDown
           className={`text-dark ease-out duration-200 ${isOpen && "rotate-180"}`}

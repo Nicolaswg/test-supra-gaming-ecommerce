@@ -38,6 +38,7 @@ const ShopWithSidebarPage = async ({ searchParams }: PageProps) => {
     sizes: '',
     colors: '',
     price: '',
+    offers: [],
   };
 
   if (categoryIds) {

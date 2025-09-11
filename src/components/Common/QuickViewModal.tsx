@@ -30,7 +30,6 @@ const QuickViewModal = () => {
   // get the product data
   const product = useAppSelector((state) => state.quickViewReducer.value);
   const [activePreview, setActivePreview] = useState(0);
-
   // preview modal
   const handlePreviewSlider = () => {
     dispatch(updateproductDetails(product));
@@ -91,9 +90,8 @@ const QuickViewModal = () => {
     <>
       {product?.name && (
         <div
-          className={`${
-            isModalOpen ? "z-99999" : "hidden"
-          } fixed top-0 left-0 overflow-y-auto no-scrollbar w-full sm:py-20 xl:py-25 2xl:py-[230px] bg-dark/70 backdrop-blur-sm transition-opacity duration-300 sm:px-8 px-4 py-5`}
+          className={`${isModalOpen ? "z-99999" : "hidden"
+            } fixed top-0 left-0 overflow-y-auto no-scrollbar w-full sm:py-20 xl:py-25 2xl:py-[230px] bg-dark/70 backdrop-blur-sm transition-opacity duration-300 sm:px-8 px-4 py-5`}
         >
           <div className="flex items-center justify-center ">
             <div className="w-full max-w-[1100px] rounded-xl shadow-3 bg-white p-7.5 relative modal-content">
@@ -114,9 +112,8 @@ const QuickViewModal = () => {
                         <button
                           onClick={() => setActivePreview(key)}
                           key={key}
-                          className={`flex items-center justify-center w-20 h-20 overflow-hidden rounded-lg bg-gray-1 ease-out duration-200 hover:border-2 hover:border-blue ${
-                            activePreview === key && "border-2 border-blue"
-                          }`}
+                          className={`flex items-center justify-center w-20 h-20 overflow-hidden rounded-lg bg-gray-1 ease-out duration-200 hover:border-2 hover:border-blue ${activePreview === key && "border-2 border-blue"
+                            }`}
                         >
                           <Image
                             src={imageBuilder(img?.image).url()!}
@@ -156,7 +153,7 @@ const QuickViewModal = () => {
 
                 <div className="max-w-[445px] w-full">
                   <span className="inline-block text-custom-xs rounded-full font-medium text-white py-1 px-3 bg-green mb-6.5">
-                    SALE 20% OFF
+                    20% DESCUENTO
                   </span>
 
                   <h3 className="mb-4 text-xl font-semibold xl:text-heading-5 text-dark">
@@ -180,10 +177,10 @@ const QuickViewModal = () => {
                       </div>
 
                       <span>
-                        <span className="font-medium text-dark">0 Rating </span>
+
                         <span className="text-dark-2">
                           {" "}
-                          ( {product.reviews.length} reviews )
+                          ( {product.reviews.length} Reseñas )
                         </span>
                       </span>
                     </div>
@@ -207,22 +204,22 @@ const QuickViewModal = () => {
                   <div className="flex flex-wrap justify-between gap-5 mt-6 mb-7.5">
                     <div>
                       <h4 className="font-semibold text-lg text-dark mb-3.5">
-                        Price
+                        precio
                       </h4>
 
                       <span className="flex items-center gap-2">
                         <span className="text-lg font-medium line-through text-dark-4 xl:text-2xl">
-                          ${product.price}
+                          €{product.price}
                         </span>
                         <span className="text-xl font-semibold text-dark xl:text-heading-4">
-                          ${product.discountedPrice}
+                          €{product.discountedPrice}
                         </span>
                       </span>
                     </div>
 
                     <div>
                       <h4 className="font-semibold text-lg text-dark mb-3.5">
-                        Quantity
+                        Cantidad
                       </h4>
 
                       <div className="flex items-center  divide-x divide-gray-4 border border-gray-4 rounded-full">
@@ -261,7 +258,7 @@ const QuickViewModal = () => {
                       onClick={() => handleAddToCart()}
                       className="inline-flex py-3 font-medium text-white duration-200 ease-out rounded-full bg-blue px-7 hover:bg-blue-dark"
                     >
-                      Add to Cart
+                      Añadir al carrito
                     </button>
 
                     <button
@@ -269,7 +266,7 @@ const QuickViewModal = () => {
                       className="inline-flex items-center gap-2 px-6 py-3 font-medium text-white duration-200 ease-out rounded-full bg-dark hover:bg-opacity-95"
                     >
                       <HeartIcon />
-                      Add to Wishlist
+                      Añadir a Favoritos
                     </button>
                   </div>
                 </div>

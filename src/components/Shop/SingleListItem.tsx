@@ -111,7 +111,7 @@ const SingleListItem = ({ item }: { item: Product }) => {
                 onClick={() => handleAddToCart()}
                 className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-full bg-blue text-white ease-out duration-200 hover:bg-blue-dark"
               >
-                Add to cart
+                Añadir al carrito
               </button>
             )}
 
@@ -141,8 +141,8 @@ const SingleListItem = ({ item }: { item: Product }) => {
             </h3>
 
             <span className="flex items-center gap-2 text-lg font-medium">
-              <span className="line-through text-dark-4">${item.price}</span>
-              <span className="text-dark">${item.discountedPrice}</span>
+              <span className="line-through text-dark-4">€{item.price}</span>
+              <span className="text-dark">€{item.discountedPrice}</span>
             </span>
           </div>
         </Link>

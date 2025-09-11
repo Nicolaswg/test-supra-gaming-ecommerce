@@ -37,6 +37,7 @@ type SelectedAttributesType = {
 };
 
 const ShopDetails = ({ product }: { product: Product }) => {
+
   const { openPreviewModal } = usePreviewSlider();
   const [previewImg, setPreviewImg] = useState(0);
   const [quantity, setQuantity] = useState(1);
@@ -230,12 +231,12 @@ const ShopDetails = ({ product }: { product: Product }) => {
 
               <h3 className="font-medium text-custom-1 mb-4.5">
                 <span className="mr-2 text-dark">
-                  Price:{" "}
+                  Precio:{" "}
                   <span className="line-through text-gray-6">
-                    ${product.price}
+                    €{product.price}
                   </span>{" "}
                   {""}
-                  <span>${product.discountedPrice}</span>
+                  <span>€{product.discountedPrice}</span>
                 </span>
               </h3>
 

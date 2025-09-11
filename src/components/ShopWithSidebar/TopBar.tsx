@@ -16,12 +16,12 @@ export default function TopBar({
       <CustomSelect />
 
       <p>
-        Showing{' '}
+        Monstrando{' '}
         <span className="text-dark">
           {' '}
-          {showingProductsCount} of {allProductsCount}{' '}
+          {showingProductsCount} de {allProductsCount}{' '}
         </span>{' '}
-        Products
+        Productos
       </p>
     </div>
   );

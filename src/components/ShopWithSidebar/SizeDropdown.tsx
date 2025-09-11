@@ -42,11 +42,10 @@ export default function SizeDropdown({ availableSizes }: PropsType) {
     <div className="bg-white rounded-lg shadow-1">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`w-full flex items-center justify-between py-3 pl-6 pr-5.5 text-dark ${
-          isOpen && "shadow-filter"
-        }`}
+        className={`w-full flex items-center justify-between py-3 pl-6 pr-5.5 text-dark ${isOpen && "shadow-filter"
+          }`}
       >
-        <span>Size</span>
+        <span>Tamaño</span>
 
         <ChevronDown
           className={`ease-out duration-200 ${isOpen && "rotate-180"}`}
