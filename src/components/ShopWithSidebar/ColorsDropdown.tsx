@@ -3,6 +3,7 @@
 import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { useState } from "react";
 import { ChevronDown } from "../Header/icons";
+import { translateColor } from "@/utils/colorTranslator";
 
 type PropsType = {
   availableColors: string[];
@@ -10,7 +11,6 @@ type PropsType = {
 
 export default function ColorsDropdown({ availableColors }: PropsType) {
   const [isOpen, setIsOpen] = useState(true);
-
   const router = useRouter();
   const searchParams = useSearchParams() || new URLSearchParams();
   const pathname = usePathname();
@@ -40,16 +40,14 @@ export default function ColorsDropdown({ availableColors }: PropsType) {
     <div className="bg-white rounded-lg shadow-1">
       <button
         onClick={() => setIsOpen(!isOpen)}
-        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 w-full ${
-          isOpen && "shadow-filter"
-        }`}
+        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 w-full ${isOpen && "shadow-filter"
+          }`}
       >
         <span className="text-dark">Colors</span>
 
         <ChevronDown
-          className={`text-dark ease-out duration-200 ${
-            isOpen && "rotate-180"
-          }`}
+          className={`text-dark ease-out duration-200 ${isOpen && "rotate-180"
+            }`}
         />
       </button>
 
@@ -77,10 +75,9 @@ export default function ColorsDropdown({ availableColors }: PropsType) {
 
               <span className="flex justify-center items-center size-5.5 rounded-full transition-all duration-200 ">
                 <span
-                  className={`size-4 rounded-full flex items-center justify-center relative transition-all duration-200 ${
-                    color === "white" ? "border border-x-meta-4" : ""
-                  }`}
-                  style={{ backgroundColor: color }}
+                  className={`size-4 rounded-full flex items-center justify-center relative transition-all duration-200 ${translateColor(color) === "white" ? "border border-x-meta-4" : ""
+                    }`}
+                  style={{ backgroundColor: translateColor(color) }}
                 >
                   {isSelected && (
                     <svg
@@ -89,8 +86,8 @@ export default function ColorsDropdown({ availableColors }: PropsType) {
                       fill="none"
                     >
                       <path
-                        d="M8.33317 2.5L3.74984 7.08333L1.6665 5"
-                        stroke={color === "white" ? "black" : "white"}
+                        d="M8.33317 2.5L3.74984 7.08333L1.66650 5"
+                        stroke={translateColor(color) === "white" ? "black" : "white"}
                         strokeWidth="1.94437"
                         strokeLinecap="round"
                         strokeLinejoin="round"

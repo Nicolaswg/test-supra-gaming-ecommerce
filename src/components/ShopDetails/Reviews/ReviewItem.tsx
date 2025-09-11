@@ -20,7 +20,7 @@ const ReviewItem = ({ review }: { review: Review }) => {
 
           <div>
             <h3 className="font-medium text-dark">{review?.name}</h3>
-            <p className="text-custom-sm">User</p>
+            <p className="text-custom-sm">Usuario</p>
           </div>
         </Link>
 
@@ -31,11 +31,10 @@ const ReviewItem = ({ review }: { review: Review }) => {
             return (
               <span
                 key={index}
-                className={`${
-                  index + 1 <= (review?.ratings || 0)
+                className={`${index + 1 <= (review?.ratings || 0)
                     ? 'text-[#FBB040]'
                     : 'text-gray-5'
-                }`}
+                  }`}
               >
                 <StarIcon />
               </span>

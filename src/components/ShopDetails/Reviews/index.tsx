@@ -9,14 +9,14 @@ const Reviews = ({ product }: { product: Product }) => {
   );
 
   if (isLoading) {
-    return <p>Loading reviews...</p>;
+    return <p>Cargando reseñas</p>;
   }
 
   return (
     <>
       <div className="max-w-[570px] w-full">
         <h2 className="font-medium text-2xl text-dark mb-9">
-          {reviews.length} Review{reviews.length > 1 && 's'} for this product
+          {reviews.length} Reseña{reviews.length > 1 && 's'} para este producto
         </h2>
 
         <div className="flex flex-col gap-6">

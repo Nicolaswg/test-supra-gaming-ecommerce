@@ -11,15 +11,15 @@ const DetailsTabs = ({ product }: { product: Product }) => {
   const tabs = [
     {
       id: "tabOne",
-      title: "Description",
+      title: "Descripcion",
     },
     {
       id: "tabTwo",
-      title: "Additional Information",
+      title: "Informacion adicional",
     },
     {
       id: "tabThree",
-      title: "Reviews",
+      title: "Reseñas",
     },
   ];
 
@@ -32,11 +32,10 @@ const DetailsTabs = ({ product }: { product: Product }) => {
             <button
               key={key}
               onClick={() => setActiveTab(item.id)}
-              className={`font-medium lg:text-lg ease-out duration-200 hover:text-blue relative before:h-0.5 before:bg-blue before:absolute before:left-0 before:bottom-0 before:ease-out before:duration-200 hover:before:w-full ${
-                activeTab === item.id
-                  ? "text-blue before:w-full"
-                  : "text-dark before:w-0"
-              }`}
+              className={`font-medium lg:text-lg ease-out duration-200 hover:text-blue relative before:h-0.5 before:bg-blue before:absolute before:left-0 before:bottom-0 before:ease-out before:duration-200 hover:before:w-full ${activeTab === item.id
+                ? "text-blue before:w-full"
+                : "text-dark before:w-0"
+                }`}
             >
               {item.title}
             </button>
@@ -48,13 +47,12 @@ const DetailsTabs = ({ product }: { product: Product }) => {
         {/* <!-- tab content one start --> */}
         <div>
           <div
-            className={`flex-col sm:flex-row gap-7.5 xl:gap-12.5 mt-12.5 ${
-              activeTab === "tabOne" ? "flex" : "hidden"
-            }`}
+            className={`flex-col sm:flex-row gap-7.5 xl:gap-12.5 mt-12.5 ${activeTab === "tabOne" ? "flex" : "hidden"
+              }`}
           >
             <div className="max-w-[670px] w-full">
               <h2 className="text-2xl font-medium text-dark mb-7">
-                Specifications:
+                Especificaciones:
               </h2>
 
               <div className="leading-7 text-base text-gray-6">
@@ -67,25 +65,23 @@ const DetailsTabs = ({ product }: { product: Product }) => {
 
         {/* <!-- tab content two start --> */}
         <div
-          className={`rounded-xl bg-white shadow-1 p-4 sm:p-6 mt-10 ${
-            activeTab === "tabTwo" ? "block" : "hidden"
-          }`}
+          className={`rounded-xl bg-white shadow-1 p-4 sm:p-6 mt-10 ${activeTab === "tabTwo" ? "block" : "hidden"
+            }`}
         >
           {product?.additionalInformation?.length ? (
             <AdditionalInformation
               additionalInformation={product?.additionalInformation}
             />
           ) : (
-            <p className="">No additional information available!</p>
+            <p className="">No hay informacion adicional!</p>
           )}
         </div>
         {/* <!-- tab content two end --> */}
 
         {/* <!-- tab content three start --> */}
         <div
-          className={`flex-col sm:flex-row gap-7.5 xl:gap-12.5 mt-12.5 ${
-            activeTab === "tabThree" ? "flex" : "hidden"
-          }`}
+          className={`flex-col sm:flex-row gap-7.5 xl:gap-12.5 mt-12.5 ${activeTab === "tabThree" ? "flex" : "hidden"
+            }`}
         >
           <Reviews product={product} />
         </div>

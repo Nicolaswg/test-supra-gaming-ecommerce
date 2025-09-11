@@ -30,6 +30,7 @@ import Newsletter from "../Common/Newsletter";
 import ReviewStar from "../Shop/ReviewStar";
 import DetailsTabs from "./DetailsTabs";
 import RecentlyViewedItems from "./RecentlyViewed";
+import { translateColor } from "@/utils/colorTranslator";
 
 type SelectedAttributesType = {
   [key: number]: string | undefined;
@@ -145,7 +146,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
 
   return (
     <>
-      <Breadcrumb title={"Shop Details"} pages={["shop details"]} />
+      <Breadcrumb title={"Seccion de detalles"} pages={["shop details"]} />
 
       <section className="relative pt-5 pb-20 overflow-hidden lg:pt-20 xl:pt-28">
         <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 xl:px-0 ">
@@ -179,9 +180,8 @@ const ShopDetails = ({ product }: { product: Product }) => {
                   <button
                     onClick={() => setPreviewImg(key)}
                     key={key}
-                    className={`flex items-center justify-center w-15 sm:w-25 h-15 sm:h-25 overflow-hidden rounded-lg bg-gray-2 shadow-1 ease-out duration-200 border-2 hover:border-blue ${
-                      key === previewImg ? "border-blue" : "border-transparent"
-                    }`}
+                    className={`flex items-center justify-center w-15 sm:w-25 h-15 sm:h-25 overflow-hidden rounded-lg bg-gray-2 shadow-1 ease-out duration-200 border-2 hover:border-blue ${key === previewImg ? "border-blue" : "border-transparent"
+                      }`}
                   >
                     <Image
                       width={50}
@@ -211,7 +211,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                   {/* <!-- stars --> */}
                   <ReviewStar reviews={product.reviews?.length} />
 
-                  <span> ( {product.reviews?.length} customer reviews ) </span>
+                  <span> ( {product.reviews?.length} opiniones de compradores) </span>
                 </div>
 
                 <div className="flex items-center gap-1.5">
@@ -272,20 +272,19 @@ const ShopDetails = ({ product }: { product: Product }) => {
                               id={color}
                               className="sr-only"
                               onChange={() => {
-                                setActiveColor(color);
+                                setActiveColor(translateColor(color));
                                 setPreviewImg(key);
                               }}
                             />
                             <div className="flex items-center justify-center w-5.5 h-5.5 rounded-full">
                               <span
-                                className={`w-5 h-5 rounded-full flex items-center justify-center ${
-                                  color === "white"
-                                    ? "border border-gray-4"
-                                    : ""
-                                }`}
-                                style={{ backgroundColor: color }}
+                                className={`w-5 h-5 rounded-full flex items-center justify-center ${translateColor(color) === "white"
+                                  ? "border border-gray-4"
+                                  : ""
+                                  }`}
+                                style={{ backgroundColor: translateColor(color) }}
                               >
-                                {activeColor === color && (
+                                {activeColor === translateColor(color) && (
                                   <svg
                                     className="w-2.5 h-2.5"
                                     viewBox="0 0 10 10"
@@ -294,7 +293,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                                     <path
                                       d="M8.33317 2.5L3.74984 7.08333L1.6665 5"
                                       stroke={
-                                        color === "white" ? "black" : "white"
+                                        translateColor(color) === "white" ? "black" : "white"
                                       }
                                       strokeWidth="1.94437"
                                       strokeLinecap="round"
@@ -325,11 +324,10 @@ const ShopDetails = ({ product }: { product: Product }) => {
                             onClick={() =>
                               toggleSelectedAttribute(itemIndex, value.id)
                             }
-                            className={`px-2.5 py-1 h-6 items-center inline-flex justify-center rounded-full text-sm font-medium transition-all duration-200 border ${
-                              selectedAttributes[itemIndex] === value.id
-                                ? "bg-blue text-white border-blue shadow-sm"
-                                : "bg-white text-dark border-gray-3 hover:border-blue hover:text-blue"
-                            }`}
+                            className={`px-2.5 py-1 h-6 items-center inline-flex justify-center rounded-full text-sm font-medium transition-all duration-200 border ${selectedAttributes[itemIndex] === value.id
+                              ? "bg-blue text-white border-blue shadow-sm"
+                              : "bg-white text-dark border-gray-3 hover:border-blue hover:text-blue"
+                              }`}
                           >
                             {value.title}
                           </button>
@@ -366,14 +364,14 @@ const ShopDetails = ({ product }: { product: Product }) => {
                     onClick={() => handleCheckout()}
                     className="inline-flex py-3 font-medium text-white duration-200 ease-out rounded-full bg-blue px-7 hover:bg-blue-dark"
                   >
-                    Purchase Now
+                    Comprar ahora
                   </button>
                   <button
                     onClick={() => handleAddToCart()}
                     disabled={isProductInCart ? true : false}
                     className={`inline-flex font-medium text-white bg-dark py-3 px-7 rounded-full ease-out duration-200 hover:bg-dark-2 ${isProductInCart && "cursor-not-allowed bg-dark-2"}`}
                   >
-                    {isProductInCart ? "Added" : "Add to Cart"}
+                    {isProductInCart ? "Agregado" : "Agregar al carrito"}
                   </button>
 
                   <button

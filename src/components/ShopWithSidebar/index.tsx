@@ -34,7 +34,6 @@ const PRODUCTS_PER_PAGE = 9;
 
 const ShopWithSidebar = ({ data }: PropsType) => {
   const { allProducts, products, categories, allProductsCount } = data;
-
   const [productStyle, setProductStyle] = useState("grid");
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
@@ -43,12 +42,12 @@ const ShopWithSidebar = ({ data }: PropsType) => {
   const availableSizes = useMemo(() => {
     const sizes = allProducts.flatMap((product) => product.sizes || []);
     return [...new Set(sizes)];
-  }, []);
+  }, [allProducts]);
 
   const availableColors = useMemo(() => {
     const colors = allProducts.flatMap((product) => product.colors || []);
     return [...new Set(colors)];
-  }, []);
+  }, [allProducts]);
 
   const handleStickyMenu = () => {
     if (window.scrollY >= 80) {
@@ -85,7 +84,7 @@ const ShopWithSidebar = ({ data }: PropsType) => {
   return (
     <>
       <Breadcrumb
-        title={"Explore All Products"}
+        title={"Explora todos los productos"}
         pages={["shop", "/", "shop with sidebar"]}
       />
 
@@ -94,18 +93,16 @@ const ShopWithSidebar = ({ data }: PropsType) => {
           <div className="flex gap-7.5">
             {/* Sidebar Start */}
             <div
-              className={`sidebar-content fixed xl:z-1 z-9999 left-0 top-0 xl:translate-x-0 xl:static xl:w-1/4 w-full ease-out duration-200 ${
-                productSidebar ? "translate-x-0 bg-white" : "-translate-x-full"
-              }`}
+              className={`sidebar-content fixed xl:z-1 z-9999 left-0 top-0 xl:translate-x-0 xl:static xl:w-1/4 w-full ease-out duration-200 ${productSidebar ? "translate-x-0 bg-white" : "-translate-x-full"
+                }`}
             >
               <button
                 onClick={() => setProductSidebar(!productSidebar)}
                 aria-label="button for product sidebar toggle"
-                className={`xl:hidden absolute -right-12.5 sm:-right-8 flex items-center justify-center w-8 h-8 rounded-md bg-white shadow-1 ${
-                  stickyMenu
-                    ? "lg:top-20 sm:top-34.5 top-35"
-                    : "lg:top-24 sm:top-39 top-37"
-                }`}
+                className={`xl:hidden absolute -right-12.5 sm:-right-8 flex items-center justify-center w-8 h-8 rounded-md bg-white shadow-1 ${stickyMenu
+                  ? "lg:top-20 sm:top-34.5 top-35"
+                  : "lg:top-45 sm:top-39 top-38"
+                  }`}
               >
                 <SidebarToggleIcon />
               </button>
@@ -149,11 +146,10 @@ const ShopWithSidebar = ({ data }: PropsType) => {
                     <button
                       onClick={() => setProductStyle("grid")}
                       aria-label="button for product grid tab"
-                      className={`${
-                        productStyle === "grid"
-                          ? "bg-blue border-blue text-white"
-                          : "text-dark bg-gray-1 border-gray-3"
-                      } flex items-center justify-center w-10.5 h-9 rounded-lg border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
+                      className={`${productStyle === "grid"
+                        ? "bg-blue border-blue text-white"
+                        : "text-dark bg-gray-1 border-gray-3"
+                        } flex items-center justify-center w-10.5 h-9 rounded-lg border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
                     >
                       <FourSquaresIcon />
                     </button>
@@ -161,11 +157,10 @@ const ShopWithSidebar = ({ data }: PropsType) => {
                     <button
                       onClick={() => setProductStyle("list")}
                       aria-label="button for product list tab"
-                      className={`${
-                        productStyle === "list"
-                          ? "bg-blue border-blue text-white"
-                          : "text-dark bg-gray-1 border-gray-3"
-                      } flex items-center justify-center w-10.5 h-9 rounded-lg border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
+                      className={`${productStyle === "list"
+                        ? "bg-blue border-blue text-white"
+                        : "text-dark bg-gray-1 border-gray-3"
+                        } flex items-center justify-center w-10.5 h-9 rounded-lg border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
                     >
                       <TwoSquaresIcon />
                     </button>

@@ -53,15 +53,15 @@ const AddReviews = ({ productId }: PropsType) => {
   return (
     <div className="max-w-[550px] w-full">
       <form onSubmit={form.handleSubmit(onSubmit)}>
-        <h2 className="font-medium text-2xl text-dark mb-3.5">Add a Review</h2>
+        <h2 className="font-medium text-2xl text-dark mb-3.5">Agregar Reseña</h2>
 
         <p className="mb-6">
-          Your email address will not be published. Required fields are marked *
+          Tu direccion de correo no sera publicada. Los campos obligatorios estan marcados <span className="text-red">*</span>
         </p>
 
         <div className="mb-7.5">
           <div className="flex items-center gap-3">
-            <span>Your Rating*</span>
+            <p>Calificacion <span className="text-red">*</span></p>
 
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, index) => {
@@ -82,11 +82,10 @@ const AddReviews = ({ productId }: PropsType) => {
                     disabled={isLoading}
                   >
                     <span
-                      className={`cursor-pointer ${
-                        index <= (hover || form.getValues('ratings'))
-                          ? 'text-[#FBB040]'
-                          : 'text-gray-5'
-                      }`}
+                      className={`cursor-pointer ${index <= (hover || form.getValues('ratings'))
+                        ? 'text-[#FBB040]'
+                        : 'text-gray-5'
+                        }`}
                     >
                       <StarIcon />
                     </span>
@@ -106,7 +105,7 @@ const AddReviews = ({ productId }: PropsType) => {
         <div className="rounded-xl bg-white shadow-1 p-4 sm:p-6">
           <div className="mb-5">
             <label htmlFor="comment" className="block mb-2.5">
-              Comment
+              Comentario
             </label>
 
             <textarea
@@ -130,7 +129,7 @@ const AddReviews = ({ productId }: PropsType) => {
             )}
 
             <div className="flex items-center justify-between mt-2.5 text-custom-sm text-dark-4">
-              <span>Maximum</span>
+              <span>Maximo</span>
               <span className={commentLength > 250 ? 'text-red' : ''}>
                 {commentLength || 0}/250
               </span>
@@ -144,8 +143,8 @@ const AddReviews = ({ productId }: PropsType) => {
               rules={{ required: 'Name is required' }}
               render={({ fieldState, field }) => (
                 <InputGroup
-                  label="Name"
-                  placeholder="Your name"
+                  label="Nombre"
+                  placeholder="Tu nombre"
                   error={!!fieldState.error}
                   errorMessage={fieldState.error?.message}
                   required
@@ -165,7 +164,7 @@ const AddReviews = ({ productId }: PropsType) => {
                 <InputGroup
                   type="email"
                   label="Email"
-                  placeholder="Your email"
+                  placeholder="Tu email"
                   error={!!fieldState.error}
                   errorMessage={fieldState.error?.message}
                   required
@@ -182,7 +181,7 @@ const AddReviews = ({ productId }: PropsType) => {
             className="font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark disabled:opacity-70 disabled:pointer-events-none"
             disabled={isLoading}
           >
-            Submit Review
+            Subir Reseña
           </button>
         </div>
       </form>
