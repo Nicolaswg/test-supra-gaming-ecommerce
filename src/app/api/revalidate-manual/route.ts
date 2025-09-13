@@ -40,6 +40,7 @@ export async function GET(req: NextRequest) {
       return new Response("Unauthorized", { status: 401 });
     }
 
+
     // Revalidate all common tags
     const tags = [
       "product",
