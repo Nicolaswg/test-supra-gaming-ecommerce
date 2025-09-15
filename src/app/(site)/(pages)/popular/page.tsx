@@ -4,8 +4,8 @@ import { getProductsByFilter } from "@/sanity/sanity-shop-utils";
 import { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "Shop Page | NextMerce | Next.js E-commerce Boilerplate",
-  description: "This is Shop Page for NextMerce Template",
+  title: "Shop Page | Supra Gaming | Online Shop",
+  description: "This is Shop Page for Supra Gaming Template",
   // other metadata
 };
 

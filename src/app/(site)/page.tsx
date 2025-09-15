@@ -9,8 +9,8 @@ import Testimonials from "@/components/Home/Testimonials";
 import type { Metadata } from "next";
 
 export const metadata: Metadata = {
-  title: "NextMerce | Next.js E-commerce Boilerplate",
-  description: "This is Home for NextMerce Template",
+  title: "Supra-Gaming |Tienda Online",
+  description: "Esto es la tienda online de Supra-Gaming",
   // other metadata
 };
 

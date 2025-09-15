@@ -72,7 +72,7 @@ const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
     const createOrder = async (paymentStatus: "pending" | "paid") => {
       // Generate a unique orderId (could also be done on backend)
       const orderId = `ORD-${Date.now()}`;
-    
+
       const orderData = {
         orderId, // unique order identifier
         status: paymentStatus, // e.g., "pending" or "paid"
@@ -80,7 +80,7 @@ const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
         userId: session?.user?.id || "", // user ID (string)
         userEmail: session?.user?.email || data.billing?.email, // user email
         productQuantity: Object.values(cartDetails ?? {}).reduce((sum, item) => sum + item.quantity, 0).toString(),
-        orderTitle: "Order from NextMerce", // or generate from cart/products
+        orderTitle: "Order from Supra Gaming", // or generate from cart/products
         country: data.billing?.country,
         city: data.billing?.town,
         line1: data.billing?.address?.street,
@@ -96,8 +96,8 @@ const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
         })),
       };
 
-      console.log('orderData',orderData)
-    
+      console.log('orderData', orderData)
+
       try {
         const orderResponse = await fetch("/api/order/checkout", {
           method: "POST",
@@ -105,12 +105,12 @@ const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
           body: JSON.stringify(orderData),
         });
         const result = await orderResponse.json();
-    
+
         if (!result?.success) {
           toast.error(result?.message || "Failed to create order");
           return false;
         }
-    
+
         toast.success("Order created successfully");
         router.push(`/success?amount=${amount}`);
         return true;
@@ -201,24 +201,24 @@ const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
             </div>
           )}
           <form onSubmit={handleSubmit(handleCheckout)}>
-                <Billing />
-                <Shipping />
-                <Notes />
-                
-                <Orders />
+            <Billing />
+            <Shipping />
+            <Notes />
 
-                <Coupon />
+            <Orders />
 
-                <ShippingMethod />
+            <Coupon />
 
-                <PaymentMethod amount={amount} />
+            <ShippingMethod />
 
-                <button
-                  type="submit"
-                  className="w-full flex justify-center font-medium text-white bg-blue py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue-dark mt-7.5"
-                >
-                  {!loading ? `Pay $${amount}` : "Processing..."}
-                </button>
+            <PaymentMethod amount={amount} />
+
+            <button
+              type="submit"
+              className="w-full flex justify-center font-medium text-white bg-blue py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue-dark mt-7.5"
+            >
+              {!loading ? `Pay $${amount}` : "Processing..."}
+            </button>
             {errorMessage && (
               <p className="mt-2 text-center text-red">{errorMessage}</p>
             )}

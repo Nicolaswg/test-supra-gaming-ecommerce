@@ -53,7 +53,7 @@ const CheckoutAreaWithoutStripe = ({ amount }: { amount: number }) => {
     const createOrder = async (paymentStatus: "pending" | "paid") => {
       // Generate a unique orderId (could also be done on backend)
       const orderId = `ORD-${Date.now()}`;
-    
+
       const orderData = {
         orderId, // unique order identifier
         status: paymentStatus, // e.g., "pending" or "paid"
@@ -61,7 +61,7 @@ const CheckoutAreaWithoutStripe = ({ amount }: { amount: number }) => {
         userId: session?.user?.id || "", // user ID (string)
         userEmail: session?.user?.email || data.billing?.email, // user email
         productQuantity: Object.values(cartDetails ?? {}).reduce((sum, item) => sum + item.quantity, 0).toString(),
-        orderTitle: "Order from NextMerce", // or generate from cart/products
+        orderTitle: "Order from Supra Gaming", // or generate from cart/products
         country: data.billing?.country,
         city: data.billing?.town,
         line1: data.billing?.address?.street,
@@ -77,8 +77,8 @@ const CheckoutAreaWithoutStripe = ({ amount }: { amount: number }) => {
         })),
       };
 
-      console.log('orderData',orderData)
-    
+      console.log('orderData', orderData)
+
       try {
         const orderResponse = await fetch("/api/order/checkout", {
           method: "POST",
@@ -86,12 +86,12 @@ const CheckoutAreaWithoutStripe = ({ amount }: { amount: number }) => {
           body: JSON.stringify(orderData),
         });
         const result = await orderResponse.json();
-    
+
         if (!result?.success) {
           toast.error(result?.message || "Failed to create order");
           return false;
         }
-    
+
         toast.success("Order created successfully");
         router.push(`/success?amount=${amount}`);
         return true;

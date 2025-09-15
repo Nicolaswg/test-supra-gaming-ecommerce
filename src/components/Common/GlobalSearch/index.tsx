@@ -9,6 +9,7 @@ const algoliaAppId = process.env.NEXT_PUBLIC_ALGOLIA_PROJECT_ID as string;
 const algoliaSearchApiKey = process.env.NEXT_PUBLIC_ALGOLIA_API_KEY as string;
 const algoliaIndexName = process.env.NEXT_PUBLIC_ALGOLIA_INDEX as string;
 
+
 const algoliaClient = algoliasearch(algoliaAppId, algoliaSearchApiKey);
 
 const GlobalSearchModal = (props: any) => {
@@ -54,6 +55,9 @@ const GlobalSearchModal = (props: any) => {
                 insights={false}
                 searchClient={algoliaClient}
                 indexName={algoliaIndexName}
+                future={{
+                  preserveSharedStateOnUnmount: true,
+                }}
               >
                 <SearchBox
                   placeholder="Type anything to search..."

@@ -23,11 +23,10 @@ export async function generateMetadata({ params }: Params) {
 
   if (post) {
     return {
-      title: `${
-        post.title || 'Single Post Page'
-      } | NextMerce - Next.js E-commerce Template`,
+      title: `${post.title || 'Single Post Page'
+        } | Supra Gaming - Next.js E-commerce Template`,
       description: `${post.metadata?.slice(0, 136)}...`,
-      author: 'NextMerce',
+      author: 'Supra Gaming',
       alternates: {
         canonical: `${siteURL}/posts/${post?.slug?.current}`,
         languages: {
@@ -50,10 +49,10 @@ export async function generateMetadata({ params }: Params) {
       },
 
       openGraph: {
-        title: `${post.title} | NextMerce`,
+        title: `${post.title} | Supra Gaming`,
         description: post.metadata,
         url: `${siteURL}/posts/${post?.slug?.current}`,
-        siteName: 'NextMerce',
+        siteName: 'Supra Gaming',
         images: [
           {
             url: imageBuilder(post.mainImage).url(),
@@ -68,10 +67,10 @@ export async function generateMetadata({ params }: Params) {
 
       twitter: {
         card: 'summary_large_image',
-        title: `${post.title} | NextMerce`,
+        title: `${post.title} | Supra Gaming`,
         description: `${post.metadata?.slice(0, 136)}...`,
-        creator: '@NextMerce',
-        site: '@NextMerce',
+        creator: '@Supra Gaming',
+        site: '@Supra Gaming',
         images: [imageBuilder(post?.mainImage).url()],
         url: `${siteURL}/blogs/${post?.slug?.current}`,
       },
@@ -87,7 +86,6 @@ export async function generateMetadata({ params }: Params) {
 const BlogDetailsPage = async ({ params }: Params) => {
   const { slug } = await params;
   const post = await getPost(slug);
-
   await structuredAlgoliaHtmlData({
     type: 'blogs',
     title: post?.title || '',

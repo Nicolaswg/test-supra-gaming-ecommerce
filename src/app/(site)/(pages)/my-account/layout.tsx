@@ -5,8 +5,8 @@ import Sidebar from './_component/sidebar';
 import { redirect } from 'next/navigation';
 
 export const metadata: Metadata = {
-  title: 'My Account | NextMerce | Next.js E-commerce Boilerplate',
-  description: 'This is My Account page for NextMerce Template',
+  title: 'My Account | Supra Gaming | Online Shop',
+  description: 'This is My Account page for Supra Gaming Template',
   // other metadata
 };
 

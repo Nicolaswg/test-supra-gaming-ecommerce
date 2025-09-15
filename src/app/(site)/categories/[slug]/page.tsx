@@ -31,11 +31,10 @@ export async function generateMetadata({ params }: Params) {
 
   if (categoryData) {
     return {
-      title: `${
-        categoryData?.title || "Category Page"
-      } | NextMerce - Next.js E-commerce Template`,
+      title: `${categoryData?.title || "Category Page"
+        } | Supra Gaming - Next.js E-commerce Template`,
       description: `${categoryData?.description?.slice(0, 136)}...`,
-      author: "NextMerce",
+      author: "Supra Gaming",
       alternates: {
         canonical: `${siteURL}/categories/${categoryData?.slug?.current}`,
         languages: {
@@ -58,10 +57,10 @@ export async function generateMetadata({ params }: Params) {
       },
 
       openGraph: {
-        title: `${categoryData?.title} | NextMerce`,
+        title: `${categoryData?.title} | Supra Gaming`,
         description: categoryData.description,
         url: `${siteURL}/categories/${categoryData?.slug?.current}`,
-        siteName: "NextMerce",
+        siteName: "Supra Gaming",
         images: [
           {
             url: imageBuilder(categoryData.image).url(),
@@ -76,10 +75,10 @@ export async function generateMetadata({ params }: Params) {
 
       twitter: {
         card: "summary_large_image",
-        title: `${categoryData?.title} | NextMerce`,
+        title: `${categoryData?.title} | Supra Gaming`,
         description: `${categoryData?.description?.slice(0, 136)}...`,
-        creator: "@NextMerce",
-        site: "@NextMerce",
+        creator: "@Supra Gaming",
+        site: "@Supra Gaming",
         images: [imageBuilder(categoryData.image).url()],
         url: `${siteURL}/categories/${categoryData?.slug?.current}`,
       },
@@ -110,9 +109,9 @@ const CategoryPage = async ({ params, searchParams }: Params) => {
   // Clean slug by removing hyphens and symbol characters
   const cleanSlug = slug
     ? slug
-        .replace(/[^a-zA-Z0-9\s]/g, "  ")
-        .replace(/\s+/g, " ")
-        .trim()
+      .replace(/[^a-zA-Z0-9\s]/g, "  ")
+      .replace(/\s+/g, " ")
+      .trim()
     : "Category Page";
 
   return (

@@ -4,29 +4,29 @@ import Image from "next/image";
 const featureData = [
   {
     img: "/images/icons/icon-01.svg",
-    title: "Free Shipping",
-    description: "For all orders $200",
+    title: "Envio Gratis",
+    description: "Pedidos superiores a €200",
   },
   {
     img: "/images/icons/icon-02.svg",
-    title: "1 & 1 Returns",
-    description: "Cancellation after 1 day",
+    title: "Devoluciones 1 & 1 ",
+    description: "Cancelaciones después de 1 dia",
   },
   {
     img: "/images/icons/icon-03.svg",
-    title: "100% Secure Payments",
-    description: "Gurantee secure payments",
+    title: "Pagos 100% Seguros",
+    description: "Garantizado de pago seguro",
   },
   {
     img: "/images/icons/icon-04.svg",
-    title: "24/7 Dedicated Support",
-    description: "Anywhere & anytime",
+    title: "Soporte 24/7",
+    description: "En cualquier momento y lugar",
   },
 ];
 
 const HeroFeature = () => {
   return (
-    <div className="max-w-[1060px] w-full mx-auto px-4 sm:px-8 xl:px-0">
+    <div className="max-w-[1100px] w-full mx-auto px-4 sm:px-8 xl:px-0">
       <div className="flex flex-wrap items-center gap-7.5 xl:gap-12.5 mt-10">
         {featureData.map((item, key) => (
           <div className="flex items-center gap-4" key={key}>

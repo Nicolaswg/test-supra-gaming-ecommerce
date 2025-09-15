@@ -1,8 +1,8 @@
-# Installing and Deploying NextMerce
+# Installing and Deploying Supra Gaming
 
-## Install and Deploy NextMerce
+## Install and Deploy Supra Gaming
 
-In this part of the documentation we will show you how to install NextMerce.
+In this part of the documentation we will show you how to install Supra Gaming.
 
 <Callout type="info">
   Before moving forward, make sure you have Node.js installed on your machine.
@@ -16,7 +16,7 @@ npm install --legacy-peer-deps
 # or
 yarn install
 ```
-    
+
 > Some included packages causes peer-deps issue with React 19 while installing.
 > With npm the `--legacy-peer-deps` flag is a workaround for that at the moment.
 
@@ -37,7 +37,7 @@ yarn dev
 Once the installation is done,  
 Follow these steps to complete the installation.
 
-1. [Database Integration - PostgreSQL on Vercel ](https://nextmerce.com//docs/database/postgresql)
+1. [Database Integration - PostgreSQL on Vercel ](https://Supra Gaming.com//docs/database/postgresql)
 
 <Callout type="info">
   **Note:** you can use any PostgreSQL you want. Just save the database url in
@@ -48,8 +48,8 @@ Follow these steps to complete the installation.
 DATABASE_URL=YOUR_DB_CONNECT_URL
 ```
 
-2. [Authentication](https://nextmerce.com//docs/authentication)
-3. [Sanity Integration](https://nextmerce.com//docs/sanity)
+2. [Authentication](https://Supra Gaming.com//docs/authentication)
+3. [Sanity Integration](https://Supra Gaming.com//docs/sanity)
 
 Follow the Sanity Integration guide to setup the project. After that take the Sanity ProjectID and title, and save them in the .env file under these variable names:
 
@@ -58,13 +58,13 @@ NEXT_PUBLIC_SANITY_PROJECT_ID=""
 NEXT_PUBLIC_SANITY_PROJECT_TITLE=""
 ```
 
-4.[Sanity API integration](https://nextmerce.com//docs/sanity/api-integration)
+4.[Sanity API integration](https://Supra Gaming.com//docs/sanity/api-integration)
 
-5.[Sanity Webhook integration](https://nextmerce.com//docs/sanity/webhook-integration)
+5.[Sanity Webhook integration](https://Supra Gaming.com//docs/sanity/webhook-integration)
 
-6.[Stripe Integration](https://nextmerce.com//docs/stripe)
+6.[Stripe Integration](https://Supra Gaming.com//docs/stripe)
 
-7.[Algolia Integration](https://nextmerce.com//docs/algolia)
+7.[Algolia Integration](https://Supra Gaming.com//docs/algolia)
 
 ---
 
@@ -87,14 +87,17 @@ yarn build
 ```
 
 ## Update Logs
+
 Version 1.3.3 - Patches - [Jul 13, 2025]
+
 - Massive UI Improvemnts
 
-  
 Version 1.3.2 - Patches - [May 04, 2025]
+
 - Fix issue on product schema
 
 Version 1.3.1 - Patches - [Mar 20, 2025]
+
 - Fix peer dependencies issue and NextConfig warning
 - Migrated from `react-instantsearch-dom` to `react-instantsearch`
 - Updated dependency and removed unused files
@@ -121,4 +124,4 @@ Version 1.0.1 - Patches - [Feb 02, 2025]
 
 - Fix countdown timer
 - Showing indicator if product has been added to wishlist
-- Redesign *Empty Cart* page
+- Redesign _Empty Cart_ page

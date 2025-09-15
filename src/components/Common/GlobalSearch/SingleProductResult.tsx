@@ -9,6 +9,7 @@ export default function SingleProductResult({
   setSearchModalOpen,
   isProduct,
 }: any) {
+
   return (
     <div className="w-full p-2 mb-2 bg-white result-template group rounded-xl hover:bg-gray-2">
       <Link
@@ -18,11 +19,10 @@ export default function SingleProductResult({
       >
         {showImage && hit?.imageURL && (
           <div
-            className={`relative overflow-hidden flex items-center justify-center rounded-lg border border-gray-3 bg-gray-2 ${
-              isProduct
-                ? "w-[110px] h-[84px]"
-                : "aspect-2/1 w-full max-w-[200px]"
-            }`}
+            className={`relative overflow-hidden flex items-center justify-center rounded-lg border border-gray-3 bg-gray-2 ${isProduct
+              ? "w-[110px] h-[84px]"
+              : "aspect-2/1 w-full max-w-[200px]"
+              }`}
           >
             <Image
               src={hit?.imageURL}

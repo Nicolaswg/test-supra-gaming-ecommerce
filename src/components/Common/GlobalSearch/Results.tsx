@@ -3,7 +3,6 @@ import SingleProductResult from './SingleProductResult';
 
 const Results = (props: any) => {
   const { setSearchModalOpen, filterValue } = props;
-
   return (
     <div className="w-full px-4">
       {(filterValue === 'all' || filterValue === 'products') && (

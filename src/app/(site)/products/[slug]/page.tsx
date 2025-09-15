@@ -31,11 +31,10 @@ export async function generateMetadata({ params }: Props) {
   }
 
   return {
-    title: `${
-      product.name || "Single Product Page"
-    } | NextMerce - Next.js E-commerce Template`,
+    title: `${product.name || "Single Product Page"
+      } | Supra Gaming - Next.js E-commerce Template`,
     description: `${product?.shortDescription?.slice(0, 136)}...`,
-    author: "NextMerce",
+    author: "Supra Gaming",
     alternates: {
       canonical: `${siteURL}/products/${product?.slug?.current}`,
       languages: {
@@ -58,10 +57,10 @@ export async function generateMetadata({ params }: Props) {
     },
 
     openGraph: {
-      title: `${product?.name} | NextMerce`,
+      title: `${product?.name} | Supra Gaming`,
       description: product.shortDescription,
       url: `${siteURL}/products/${product?.slug?.current}`,
-      siteName: "NextMerce",
+      siteName: "Supra Gaming",
       images: [
         {
           url: imageBuilder(product?.previewImages[0]?.image).url(),
@@ -76,10 +75,10 @@ export async function generateMetadata({ params }: Props) {
 
     twitter: {
       card: "summary_large_image",
-      title: `${product?.name} | NextMerce`,
+      title: `${product?.name} | Supra Gaming`,
       description: `${product?.shortDescription?.slice(0, 136)}...`,
-      creator: "@NextMerce",
-      site: "@NextMerce",
+      creator: "@Supra Gaming",
+      site: "@Supra Gaming",
       images: [imageBuilder(product?.previewImages[0]?.image).url()],
       url: `${siteURL}/products/${product?.slug?.current}`,
     },
