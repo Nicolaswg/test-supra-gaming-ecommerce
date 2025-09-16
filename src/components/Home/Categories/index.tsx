@@ -53,16 +53,15 @@ const Categories = () => {
           <div className="flex items-center justify-between mb-10">
             <div>
               <h2 className="text-xl font-semibold xl:text-heading-5 text-dark">
-                Browse by Category
+                Categorias
               </h2>
             </div>
 
             <div className="flex items-center gap-3">
               <button
                 onClick={handlePrev}
-                className={`swiper-button-prev ${
-                  currentIndex === 0 ? "opacity-50 pointer-events-none" : ""
-                }`}
+                className={`swiper-button-prev ${currentIndex === 0 ? "opacity-50 pointer-events-none" : ""
+                  }`}
                 aria-label="previous button"
                 disabled={currentIndex === 0}
               >
@@ -72,9 +71,8 @@ const Categories = () => {
               <button
                 onClick={handleNext}
                 aria-label="next button"
-                className={`swiper-button-next ${
-                  isEnd ? "opacity-50 pointer-events-none" : ""
-                }`}
+                className={`swiper-button-next ${isEnd ? "opacity-50 pointer-events-none" : ""
+                  }`}
                 disabled={isEnd}
               >
                 <ChevronRightIcon />

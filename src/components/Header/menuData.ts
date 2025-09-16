@@ -57,34 +57,10 @@ export const menuData: Menu[] = [
       },
       {
         id: 67,
-        title: "Iniciar Sesión",
-        newTab: false,
-        path: "/signin",
-      },
-      {
-        id: 68,
-        title: "Registrar Cuenta",
-        newTab: false,
-        path: "/signup",
-      },
-      {
-        id: 70,
         title: "Contacto",
         newTab: false,
         path: "/contact",
       },
-      // {
-      //   id: 62,
-      //   title: "Error",
-      //   newTab: false,
-      //   path: "/error",
-      // },
-      // {
-      //   id: 63,
-      //   title: "Mail Success",
-      //   newTab: false,
-      //   path: "/mail-success",
-      // },
     ],
   },
   {

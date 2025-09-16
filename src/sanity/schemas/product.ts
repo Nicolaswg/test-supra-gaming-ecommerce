@@ -179,11 +179,21 @@ const product = {
                       type: "string",
                       validation: (Rule: any) => Rule.required(),
                     },
+                    {
+                      name: "image",
+                      title: "Image",
+                      type: "image",
+                      description: "optional image for this value",
+                      options: {
+                        hotspot: true
+                      },
+                    }
                   ],
                   preview: {
                     select: {
                       title: "title",
                       subtitle: "id",
+                      media: "image",
                     },
                   },
                 },
