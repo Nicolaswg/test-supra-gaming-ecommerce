@@ -46,7 +46,7 @@ export async function POST(req: NextRequest) {
       },
       shipping_options: [
         {
-          shipping_rate: 'shr_1OEXL0LtGdPVhGLeUX3qlYJB',
+          shipping_rate: process.env.STRIPE_SHIPPING_RATE_ID!,
         },
       ],
       billing_address_collection: 'auto',
