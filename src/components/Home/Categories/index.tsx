@@ -9,8 +9,10 @@ import "swiper/css";
 import "swiper/css/navigation";
 import SingleItem from "./SingleItem";
 
+
 const Categories = () => {
   const sliderRef = useRef(null);
+
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isEnd, setIsEnd] = useState(false);
 

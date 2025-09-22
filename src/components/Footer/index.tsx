@@ -92,48 +92,6 @@ const Footer = () => {
           <AccountLinks />
 
           <QuickLinks />
-
-          <div className="w-full sm:w-auto">
-            <h2 className="mb-7.5 text-custom-1 font-medium text-dark lg:text-right">
-              Download App
-            </h2>
-
-            <p className="mb-4 lg:text-right text-custom-sm">
-              Save $3 With App & New User only
-            </p>
-
-            <ul className="flex flex-col gap-3 lg:items-end">
-              <li>
-                <Link
-                  className="inline-flex items-center gap-3 py-[9px] pl-4 pr-7.5 text-white rounded-xl bg-dark ease-out duration-200 hover:bg-opacity-95"
-                  href="#"
-                >
-                  <AppStoreIcon />
-
-                  <div>
-                    <span className="block text-custom-xs">
-                      Download on the
-                    </span>
-                    <p className="font-medium">App Store</p>
-                  </div>
-                </Link>
-              </li>
-
-              <li>
-                <Link
-                  className="inline-flex items-center gap-3 py-[9px] pl-4 pr-8.5 text-white rounded-xl bg-blue ease-out duration-200 hover:bg-opacity-95"
-                  href="#"
-                >
-                  <GooglePlayIcon />
-
-                  <div>
-                    <span className="block text-custom-xs"> Get in On </span>
-                    <p className="font-medium">Google Play</p>
-                  </div>
-                </Link>
-              </li>
-            </ul>
-          </div>
         </div>
         {/* <!-- footer menu end --> */}
       </div>

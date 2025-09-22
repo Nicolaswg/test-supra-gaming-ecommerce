@@ -20,7 +20,7 @@ const prisma = new PrismaClient();
 
 export const authOptions: NextAuthOptions = {
   pages: {
-    signIn: "/auth/signin",
+    signIn: "/signin",
   },
   adapter: PrismaAdapter(prisma) as Adapter,
   secret: process.env.SECRET,

@@ -8,7 +8,7 @@ export async function POST(req: NextRequest) {
   const structuredData = {
     line_items: Object.values(cartDetails).map((item: any) => ({
       price_data: {
-        currency: 'usd',
+        currency: 'eur',
         product_data: {
           name: item.name,
           images: [item.image],
@@ -38,11 +38,11 @@ export async function POST(req: NextRequest) {
       mode: 'payment',
       payment_method_types: ['card'],
       line_items: structuredData.line_items,
-      currency: 'usd',
+      currency: 'eur',
       success_url: `${origin}/success?session_id={CHECKOUT_SESSION_ID}`,
       cancel_url: `${origin}`,
       shipping_address_collection: {
-        allowed_countries: ['US', 'CA'],
+        allowed_countries: ['US', 'CA', 'GB', 'FR', 'DE', 'IT', 'ES'],
       },
       shipping_options: [
         {

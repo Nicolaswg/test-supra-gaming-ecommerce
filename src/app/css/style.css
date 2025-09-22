@@ -14,6 +14,7 @@
   --color-transparent: transparent;
   --color-white: #ffffff;
   --color-body: #6c6f93;
+  --color-primary: oklch(0.55 0.25 300);
 
   --color-meta-2: #495270;
   --color-meta-3: #606882;
@@ -75,6 +76,8 @@
 
   --color-orange: #f27430;
   --color-orange-dark: #e1580e;
+
+  --primary: oklch(0.55 0.25 300);
 
   --breakpoint-*: initial;
   --breakpoint-xsm: 375px;

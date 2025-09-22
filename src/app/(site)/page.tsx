@@ -7,6 +7,7 @@ import NewArrival from "@/components/Home/NewArrivals";
 import PromoBanner from "@/components/Home/PromoBanner";
 import Testimonials from "@/components/Home/Testimonials";
 import type { Metadata } from "next";
+import { useSession } from "next-auth/react";
 
 export const metadata: Metadata = {
   title: "Supra-Gaming |Tienda Online",

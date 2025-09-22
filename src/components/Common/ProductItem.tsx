@@ -44,7 +44,7 @@ const ProductItem = ({ item }: { item: Product }) => {
     id: item._id,
     name: item.name,
     price: item.discountedPrice * 100,
-    currency: "usd",
+    currency: "eur",
     image: item?.thumbnails
       ? imageBuilder(item?.thumbnails[0]?.image).url()
       : "",
@@ -93,11 +93,10 @@ const ProductItem = ({ item }: { item: Product }) => {
     <div className="group">
       <div className="relative overflow-hidden flex border items-center justify-center rounded-lg border-gray-2 bg-[#F6F7FB] min-h-[270px] mb-4">
         <Link
-          href={`${
-            pathUrl.includes("products")
-              ? `${item?.slug?.current}`
-              : `products/${item?.slug?.current}`
-          }`}
+          href={`${pathUrl.includes("products")
+            ? `${item?.slug?.current}`
+            : `products/${item?.slug?.current}`
+            }`}
         >
           <Image
             src={
@@ -155,11 +154,10 @@ const ProductItem = ({ item }: { item: Product }) => {
         onClick={() => handleProductDetails()}
       >
         <Link
-          href={`${
-            pathUrl.includes("products")
-              ? `${item?.slug?.current}`
-              : `products/${item?.slug?.current}`
-          }`}
+          href={`${pathUrl.includes("products")
+            ? `${item?.slug?.current}`
+            : `products/${item?.slug?.current}`
+            }`}
         >
           {" "}
           {item.name}{" "}
@@ -167,8 +165,8 @@ const ProductItem = ({ item }: { item: Product }) => {
       </h3>
 
       <span className="flex items-center gap-2 text-lg font-medium">
-        <span className="text-dark">${item.discountedPrice}</span>
-        <span className="line-through text-dark-4">${item.price}</span>
+        <span className="text-dark">€{item.discountedPrice}</span>
+        <span className="line-through text-dark-4">€{item.price}</span>
       </span>
     </div>
   );
