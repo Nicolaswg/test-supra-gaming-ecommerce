@@ -24,9 +24,8 @@ export default function Shipping() {
       >
         Ship to a different address?
         <ChevronDown
-          className={`fill-current ease-out duration-200 ${
-            dropdown && "rotate-180"
-          }`}
+          className={`fill-current ease-out duration-200 ${dropdown && "rotate-180"
+            }`}
           aria-hidden
         />
       </div>
@@ -51,7 +50,7 @@ export default function Shipping() {
                     : false,
                 })}
                 id="shipping-country-name"
-                className="w-full bg-gray-1 rounded-full border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                className="w-full bg-gray-1 rounded-full border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               >
                 <option value="">Select a country</option>
                 <option value="australia">Australia</option>
@@ -82,7 +81,7 @@ export default function Shipping() {
                 type="text"
                 {...register("shipping.address.apartment")}
                 placeholder="Apartment, suite, unit, etc. (optional)"
-                className="rounded-full mt-5 border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                className="rounded-full mt-5 border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               />
             </div>
           </div>

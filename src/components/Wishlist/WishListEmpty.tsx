@@ -5,7 +5,7 @@ export default function WishListEmpty() {
     <div className="py-20">
       <div className="flex items-center justify-center mb-5">
         <svg
-          className="w-20 h-20 text-blue"
+          className="w-20 h-20 text-primary"
           viewBox="0 0 24 24"
           fill="none"
           xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@ export default function WishListEmpty() {
       </h2>
       <Link
         href="/shop-with-sidebar"
-        className="w-96 mx-auto flex justify-center font-medium text-white bg-blue py-[13px] px-6 rounded-full ease-out duration-200 hover:bg-blue-dark"
+        className="w-96 mx-auto flex justify-center font-medium text-white bg-primary py-[13px] px-6 rounded-full ease-out duration-200 hover:bg-primary-dark"
       >
         Continue Shopping
       </Link>

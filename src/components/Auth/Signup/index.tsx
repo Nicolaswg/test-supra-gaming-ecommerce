@@ -108,7 +108,7 @@ const Signup = () => {
                     {...register("name", { required: true })}
                     id="name"
                     placeholder="John"
-                    className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
                     required
                   />
 
@@ -129,7 +129,7 @@ const Signup = () => {
                     {...register("email", { required: true })}
                     id="email"
                     placeholder="john@gmail.com"
-                    className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
                     required
                   />
 
@@ -154,7 +154,7 @@ const Signup = () => {
                     id="password"
                     placeholder="Ingresa tu contraseña"
                     autoComplete="on"
-                    className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
                     required
                   />
 
@@ -183,7 +183,7 @@ const Signup = () => {
                     id="re-type-password"
                     placeholder="Confirma tu contraseña"
                     autoComplete="on"
-                    className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-3 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
                     required
                   />
 
@@ -197,7 +197,7 @@ const Signup = () => {
                 <button
                   type="submit"
                   className={cn(
-                    "w-full flex justify-center font-medium text-white bg-dark py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue mt-7.5 items-center gap-2",
+                    "w-full flex justify-center font-medium text-white bg-dark py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary mt-7.5 items-center gap-2",
                     {
                       "opacity-80 pointer-events-none": isLoading,
                     }
@@ -211,7 +211,7 @@ const Signup = () => {
                   ¿Ya tienes una cuenta?
                   <Link
                     href="/signin"
-                    className="text-dark ease-out duration-200 hover:text-blue pl-1"
+                    className="text-dark ease-out duration-200 hover:text-primary pl-1"
                   >
                     Inicia Sesión ahora!
                   </Link>

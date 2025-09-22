@@ -41,7 +41,7 @@ export default async function LatestPosts({ data }: PropsType) {
               </Link>
 
               <Link href={`/blogs/${blog.slug.current}`}>
-                <h3 className="text-dark leading-[22px] ease-out duration-200 mb-1.5 hover:text-blue">
+                <h3 className="text-dark leading-[22px] ease-out duration-200 mb-1.5 hover:text-primary">
                   {blog.title.length > 40
                     ? blog.title.slice(0, 40) + '...'
                     : blog.title}

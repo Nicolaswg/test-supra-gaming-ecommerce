@@ -158,7 +158,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                   <button
                     onClick={handlePreviewSlider}
                     aria-label="button for zoom"
-                    className="gallery__Image w-11 h-11 rounded-full bg-gray-1 shadow-1 flex items-center justify-center ease-out duration-200 text-dark hover:text-blue absolute top-4 lg:top-6 right-4 lg:right-6 z-50"
+                    className="gallery__Image w-11 h-11 rounded-full bg-gray-1 shadow-1 flex items-center justify-center ease-out duration-200 text-dark hover:text-primary absolute top-4 lg:top-6 right-4 lg:right-6 z-50"
                   >
                     <FullScreenIcon className="w-6 h-6" />
                   </button>
@@ -181,7 +181,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                   <button
                     onClick={() => setPreviewImg(key)}
                     key={key}
-                    className={`flex items-center justify-center w-15 sm:w-25 h-15 sm:h-25 overflow-hidden rounded-lg bg-gray-2 shadow-1 ease-out duration-200 border-2 hover:border-blue ${key === previewImg ? "border-blue" : "border-transparent"
+                    className={`flex items-center justify-center w-15 sm:w-25 h-15 sm:h-25 overflow-hidden rounded-lg bg-gray-2 shadow-1 ease-out duration-200 border-2 hover:border-primary ${key === previewImg ? "border-primary" : "border-transparent"
                       }`}
                   >
                     <Image
@@ -202,7 +202,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                   {product.name}
                 </h2>
 
-                <div className="inline-flex  rounded-full shrink-0 font-medium text-xs text-white bg-blue py-0.5 px-2.5">
+                <div className="inline-flex  rounded-full shrink-0 font-medium text-xs text-white bg-primary py-0.5 px-2.5">
                   30% OFF
                 </div>
               </div>
@@ -326,8 +326,8 @@ const ShopDetails = ({ product }: { product: Product }) => {
                               toggleSelectedAttribute(itemIndex, value.id)
                             }
                             className={`px-2.5 py-1 h-6 items-center inline-flex justify-center rounded-full text-sm font-medium transition-all duration-200 border ${selectedAttributes[itemIndex] === value.id
-                              ? "bg-blue text-white border-blue shadow-sm"
-                              : "bg-white text-dark border-gray-3 hover:border-blue hover:text-blue"
+                              ? "bg-primary text-white border-primary shadow-sm"
+                              : "bg-white text-dark border-gray-3 hover:border-primary hover:text-primary"
                               }`}
                           >
                             {value.title}
@@ -342,7 +342,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                   <div className="flex items-center border rounded-full border-gray-3">
                     <button
                       aria-label="button for remove product"
-                      className="flex items-center justify-center w-12 h-12 duration-200 ease-out hover:text-blue"
+                      className="flex items-center justify-center w-12 h-12 duration-200 ease-out hover:text-primary"
                       onClick={() => quantity > 1 && setQuantity(quantity - 1)}
                     >
                       <MinusIcon />
@@ -355,7 +355,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                     <button
                       onClick={() => setQuantity(quantity + 1)}
                       aria-label="button for add product"
-                      className="flex items-center justify-center w-12 h-12 duration-200 ease-out hover:text-blue"
+                      className="flex items-center justify-center w-12 h-12 duration-200 ease-out hover:text-primary"
                     >
                       <PlusIcon />
                     </button>
@@ -363,7 +363,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
 
                   <button
                     onClick={() => handleCheckout()}
-                    className="inline-flex py-3 font-medium text-white duration-200 ease-out rounded-full bg-blue px-7 hover:bg-blue-dark"
+                    className="inline-flex py-3 font-medium text-white duration-200 ease-out rounded-full bg-primary px-7 hover:bg-primary-dark"
                   >
                     Comprar ahora
                   </button>
@@ -382,7 +382,7 @@ const ShopDetails = ({ product }: { product: Product }) => {
                   >
                     {mounted ? (
                       isProductInWishlist ? (
-                        <HeartSolid className="w-5 h-5 text-blue" />
+                        <HeartSolid className="w-5 h-5 text-primary" />
                       ) : (
                         <HeartIcon className="w-5 h-5" />
                       )

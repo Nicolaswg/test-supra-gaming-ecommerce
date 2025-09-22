@@ -14,7 +14,7 @@ export default function ClearFilters() {
     <div className="px-5 py-4 bg-white rounded-lg shadow-1">
       <div className="flex items-center justify-between">
         <p>Filtros:</p>
-        <button className="text-blue" onClick={handleClear}>
+        <button className="text-primary" onClick={handleClear}>
           Limpiar Filtros
         </button>
       </div>

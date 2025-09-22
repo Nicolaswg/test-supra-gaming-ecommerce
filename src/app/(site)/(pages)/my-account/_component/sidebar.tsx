@@ -69,7 +69,7 @@ export default function Sidebar() {
                   callbackUrl: '/signin',
                 })
               }
-              className="flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white text-dark-2 bg-gray-1"
+              className="flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-primary hover:text-white text-dark-2 bg-gray-1"
             >
               <LogOutIcon />
               Logout
@@ -88,7 +88,7 @@ function Link({ children, href }: { children: React.ReactNode; href: string }) {
   return (
     <NextLink
       href={href}
-      className="flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-blue hover:text-white text-dark-2 bg-gray-1 data-[active=true]:bg-blue data-[active=true]:text-white"
+      className="flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-primary hover:text-white text-dark-2 bg-gray-1 data-[active=true]:bg-primary data-[active=true]:text-white"
       data-active={isActive}
     >
       {children}

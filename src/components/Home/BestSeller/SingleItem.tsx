@@ -108,7 +108,7 @@ const SingleItem = ({ item }: { item: Product }) => {
             <p className="text-custom-sm">({item.reviews.length})</p>
           </div> */}
 
-          <h3 className="font-medium text-dark ease-out text-base duration-200 hover:text-blue mb-1.5 line-clamp-1">
+          <h3 className="font-medium text-dark ease-out text-base duration-200 hover:text-primary mb-1.5 line-clamp-1">
             <Link href={`/products/${item?.slug?.current}`}>{item.name}</Link>
           </h3>
 

@@ -36,7 +36,7 @@ const SingleItem = ({ item }: any) => {
           </div>
 
           <div className="min-w-0 flex-1">
-            <h3 className="duration-200 ease-out text-dark hover:text-blue font-medium">
+            <h3 className="duration-200 ease-out text-dark hover:text-primary font-medium">
               <Link href={`/products/${item.slug}`} className="hover:underline">
                 {item.name}
               </Link>
@@ -55,7 +55,7 @@ const SingleItem = ({ item }: any) => {
             onClick={() => handleDecreaseQuantity()}
             aria-label="Decrease quantity"
             className={cn(
-              "flex items-center justify-center w-11.5 h-11.5 ease-out duration-200 hover:text-blue",
+              "flex items-center justify-center w-11.5 h-11.5 ease-out duration-200 hover:text-primary",
               {
                 "opacity-50 pointer-events-none": item.quantity === 1,
               }
@@ -72,7 +72,7 @@ const SingleItem = ({ item }: any) => {
           <button
             onClick={() => handleIncreaseQuantity()}
             aria-label="Increase quantity"
-            className="flex items-center justify-center w-11.5 h-11.5 ease-out duration-200 hover:text-blue"
+            className="flex items-center justify-center w-11.5 h-11.5 ease-out duration-200 hover:text-primary"
           >
             <PlusIcon />
           </button>

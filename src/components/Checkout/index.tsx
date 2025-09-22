@@ -72,14 +72,14 @@ export default function CheckoutMain() {
     return (
       <div className="py-20 mt-40">
         <div className="flex items-center justify-center mb-5">
-          <EmptyCartIcon className="mx-auto text-blue" />
+          <EmptyCartIcon className="mx-auto text-primary" />
         </div>
         <h2 className="pb-5 text-2xl font-medium text-center text-dark">
           No items found in your cart to checkout.
         </h2>
         <Link
           href="/shop-with-sidebar"
-          className="w-96 mx-auto flex justify-center font-medium text-white bg-blue py-[13px] px-6 rounded-md ease-out duration-200 hover:bg-blue-dark"
+          className="w-96 mx-auto flex justify-center font-medium text-white bg-primary py-[13px] px-6 rounded-md ease-out duration-200 hover:bg-primary-dark"
         >
           Continue Shopping
         </Link>

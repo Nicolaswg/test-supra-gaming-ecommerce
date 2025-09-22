@@ -51,7 +51,7 @@ export function BillingAddress({ userId }: PropsType) {
           <p className="font-medium text-xl text-dark">Billing Address</p>
 
           <button
-            className="text-dark ease-out duration-200 hover:text-blue"
+            className="text-dark ease-out duration-200 hover:text-primary"
             onClick={openAddressModal}
           >
             <span className="sr-only">Open edit info modal</span>
@@ -84,7 +84,7 @@ export function BillingAddress({ userId }: PropsType) {
             </div> : <div className='flex flex-col gap-4 items-center'>
               <p className="text-center text-dark-4">No address set yet</p>
               <button
-                className="inline-flex justify-center font-medium text-white bg-dark py-3 px-6 rounded-lg ease-out duration-200 hover:bg-blue items-center gap-2"
+                className="inline-flex justify-center font-medium text-white bg-dark py-3 px-6 rounded-lg ease-out duration-200 hover:bg-primary items-center gap-2"
                 onClick={openAddressModal}
               >
                 Add Address</button>

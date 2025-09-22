@@ -35,7 +35,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
               <span className="flex items-center gap-3 mb-4">
                 <Link
                   href="#"
-                  className="ease-out duration-200 hover:text-blue"
+                  className="ease-out duration-200 hover:text-primary"
                 >
                   {blogData.publishedAt &&
                     new Date(blogData.publishedAt)
@@ -50,7 +50,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
 
                 <Link
                   href="#"
-                  className="ease-out duration-200 hover:text-blue"
+                  className="ease-out duration-200 hover:text-primary"
                 >
                   300k Views
                 </Link>
@@ -72,7 +72,7 @@ const BlogDetails = ({ blogData }: { blogData: Blog }) => {
                     {blogData?.tags?.map((tag, key) => (
                       <li key={key}>
                         <Link
-                          className="inline-flex hover:text-white border border-gray-3 bg-white py-2 px-4 rounded-full ease-out duration-200 hover:bg-blue hover:border-blue capitalize"
+                          className="inline-flex hover:text-white border border-gray-3 bg-white py-2 px-4 rounded-full ease-out duration-200 hover:bg-primary hover:border-primary capitalize"
                           href={`/blogs/tags/${tag}`}
                         >
                           {tag}

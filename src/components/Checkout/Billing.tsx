@@ -12,7 +12,7 @@ export default function Billing() {
 
   return (
     <div>
-        <h2 className="font-medium text-dark text-xl sm:text-2xl mb-5.5">Billing details</h2>
+      <h2 className="font-medium text-dark text-xl sm:text-2xl mb-5.5">Billing details</h2>
 
       <div className="bg-white shadow-1 rounded-[10px] p-4 sm:p-8.5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 mb-5">
@@ -81,7 +81,7 @@ export default function Billing() {
             <select
               {...register("billing.regionName", { required: true })}
               id="regionName"
-              className="w-full bg-gray-1 rounded-full border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="w-full bg-gray-1 rounded-full border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               required
             >
               <option value="" hidden>
@@ -123,7 +123,7 @@ export default function Billing() {
               type="text"
               {...register("billing.address.apartment")}
               placeholder="Apartment, suite, unit, etc. (optional)"
-              className="rounded-full mt-5 border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="rounded-full mt-5 border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
             />
           </div>
         </div>
@@ -218,7 +218,7 @@ export default function Billing() {
                 className="sr-only peer"
               />
 
-              <div className="rounded border size-4 text-white flex items-center justify-center border-gray-4 peer-checked:bg-blue peer-checked:border-blue [&>svg]:opacity-0 peer-checked:[&>svg]:opacity-100">
+              <div className="rounded border size-4 text-white flex items-center justify-center border-gray-4 peer-checked:bg-primary peer-checked:border-primary [&>svg]:opacity-0 peer-checked:[&>svg]:opacity-100">
                 <CheckMarkIcon />
               </div>
 

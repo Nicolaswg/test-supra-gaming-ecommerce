@@ -106,7 +106,7 @@ export function AccountInfo() {
             <select
               id="country"
               {...register('country', { required: true })}
-              className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
             >
               <option value="" hidden>
                 Select your country
@@ -129,7 +129,7 @@ export function AccountInfo() {
           )}
         </div>
 
-        <button className={cn("inline-flex items-center gap-2 font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark", {
+        <button className={cn("inline-flex items-center gap-2 font-medium text-white bg-primary py-3 px-7 rounded-md ease-out duration-200 hover:bg-primary-dark", {
           "opacity-80 pointer-events-none": isLoading,
         })}
           disabled={isLoading}

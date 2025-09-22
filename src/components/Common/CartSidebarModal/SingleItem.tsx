@@ -18,7 +18,7 @@ const SingleItem = ({ item, toggle }: any) => {
         </div>
 
         <div>
-          <h3 className="mb-1 font-medium duration-200 ease-out text-dark hover:text-blue">
+          <h3 className="mb-1 font-medium duration-200 ease-out text-dark hover:text-primary">
             <Link onClick={toggle} href={`/products/${item.slug}`}>
               {" "}
               {item.name} ({item.quantity})

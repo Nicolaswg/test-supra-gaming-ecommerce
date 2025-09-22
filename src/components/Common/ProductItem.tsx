@@ -117,7 +117,7 @@ const ProductItem = ({ item }: { item: Product }) => {
               handleQuickViewUpdate();
             }}
             aria-label="button for quick view"
-            className="flex items-center justify-center w-9 h-9 rounded-full shadow-1 ease-out duration-200 text-dark bg-white hover:text-blue"
+            className="flex items-center justify-center w-9 h-9 rounded-full shadow-1 ease-out duration-200 text-dark bg-white hover:text-primary"
           >
             <EyeIcon className="w-5 h-5" />
           </button>
@@ -127,7 +127,7 @@ const ProductItem = ({ item }: { item: Product }) => {
           ) : (
             <button
               onClick={() => handleAddToCart()}
-              className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-full bg-blue text-white ease-out duration-200 hover:bg-blue-dark"
+              className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-full bg-primary text-white ease-out duration-200 hover:bg-primary-dark"
             >
               Add to cart
             </button>
@@ -136,7 +136,7 @@ const ProductItem = ({ item }: { item: Product }) => {
           <button
             onClick={handleToggleWishList}
             aria-label="button for favorite select"
-            className={`flex items-center justify-center w-9 h-9 rounded-full shadow-1 ease-out duration-200 text-dark bg-white hover:text-blue`}
+            className={`flex items-center justify-center w-9 h-9 rounded-full shadow-1 ease-out duration-200 text-dark bg-white hover:text-primary`}
           >
             {mounted ? (
               isAlradyWishListed ? (
@@ -150,7 +150,7 @@ const ProductItem = ({ item }: { item: Product }) => {
       </div>
 
       <h3
-        className="font-medium text-dark ease-out duration-200 hover:text-blue mb-1.5 line-clamp-1"
+        className="font-medium text-dark ease-out duration-200 hover:text-primary mb-1.5 line-clamp-1"
         onClick={() => handleProductDetails()}
       >
         <Link

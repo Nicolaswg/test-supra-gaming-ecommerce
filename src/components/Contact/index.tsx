@@ -44,17 +44,17 @@ const Contact = () => {
               <div className="p-4 sm:p-7.5">
                 <div className="flex flex-col gap-4">
                   <p className="flex items-center gap-4">
-                    <EmailIcon className="w-6 h-6 text-blue" />
+                    <EmailIcon className="w-6 h-6 text-primary" />
                     Email: jamse@example.com
                   </p>
 
                   <p className="flex items-center gap-4">
-                    <CallIcon className="w-6 h-6 text-blue" />
+                    <CallIcon className="w-6 h-6 text-primary" />
                     Phone: 1234 567890
                   </p>
 
                   <p className="flex gap-4">
-                    <MapIcon className="w-6 h-6 text-blue shrink-0" />
+                    <MapIcon className="w-6 h-6 text-primary shrink-0" />
                     Address: 7398 Smoke Ranch RoadLas Vegas, Nevada 89128
                   </p>
                 </div>
@@ -160,7 +160,7 @@ const Contact = () => {
                     id="message"
                     rows={5}
                     placeholder="Type your message"
-                    className="w-full p-5 duration-200 border rounded-2xl border-gray-3 bg-gray-1 placeholder:text-dark-5 outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                    className="w-full p-5 duration-200 border rounded-2xl border-gray-3 bg-gray-1 placeholder:text-dark-5 outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
                   />
 
                   {formState.errors.message && (
@@ -173,7 +173,7 @@ const Contact = () => {
                 <button
                   type="submit"
                   className={cn(
-                    "inline-flex items-center gap-2 font-medium text-white bg-blue py-3 px-7 rounded-full ease-out duration-200 hover:bg-blue-dark",
+                    "inline-flex items-center gap-2 font-medium text-white bg-primary py-3 px-7 rounded-full ease-out duration-200 hover:bg-primary-dark",
                     {
                       "opacity-80 pointer-events-none": isLoading,
                     }

@@ -26,7 +26,7 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
         <span className="flex items-center gap-3 mb-2.5">
           <Link
             href="#"
-            className="text-custom-sm ease-out duration-200 hover:text-blue"
+            className="text-custom-sm ease-out duration-200 hover:text-primary"
           >
             {blog.publishedAt &&
               new Date(blog.publishedAt)
@@ -41,19 +41,19 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
 
           <Link
             href="#"
-            className="text-custom-sm ease-out duration-200 hover:text-blue"
+            className="text-custom-sm ease-out duration-200 hover:text-primary"
           >
             100k Views
           </Link>
         </span>
 
-        <h2 className="font-medium text-dark text-lg sm:text-xl ease-out duration-200 mb-4 hover:text-blue">
+        <h2 className="font-medium text-dark text-lg sm:text-xl ease-out duration-200 mb-4 hover:text-primary">
           <Link href={`/blogs/${blog?.slug.current}`}>{blog.title}</Link>
         </h2>
 
         <Link
           href={`/blogs/${blog?.slug.current}`}
-          className="text-custom-sm inline-flex items-center gap-2 py-2 ease-out duration-200 hover:text-blue"
+          className="text-custom-sm inline-flex items-center gap-2 py-2 ease-out duration-200 hover:text-primary"
         >
           Read More
           <ArrowRightIcon />

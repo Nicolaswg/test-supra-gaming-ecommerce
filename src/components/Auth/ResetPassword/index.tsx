@@ -134,7 +134,7 @@ export default function ResetPassword({ token }: { token: string }) {
                   <button
                     type="submit"
                     className={cn(
-                      "w-full flex justify-center font-medium text-white bg-dark py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue mt-7.5 items-center gap-2",
+                      "w-full flex justify-center font-medium text-white bg-dark py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary mt-7.5 items-center gap-2",
                       {
                         "opacity-80 pointer-events-none": loading,
                       }

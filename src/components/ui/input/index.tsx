@@ -27,7 +27,7 @@ export function InputGroup({
         id={id}
         {...props}
         className={cn(
-          "rounded-full border border-gray-3 h-[50px] bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20 disabled:opacity-70 disabled:bg-gray-3/80",
+          "rounded-full border border-gray-3 h-[50px] bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20 disabled:opacity-70 disabled:bg-gray-3/80",
           className,
           {
             "border-red": error,

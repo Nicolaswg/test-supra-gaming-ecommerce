@@ -148,9 +148,9 @@ const ShopWithSidebar = ({ data }: PropsType) => {
                       onClick={() => setProductStyle("grid")}
                       aria-label="button for product grid tab"
                       className={`${productStyle === "grid"
-                        ? "bg-blue border-blue text-white"
+                        ? "bg-primary border-primary text-white"
                         : "text-dark bg-gray-1 border-gray-3"
-                        } flex items-center justify-center w-10.5 h-9 rounded-lg border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
+                        } flex items-center justify-center w-10.5 h-9 rounded-lg border ease-out duration-200 hover:bg-primary hover:border-primary hover:text-white`}
                     >
                       <FourSquaresIcon />
                     </button>
@@ -159,9 +159,9 @@ const ShopWithSidebar = ({ data }: PropsType) => {
                       onClick={() => setProductStyle("list")}
                       aria-label="button for product list tab"
                       className={`${productStyle === "list"
-                        ? "bg-blue border-blue text-white"
+                        ? "bg-primary border-primary text-white"
                         : "text-dark bg-gray-1 border-gray-3"
-                        } flex items-center justify-center w-10.5 h-9 rounded-lg border ease-out duration-200 hover:bg-blue hover:border-blue hover:text-white`}
+                        } flex items-center justify-center w-10.5 h-9 rounded-lg border ease-out duration-200 hover:bg-primary hover:border-primary hover:text-white`}
                     >
                       <TwoSquaresIcon />
                     </button>

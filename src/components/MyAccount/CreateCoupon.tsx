@@ -45,7 +45,7 @@ const CreateCoupon = () => {
             <input
               type="text"
               name="name"
-              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               placeholder="Black Friday"
               required
             />
@@ -59,7 +59,7 @@ const CreateCoupon = () => {
             <input
               type="number"
               name="percent_off"
-              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               placeholder="10"
               required
             />
@@ -75,7 +75,7 @@ const CreateCoupon = () => {
             <input
               type="text"
               name="duration"
-              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               placeholder="repeating, forever or once"
               required
             />
@@ -89,7 +89,7 @@ const CreateCoupon = () => {
             <input
               type="number"
               name="duration_in_months"
-              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               required
             />
           </div>
@@ -104,7 +104,7 @@ const CreateCoupon = () => {
             <input
               type="number"
               name="max_redemptions"
-              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+              className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               required
             />
           </div>
@@ -112,7 +112,7 @@ const CreateCoupon = () => {
 
         <button
           type="submit"
-          className="inline-flex font-medium text-white bg-blue py-3 px-7 rounded-full ease-out duration-200 hover:bg-blue-dark"
+          className="inline-flex font-medium text-white bg-primary py-3 px-7 rounded-full ease-out duration-200 hover:bg-primary-dark"
         >
           Create
         </button>

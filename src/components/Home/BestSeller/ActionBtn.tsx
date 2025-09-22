@@ -19,11 +19,10 @@ const ActionBtn = ({ handleClick, text, icon, addedToWishlist }: any) => {
         onMouseLeave={() => setShow(false)}
         onClick={handleClick}
         aria-label="button for quick view"
-        className={`relative border border-gray-2 flex items-center justify-center w-9 h-9 rounded-full shadow-xs ease-out duration-200 z-10 ${
-          icon === "check-out"
-            ? "bg-blue text-white"
-            : "text-dark bg-white hover:text-white hover:bg-blue"
-        }`}
+        className={`relative border border-gray-2 flex items-center justify-center w-9 h-9 rounded-full shadow-xs ease-out duration-200 z-10 ${icon === "check-out"
+            ? "bg-primary text-white"
+            : "text-dark bg-white hover:text-white hover:bg-primary"
+          }`}
       >
         {icon === "quick-view" && <EyeIcon className="w-5 h-5" />}
 
@@ -61,9 +60,8 @@ const ActionBtn = ({ handleClick, text, icon, addedToWishlist }: any) => {
       </button>
 
       <p
-        className={`bg-white text-dark text-xs leading-5 font-medium rounded-full px-3 py-1.5 relative shadow-1 self-end capitalize duration-500 ${
-          show ? "translate-x-0 opacity-100" : "translate-x-5 opacity-0"
-        }`}
+        className={`bg-white text-dark text-xs leading-5 font-medium rounded-full px-3 py-1.5 relative shadow-1 self-end capitalize duration-500 ${show ? "translate-x-0 opacity-100" : "translate-x-5 opacity-0"
+          }`}
       >
         {addedToWishlist ? <>Added</> : <>{text}</>}
         <span className="inline-block absolute -right-3.5 top-2.5 w-0 h-0 border-[7px] border-solid border-transparent border-l-white"></span>

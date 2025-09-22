@@ -25,7 +25,7 @@ const CheckoutSuccess = () => {
           <>
             <div className="bg-white rounded-xl shadow-1 px-4 py-10 sm:py-15 lg:py-20 xl:py-25">
               <div className="text-center">
-                <h2 className="font-bold text-blue text-4xl lg:text-[45px] lg:leading-[57px] mb-5">
+                <h2 className="font-bold text-primary text-4xl lg:text-[45px] lg:leading-[57px] mb-5">
                   Gracias!
                 </h2>
 
@@ -69,7 +69,7 @@ const CheckoutSuccess = () => {
           <>
             <div className="bg-white rounded-xl shadow-1 px-4 py-10 sm:py-15 lg:py-20 xl:py-25">
               <div className="text-center">
-                <h2 className="font-bold text-blue text-4xl lg:text-[45px] lg:leading-[57px] mb-5">
+                <h2 className="font-bold text-primary text-4xl lg:text-[45px] lg:leading-[57px] mb-5">
                   Gracias!
                 </h2>
 
@@ -85,7 +85,7 @@ const CheckoutSuccess = () => {
                 <div className="flex justify-center gap-5">
                   <Link
                     href={`${session?.user ? "/my-account" : "/signin"}`}
-                    className="inline-flex items-center gap-2 font-medium text-white bg-blue-light py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue-dark"
+                    className="inline-flex items-center gap-2 font-medium text-white bg-primary-light py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary-dark"
                   >
                     <ArrowLeftIcon />
                     {`${session?.user ? "Mi cuenta" : "Iniciar Sesión"}`}
@@ -93,7 +93,7 @@ const CheckoutSuccess = () => {
 
                   <Link
                     href="/shop-with-sidebar"
-                    className="inline-flex items-center gap-2 font-medium text-white bg-blue py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue-dark"
+                    className="inline-flex items-center gap-2 font-medium text-white bg-primary py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary-dark"
                   >
                     Continuar Comprando
                     <ArrowLeftIcon className="rotate-180" />

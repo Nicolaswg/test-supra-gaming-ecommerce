@@ -30,7 +30,7 @@ const Error = () => {
 
               <Link
                 href="/"
-                className="inline-flex items-center gap-2 font-medium text-white bg-blue py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue-dark"
+                className="inline-flex items-center gap-2 font-medium text-white bg-primary py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary-dark"
               >
                 <ArrowLeftIcon />
                 Back to Home

@@ -68,7 +68,7 @@ const SingleItem = ({ item }: any) => {
 
           {/* Product Name */}
           <div className="flex-1">
-            <h3 className="text-base font-medium text-dark ease-out duration-200 hover:text-blue line-clamp-2">
+            <h3 className="text-base font-medium text-dark ease-out duration-200 hover:text-primary line-clamp-2">
               <Link href={`/products/${item.slug.current}`}>{item.name}</Link>
             </h3>
           </div>
@@ -99,11 +99,10 @@ const SingleItem = ({ item }: any) => {
         <button
           onClick={() => handleAddToCart()}
           disabled={!item?.status}
-          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${
-            item?.status
-              ? "text-white bg-blue hover:bg-blue-dark shadow-sm hover:shadow-md"
+          className={`inline-flex items-center gap-2 px-4 py-2 rounded-full font-medium text-sm transition-all duration-200 ${item?.status
+              ? "text-white bg-primary hover:bg-primary-dark shadow-sm hover:shadow-md"
               : "text-gray-4 bg-gray-2 cursor-not-allowed"
-          }`}
+            }`}
         >
           Add to Cart
         </button>

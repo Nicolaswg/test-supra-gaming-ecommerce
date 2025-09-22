@@ -40,7 +40,7 @@ export default function QuickLinks() {
           quickLinks.map((link) => (
             <li key={link.id}>
               <Link
-                className="ease-out duration-200 hover:text-blue"
+                className="ease-out duration-200 hover:text-primary"
                 href={link.href}
               >
                 {link.label}

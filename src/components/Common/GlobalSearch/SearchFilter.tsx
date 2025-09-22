@@ -20,11 +20,10 @@ export default function SearchFilter({ filterValue, setFilterValue }: any) {
         <button
           key={item?.value}
           onClick={() => setFilterValue(item?.value)}
-          className={`inline-flex h-10 items-center justify-center rounded-lg border px-3.5 py-2.5 text-base font-medium ${
-            filterValue === item?.value
-              ? "border-blue bg-[#E1E8FF] text-blue"
-              : "border-gray-5 bg-white text-dark hover:border-blue hover:bg-[#E1E8FF]"
-          }`}
+          className={`inline-flex h-10 items-center justify-center rounded-lg border px-3.5 py-2.5 text-base font-medium ${filterValue === item?.value
+              ? "border-primary bg-[#E1E8FF] text-primary"
+              : "border-gray-5 bg-white text-dark hover:border-primary hover:bg-[#E1E8FF]"
+            }`}
         >
           {item?.label}
         </button>

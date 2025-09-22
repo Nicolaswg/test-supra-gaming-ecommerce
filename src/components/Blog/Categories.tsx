@@ -18,10 +18,10 @@ const Categories = async () => {
               <Link
                 key={i}
                 href={`/blogs/categories/${category.slug.current}`}
-                className="group flex items-center justify-between ease-out duration-200 text-dark hover:text-blue capitalize"
+                className="group flex items-center justify-between ease-out duration-200 text-dark hover:text-primary capitalize"
               >
                 {category.title}
-                <span className="inline-flex rounded-full bg-gray-2 text-custom-xs w-7 h-7 justify-center items-center ease-out duration-200 group-hover:text-white group-hover:bg-blue">
+                <span className="inline-flex rounded-full bg-gray-2 text-custom-xs w-7 h-7 justify-center items-center ease-out duration-200 group-hover:text-white group-hover:bg-primary">
                   {category?.postCount && category?.postCount < 10
                     ? "0" + category?.postCount
                     : category?.postCount}

@@ -16,7 +16,7 @@ export function RadioInput({ label, spacing = 0.875, ...rest }: PropsType) {
       >
         <input type="radio" className="peer sr-only" {...rest} id={id} />
 
-        <span className="flex size-4 items-center justify-center rounded-full border border-gray-4 peer-checked:border-4 peer-checked:border-blue dark:border-dark-3" />
+        <span className="flex size-4 items-center justify-center rounded-full border border-gray-4 peer-checked:border-4 peer-checked:border-primary dark:border-dark-3" />
 
         {label}
       </label>

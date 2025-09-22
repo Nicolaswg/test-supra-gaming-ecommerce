@@ -25,7 +25,7 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               <li className="flex gap-4.5">
                 <span className="shrink-0">
-                  <MapIcon className="w-6 h-6 text-blue" />
+                  <MapIcon className="w-6 h-6 text-primary" />
                 </span>
                 685 Market Street,Las Vegas, LA 95820,United States.
               </li>
@@ -35,7 +35,7 @@ const Footer = () => {
                   href="tel:+099 532-786-9843"
                   className="flex items-center gap-4.5"
                 >
-                  <CallIcon className="w-6 h-6 text-blue" />
+                  <CallIcon className="w-6 h-6 text-primary" />
                   (+099) 532-786-9843
                 </Link>
               </li>
@@ -45,7 +45,7 @@ const Footer = () => {
                   href="mailto:support@example.com"
                   className="flex items-center gap-4.5"
                 >
-                  <EmailIcon className="w-6 h-6 text-blue" />
+                  <EmailIcon className="w-6 h-6 text-primary" />
                   support@example.com
                 </Link>
               </li>
@@ -55,7 +55,7 @@ const Footer = () => {
             <div className="flex items-center gap-4 mt-7.5">
               <Link
                 href="#"
-                className="flex duration-200 ease-out hover:text-blue"
+                className="flex duration-200 ease-out hover:text-primary"
               >
                 <span className="sr-only">Facebook link</span>
                 <FacebookIcon />
@@ -63,7 +63,7 @@ const Footer = () => {
 
               <Link
                 href="#"
-                className="flex duration-200 ease-out hover:text-blue"
+                className="flex duration-200 ease-out hover:text-primary"
               >
                 <span className="sr-only">Twitter link</span>
                 <TwitterIcon />
@@ -71,7 +71,7 @@ const Footer = () => {
 
               <Link
                 href="#"
-                className="flex duration-200 ease-out hover:text-blue"
+                className="flex duration-200 ease-out hover:text-primary"
               >
                 <span className="sr-only">Instagram link</span>
                 <InstagramIcon />
@@ -80,7 +80,7 @@ const Footer = () => {
               <Link
                 href="#"
                 aria-label="Linkedin Social Link"
-                className="flex duration-200 ease-out hover:text-blue"
+                className="flex duration-200 ease-out hover:text-primary"
               >
                 <span className="sr-only">LinkedIn link</span>
                 <LinkedInIcon />

@@ -63,7 +63,7 @@ const OrderSummary = () => {
           {/* <!-- checkout button --> */}
           <Link
             href="/checkout"
-            className="w-full flex justify-center font-medium text-white bg-blue py-3 px-6 rounded-full ease-out duration-200 hover:bg-blue-dark mt-7.5"
+            className="w-full flex justify-center font-medium text-white bg-primary py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary-dark mt-7.5"
           >
             Process to Checkout
           </Link>

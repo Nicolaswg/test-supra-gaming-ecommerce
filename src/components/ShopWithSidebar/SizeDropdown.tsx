@@ -67,7 +67,7 @@ export default function SizeDropdown({ availableSizes }: PropsType) {
               onChange={(e) => handleSizes(size, e.target.checked)}
             />
 
-            <span className="text-custom-sm uppercase py-[5px] px-3.5 text-dark bg-gray-2 hover:bg-gray-3 peer-checked:hover:bg-blue peer-checked:bg-blue peer-checked:text-white rounded-full">
+            <span className="text-custom-sm uppercase py-[5px] px-3.5 text-dark bg-gray-2 hover:bg-gray-3 peer-checked:hover:bg-primary peer-checked:bg-primary peer-checked:text-white rounded-full">
               {size}
             </span>
           </label>

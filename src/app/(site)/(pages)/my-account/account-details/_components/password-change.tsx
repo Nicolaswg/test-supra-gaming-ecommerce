@@ -135,7 +135,7 @@ export function PasswordChange() {
           )}
         />
 
-        <button className={cn("inline-flex items-center gap-2 font-medium text-white bg-blue py-3 px-7 rounded-md ease-out duration-200 hover:bg-blue-dark", {
+        <button className={cn("inline-flex items-center gap-2 font-medium text-white bg-primary py-3 px-7 rounded-md ease-out duration-200 hover:bg-primary-dark", {
           "opacity-80 pointer-events-none": isLoading,
         })}
           disabled={isLoading}

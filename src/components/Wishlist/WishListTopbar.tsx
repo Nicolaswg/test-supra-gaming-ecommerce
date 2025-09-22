@@ -13,7 +13,7 @@ export default function WishListTopbar() {
   return (
     <div className="flex flex-wrap items-center justify-between gap-5 mb-7.5">
       <h2 className="font-medium text-dark text-2xl">Your Wishlist</h2>
-      <button className="text-blue" onClick={handleRemoveFromWishlist}>Clear Wishlist Cart</button>
+      <button className="text-primary" onClick={handleRemoveFromWishlist}>Clear Wishlist Cart</button>
     </div>
   )
 }

@@ -41,7 +41,7 @@ const BlogDetailsWithSidebar = ({ blogData }: { blogData: Blog }) => {
                 <span className="flex items-center gap-3 mb-4">
                   <Link
                     href="#"
-                    className="duration-200 ease-out hover:text-blue"
+                    className="duration-200 ease-out hover:text-primary"
                   >
                     {blogData.publishedAt &&
                       new Date(blogData.publishedAt)
@@ -56,7 +56,7 @@ const BlogDetailsWithSidebar = ({ blogData }: { blogData: Blog }) => {
 
                   <Link
                     href="#"
-                    className="duration-200 ease-out hover:text-blue"
+                    className="duration-200 ease-out hover:text-primary"
                   >
                     300k Views
                   </Link>
@@ -78,7 +78,7 @@ const BlogDetailsWithSidebar = ({ blogData }: { blogData: Blog }) => {
                       {blogData?.tags?.map((tag, key) => (
                         <li key={key}>
                           <Link
-                            className="inline-flex px-4 py-2 capitalize duration-200 ease-out bg-white border rounded-full hover:text-white border-gray-3 hover:bg-blue hover:border-blue"
+                            className="inline-flex px-4 py-2 capitalize duration-200 ease-out bg-white border rounded-full hover:text-white border-gray-3 hover:bg-primary hover:border-primary"
                             href={`/blogs/tags/${tag}`}
                           >
                             {tag}

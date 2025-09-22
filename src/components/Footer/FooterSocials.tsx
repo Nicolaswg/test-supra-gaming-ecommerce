@@ -36,7 +36,7 @@ export default function FooterSocials() {
           <Link
             key={social.id}
             href={social.href}
-            className="flex ease-out duration-200 hover:text-blue"
+            className="flex ease-out duration-200 hover:text-primary"
           >
             <span className="sr-only">{social.name} link</span>
             <social.icon />

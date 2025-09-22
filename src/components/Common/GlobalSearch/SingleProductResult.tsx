@@ -33,7 +33,7 @@ export default function SingleProductResult({
           </div>
         )}
         <div className="ml-3 w-full">
-          <h4 className="text-base font-semibold text-dark duration-300 group-hover:text-blue sm:text-lg">
+          <h4 className="text-base font-semibold text-dark duration-300 group-hover:text-primary sm:text-lg">
             <Highlight attribute="name" hit={hit} />
           </h4>
 

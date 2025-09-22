@@ -34,7 +34,7 @@ const LatestProducts = async () => {
                 </Link>
 
                 <div>
-                  <h3 className="font-medium text-dark mb-1 ease-out duration-200 hover:text-blue">
+                  <h3 className="font-medium text-dark mb-1 ease-out duration-200 hover:text-primary">
                     <Link href={`/products/${product?.slug?.current}`}>
                       {" "}
                       {product?.name}{" "}

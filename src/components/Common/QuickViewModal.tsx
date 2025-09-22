@@ -112,7 +112,7 @@ const QuickViewModal = () => {
                         <button
                           onClick={() => setActivePreview(key)}
                           key={key}
-                          className={`flex items-center justify-center w-20 h-20 overflow-hidden rounded-lg bg-gray-1 ease-out duration-200 hover:border-2 hover:border-blue ${activePreview === key && "border-2 border-blue"
+                          className={`flex items-center justify-center w-20 h-20 overflow-hidden rounded-lg bg-gray-1 ease-out duration-200 hover:border-2 hover:border-primary ${activePreview === key && "border-2 border-primary"
                             }`}
                         >
                           <Image
@@ -130,7 +130,7 @@ const QuickViewModal = () => {
                       <div>
                         <button
                           onClick={handlePreviewSlider}
-                          className="gallery__Image w-10 h-10 rounded-full bg-white shadow-1 flex items-center justify-center ease-out duration-200 text-dark hover:text-blue absolute top-4 lg:top-8 right-4 lg:right-8 z-50"
+                          className="gallery__Image w-10 h-10 rounded-full bg-white shadow-1 flex items-center justify-center ease-out duration-200 text-dark hover:text-primary absolute top-4 lg:top-8 right-4 lg:right-8 z-50"
                         >
                           <span className="sr-only">Fullscreen</span>
                           <FullScreenIcon />
@@ -227,7 +227,7 @@ const QuickViewModal = () => {
                           onClick={() =>
                             quantity > 1 && setQuantity(quantity - 1)
                           }
-                          className="flex items-center justify-center w-10 h-10   text-dark ease-out duration-200 hover:text-blue"
+                          className="flex items-center justify-center w-10 h-10   text-dark ease-out duration-200 hover:text-primary"
                           disabled={quantity <= 1}
                         >
                           <span className="sr-only">Decrease quantity</span>
@@ -243,7 +243,7 @@ const QuickViewModal = () => {
 
                         <button
                           onClick={() => setQuantity(quantity + 1)}
-                          className="flex items-center justify-center w-10 h-10   text-dark ease-out duration-200 hover:text-blue"
+                          className="flex items-center justify-center w-10 h-10   text-dark ease-out duration-200 hover:text-primary"
                         >
                           <span className="sr-only">Increase quantity</span>
                           <PlusIcon className="w-4 text-gray-7 h-4" />
@@ -256,7 +256,7 @@ const QuickViewModal = () => {
                     <button
                       disabled={quantity < 1}
                       onClick={() => handleAddToCart()}
-                      className="inline-flex py-3 font-medium text-white duration-200 ease-out rounded-full bg-blue px-7 hover:bg-blue-dark"
+                      className="inline-flex py-3 font-medium text-white duration-200 ease-out rounded-full bg-primary px-7 hover:bg-primary-dark"
                     >
                       Añadir al carrito
                     </button>

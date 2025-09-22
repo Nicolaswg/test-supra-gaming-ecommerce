@@ -20,9 +20,9 @@ const SearchForm = () => {
                 onClick={() => setSearchModalOpen(true)}
                 type="text"
                 placeholder="Search here..."
-                className="w-full rounded-full border border-gray-3 py-3 pl-5 pr-13 outline-hidden ease-out duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
+                className="w-full rounded-full border border-gray-3 py-3 pl-5 pr-13 outline-hidden ease-out duration-200 placeholder:text-dark-5 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               />
-              <button className="text-dark-2 absolute right-0 top-0 px-4 py-3.5 ease-out duration-200 hover:text-blue">
+              <button className="text-dark-2 absolute right-0 top-0 px-4 py-3.5 ease-out duration-200 hover:text-primary">
                 <SearchIcon />
               </button>
             </div>

@@ -47,16 +47,14 @@ const Header = () => {
   return (
     <>
       <header
-        className={`fixed left-0 top-0 w-full z-999 bg-white transition-all ease-in-out duration-300 ${
-          stickyMenu && "shadow-sm"
-        }`}
+        className={`fixed left-0 top-0 w-full z-999 bg-white transition-all ease-in-out duration-300 ${stickyMenu && "shadow-sm"
+          }`}
       >
         <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 xl:px-0">
           {/* <!-- header top start --> */}
           <div
-            className={`flex flex-col lg:flex-row gap-5 items-end lg:items-center xl:justify-between ease-out duration-200 ${
-              stickyMenu ? "py-4" : "py-6"
-            }`}
+            className={`flex flex-col lg:flex-row gap-5 items-end lg:items-center xl:justify-between ease-out duration-200 ${stickyMenu ? "py-4" : "py-6"
+              }`}
           >
             {/* <!-- header top left --> */}
             <div className="flex flex-col w-full gap-5 xl:w-auto sm:flex-row xl:justify-between sm:items-center sm:gap-10">
@@ -91,7 +89,7 @@ const Header = () => {
                         type="submit"
                         id="search-btn"
                         aria-label="Search"
-                        className="absolute flex items-center h-[42px] justify-center duration-200 ease-in  -translate-y-1/2 right-5 top-1/2 hover:text-blue"
+                        className="absolute flex items-center h-[42px] justify-center duration-200 ease-in  -translate-y-1/2 right-5 top-1/2 hover:text-primary"
                       >
                         <SearchIcon className="w-5 h-5 text-gray-6" />
                       </button>
@@ -129,7 +127,7 @@ const Header = () => {
                       <span className="block uppercase font-medium text-2xs text-dark-4">
                         cuenta
                       </span>
-                      <p className="font-medium text-custom-sm text-dark hover:text-blue">
+                      <p className="font-medium text-custom-sm text-dark hover:text-primary">
                         {session?.user.name?.split(" ")[0] ||
                           "Iniciar Sesión / Registrar Cuenta"}
                       </p>
@@ -253,13 +251,12 @@ const Header = () => {
                       ) : (
                         <li
                           key={i}
-                          className="group relative before:w-0 before:h-[3px] before:bg-blue before:absolute before:left-0 before:top-0 before:rounded-b-[3px] before:ease-out before:duration-200 hover:before:w-full "
+                          className="group relative before:w-0 before:h-[3px] before:bg-primary before:absolute before:left-0 before:top-0 before:rounded-b-[3px] before:ease-out before:duration-200 hover:before:w-full "
                         >
                           <Link
                             href={menuItem.path!}
-                            className={`hover:text-blue text-custom-sm font-medium text-dark flex ${
-                              stickyMenu ? "xl:py-4" : "xl:py-6"
-                            }`}
+                            className={`hover:text-primary text-custom-sm font-medium text-dark flex ${stickyMenu ? "xl:py-4" : "xl:py-6"
+                              }`}
                           >
                             {menuItem.title}
                           </Link>
@@ -274,7 +271,7 @@ const Header = () => {
               <div className="hidden xl:block">
                 <Link
                   href="/popular?sort=popular"
-                  className="text-sm text-dark flex items-center font-medium hover:text-blue"
+                  className="text-sm text-dark flex items-center font-medium hover:text-primary"
                 >
                   Ofertas del día
                   <span className="bg-red text-white font-semibold text-[10px] inline-flex items-center justify-center rounded-full ml-2.5  px-2 h-5 uppercase">
@@ -297,9 +294,8 @@ const Header = () => {
           ></div>
           {/* Sidebar */}
           <aside
-            className={`fixed top-0 right-0 z-[999] h-full w-80 max-w-full bg-white shadow-2xl flex flex-col transition-all duration-300 ease-out transform ${
-              navigationOpen ? "translate-x-0" : "translate-x-full"
-            }`}
+            className={`fixed top-0 right-0 z-[999] h-full w-80 max-w-full bg-white shadow-2xl flex flex-col transition-all duration-300 ease-out transform ${navigationOpen ? "translate-x-0" : "translate-x-full"
+              }`}
             style={{
               transitionDelay: navigationOpen ? "0ms" : "50ms",
             }}
@@ -345,18 +341,17 @@ const Header = () => {
                   ) : (
                     <li
                       key={i}
-                      className={`transform transition-all duration-300 ease-out ${
-                        navigationOpen
-                          ? "translate-x-0 opacity-100"
-                          : "translate-x-4 opacity-0"
-                      }`}
+                      className={`transform transition-all duration-300 ease-out ${navigationOpen
+                        ? "translate-x-0 opacity-100"
+                        : "translate-x-4 opacity-0"
+                        }`}
                       style={{
                         transitionDelay: navigationOpen ? `${i * 50}ms` : "0ms",
                       }}
                     >
                       <Link
                         href={menuItem.path!}
-                        className="flex items-center gap-2 text-sm font-medium text-dark py-2 px-3 rounded-md hover:bg-blue/10 hover:text-blue transition-colors"
+                        className="flex items-center gap-2 text-sm font-medium text-dark py-2 px-3 rounded-md hover:bg-primary/10 hover:text-primary transition-colors"
                         onClick={() => setNavigationOpen(false)}
                       >
                         {menuItem.title}
@@ -369,11 +364,10 @@ const Header = () => {
             <div className="px-3 py-4 border-t space-y-1 border-gray-3 flex flex-col gap-2">
               <Link
                 href={session?.user ? "/my-account" : "/signin"}
-                className={`flex items-center gap-2 text-dark px-2 py-1 hover:bg-blue/10 rounded-md hover:text-blue font-medium text-sm transition-all duration-300 ease-out transform ${
-                  navigationOpen
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-4 opacity-0"
-                }`}
+                className={`flex items-center gap-2 text-dark px-2 py-1 hover:bg-primary/10 rounded-md hover:text-primary font-medium text-sm transition-all duration-300 ease-out transform ${navigationOpen
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-4 opacity-0"
+                  }`}
                 style={{
                   transitionDelay: navigationOpen
                     ? `${menuData.length * 50}ms`
@@ -388,11 +382,10 @@ const Header = () => {
               </Link>
               <Link
                 href="/wishlist"
-                className={`flex items-center gap-2 text-dark hover:text-blue px-2 py-1 hover:bg-blue/10 rounded-md font-medium text-sm transition-all duration-300 ease-out transform ${
-                  navigationOpen
-                    ? "translate-x-0 opacity-100"
-                    : "translate-x-4 opacity-0"
-                }`}
+                className={`flex items-center gap-2 text-dark hover:text-primary px-2 py-1 hover:bg-primary/10 rounded-md font-medium text-sm transition-all duration-300 ease-out transform ${navigationOpen
+                  ? "translate-x-0 opacity-100"
+                  : "translate-x-4 opacity-0"
+                  }`}
                 style={{
                   transitionDelay: navigationOpen
                     ? `${(menuData.length + 1) * 50}ms`

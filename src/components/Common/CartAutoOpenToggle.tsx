@@ -17,7 +17,7 @@ const CartAutoOpenToggle: React.FC = () => {
         onClick={() => setAutoOpenEnabled(!isAutoOpenEnabled)}
         className={`
           relative inline-flex h-5 w-8 items-center rounded-full transition-colors
-          ${isAutoOpenEnabled ? "bg-blue" : "bg-gray-300"}
+          ${isAutoOpenEnabled ? "bg-primary" : "bg-gray-300"}
         `}
         aria-label="Toggle auto-open cart"
       >

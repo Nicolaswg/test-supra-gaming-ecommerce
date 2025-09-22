@@ -61,7 +61,7 @@ const CategoryDropdown = ({ categories }: PropsType) => {
           <label
             htmlFor={category.slug.current}
             key={category.slug.current}
-            className="flex items-center justify-start gap-2 cursor-pointer group hover:text-blue"
+            className="flex items-center justify-start gap-2 cursor-pointer group hover:text-primary"
           >
             <input
               type="checkbox"
@@ -78,16 +78,16 @@ const CategoryDropdown = ({ categories }: PropsType) => {
 
             <div
               aria-hidden
-              className="cursor-pointer flex items-center justify-center rounded-sm w-4 h-4 border peer-checked:border-blue peer-checked:bg-blue bg-white border-gray-3 peer-checked:[&>*]:!block"
+              className="cursor-pointer flex items-center justify-center rounded-sm w-4 h-4 border peer-checked:border-primary peer-checked:bg-primary bg-white border-gray-3 peer-checked:[&>*]:!block"
             >
               <CheckMarkIcon2 className="hidden" />
             </div>
 
-            <span className="flex-1 peer-checked:text-blue">
+            <span className="flex-1 peer-checked:text-primary">
               {category.title}
             </span>
 
-            <span className="peer-checked:text-white peer-checked:bg-blue bg-gray-2 inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-blue">
+            <span className="peer-checked:text-white peer-checked:bg-primary bg-gray-2 inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-primary">
               {category.productCount}
             </span>
           </label>

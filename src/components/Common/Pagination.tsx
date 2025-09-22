@@ -40,11 +40,10 @@ const Pagination: React.FC<PaginationProps> = ({
           <li key={page}>
             <button
               onClick={() => onPageChange(page)}
-              className={`px-3 py-1 h-10 w-10 rounded-lg border border-gray-3 ${
-                page === currentPage
-                  ? "bg-blue text-white border-blue"
+              className={`px-3 py-1 h-10 w-10 rounded-lg border border-gray-3 ${page === currentPage
+                  ? "bg-primary text-white border-primary"
                   : "bg-white text-dark border-gray-3"
-              }`}
+                }`}
             >
               {page}
             </button>
