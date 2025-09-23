@@ -47,7 +47,7 @@ const HeroCarousel = ({ sliders }: any) => {
                 <h1 className="font-bold text-white text-2xl sm:text-[42px] mb-4 leading-tight drop-shadow-lg">
                   <Link
                     href={`/products/${slider?.product?.slug.current}`}
-                    className="hover:text-primary-light transition-colors duration-300"
+                    className="transition-colors duration-300"
                   >
                     {slider?.product?.name}
                   </Link>

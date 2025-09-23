@@ -8,6 +8,8 @@ import Header from "../../components/Header";
 // import "../css/euclid-circular-a-font.css";
 import "../css/style.css";
 import Providers from "./Providers";
+import { fontAkegin } from "@/assets/fonts";
+import cn from "@/utils/cn";
 
 export default function RootLayout({
   children,
@@ -15,7 +17,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className="font-inter" suppressHydrationWarning>
+    <html lang="en" className={cn("font-inter", fontAkegin.variable)} suppressHydrationWarning>
       <body>
         <PreLoader />
 

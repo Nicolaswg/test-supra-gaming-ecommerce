@@ -8,13 +8,14 @@
   /* --font-*: initial; */
   /* --font-euclid-circular-a: Euclid Circular A; */
   --font-gsans: "General Sans", sans-serif;
-
+  --font-akegin: var(--font-akegin);
   --color-*: initial;
   --color-current: currentColor;
   --color-transparent: transparent;
   --color-white: #ffffff;
   --color-body: #6c6f93;
   --color-primary: oklch(0.55 0.25 300);
+  --color-primary-light: oklch(0.55 0.25 300 / 0.5);
 
   --color-meta-2: #495270;
   --color-meta-3: #606882;
@@ -76,8 +77,6 @@
 
   --color-orange: #f27430;
   --color-orange-dark: #e1580e;
-
-  --primary: oklch(0.55 0.25 300);
 
   --breakpoint-*: initial;
   --breakpoint-xsm: 375px;
@@ -232,6 +231,9 @@
   line-height: 30px;
 }
 
+@utilityu font-akegin {
+  font-family: var(--font-akegin), sans-serif;
+}
 /*
   The default border color has changed to `currentColor` in Tailwind CSS v4,
   so we've added these compatibility styles to make sure everything still

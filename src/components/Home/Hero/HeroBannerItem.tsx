@@ -33,7 +33,7 @@ export default function HeroBannerItem({
             <h2 className="text-base font-bold text-card-foreground leading-tight text-balance group-hover:text-white transition-colors duration-400 mb-1 relative z-10">
               <Link
                 href={`/products/${bannerItem?.product?.slug.current}`}
-                className="hover:underline decoration-2 underline-offset-4 decoration-primary/40"
+                className="font-akegin hover:underline decoration-2 underline-offset-4 decoration-primary/40"
               >
                 {bannerItem.name}
               </Link>
