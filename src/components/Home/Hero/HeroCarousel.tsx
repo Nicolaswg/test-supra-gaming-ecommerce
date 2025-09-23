@@ -59,7 +59,7 @@ const HeroCarousel = ({ sliders }: any) => {
 
                 <Link
                   href={`/products/${slider?.product?.slug.current}`}
-                  className="inline-flex items-center gap-2 font-semibold text-white text-base rounded-full bg-primary py-4 px-10 ease-out duration-300 hover:bg-primary-dark hover:scale-105 transform shadow-lg hover:shadow-xl"
+                  className="inline-flex items-center gap-2 font-semibold text-white text-base rounded-full bg-[#54044F] hover:bg-gradient-to-r hover:from-[#54044F] hover:to-[#360232] py-4 px-10 ease-out duration-300 hover:bg-primary-dark hover:scale-105 transform shadow-lg hover:shadow-xl"
                 >
                   comprar ahora
                   <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">

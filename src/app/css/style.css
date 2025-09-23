@@ -14,8 +14,8 @@
   --color-transparent: transparent;
   --color-white: #ffffff;
   --color-body: #6c6f93;
-  --color-primary: oklch(0.55 0.25 300);
-  --color-primary-light: oklch(0.55 0.25 300 / 0.5);
+  --color-primary: oklch(0.3121 0.1362 331.35);
+  --color-primary-light: oklch(0.3121 0.1362 331.35 / 0.5);
 
   --color-meta-2: #495270;
   --color-meta-3: #606882;
@@ -379,7 +379,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .common-carousel .swiper-button-next,
 .common-carousel .swiper-button-prev {
-  @apply static! h-9 w-9 rounded-full bg-white text-dark border border-gray-3 m-0 ease-out duration-200 hover:bg-blue hover:text-white hover:border-blue;
+  @apply static! h-9 w-9 rounded-full bg-white text-dark border border-gray-3 m-0 ease-out duration-200 hover:text-white hover:bg-gradient-to-r hover:from-[#54044F] hover:to-[#360232];
 }
 
 .common-carousel .swiper-button-next svg,

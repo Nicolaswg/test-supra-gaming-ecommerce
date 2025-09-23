@@ -75,7 +75,7 @@ export const productByCategoryQuery = groq`*[_type == "product" && category->slu
 export const allOrdersQuery = groq`*[_type == "order"] | order(_createdAt desc)  ${orderData}`;
 export const orderByIdQuery = groq`*[_type == "order" && orderId == $orderId][0] ${orderData}`;
 
-export const heroBannerQuery = groq`*[_type == "heroBanner"] | order(_createdAt desc) {
+export const heroBannerQuery = groq`*[_type == "heroBanner"] | order(_createdAt desc)[0..2] {
   _id,
   name,
   image,

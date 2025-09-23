@@ -49,7 +49,7 @@ const Categories = () => {
 
   return (
     <section className="overflow-hidden ">
-      <div className="w-full px-4 mx-auto border-b max-w-7xl sm:px-6 xl:px-0 pb-15 border-gray-3">
+      <div className="w-full px-4 mt-4 mx-auto border-b max-w-7xl sm:px-6 xl:px-0 pb-15 border-gray-3">
         <div className="swiper categories-carousel common-carousel">
           {/* <!-- section title --> */}
           <div className="flex items-center justify-between mb-10">
@@ -67,6 +67,7 @@ const Categories = () => {
                 aria-label="previous button"
                 disabled={currentIndex === 0}
               >
+
                 <ChevronLeftIcon />
               </button>
 

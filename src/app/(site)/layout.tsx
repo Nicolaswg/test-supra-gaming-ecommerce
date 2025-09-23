@@ -9,7 +9,13 @@ import Header from "../../components/Header";
 import "../css/style.css";
 import Providers from "./Providers";
 import { fontAkegin } from "@/assets/fonts";
+import { Poppins } from "next/font/google"
 import cn from "@/utils/cn";
+
+const poppins = Poppins({
+  subsets: ["latin"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+})
 
 export default function RootLayout({
   children,
@@ -17,7 +23,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="en" className={cn("font-inter", fontAkegin.variable)} suppressHydrationWarning>
+    <html lang="en" className={cn(poppins.className, fontAkegin.variable)} suppressHydrationWarning>
       <body>
         <PreLoader />
 
