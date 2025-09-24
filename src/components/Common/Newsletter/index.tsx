@@ -3,7 +3,7 @@ import NewsletterForm from "./NewsletterForm";
 
 const Newsletter = () => {
   return (
-    <section className="overflow-hidden">
+    <section className="overflow-hidden mb-5">
       <div className="max-w-7xl w-full mx-auto px-4 sm:px-6 xl:px-0 ">
         <div className="relative z-1 overflow-hidden rounded-xl">
           <Graphics />

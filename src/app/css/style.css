@@ -46,6 +46,14 @@
   --color-blue-light-4: #c3cef6;
   --color-blue-light-5: #e1e8ff;
 
+  --color-purple: oklch(38% 0.189 293.745);
+  --color-purple-dark: oklch(29.1% 0.149 302.717);
+  --color-purple-light: oklch(62.7% 0.265 303.9);
+  --color-purple-light-2: oklch(71.4% 0.203 305.504);
+  --color-purple-light-3: oklch(82.7% 0.119 306.383);
+  --color-purple-light-4: oklch(90.2% 0.063 306.703);
+  --color-purple-light-5: oklch(94.6% 0.033 307.174);
+
   --color-red: #f23030;
   --color-red-dark: #e10e0e;
   --color-red-light: #f56060;

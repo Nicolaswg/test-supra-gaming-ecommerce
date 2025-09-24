@@ -1,32 +1,36 @@
+import { authOptions } from '@/lib/auth'
+import { getServerSession } from 'next-auth'
 import Link from 'next/link'
 
-const accountLinks = [
-  {
-    id: 1,
-    label: 'Login / Register',
-    href: '/signin',
-  },
-  {
-    id: 2,
-    label: 'Cart',
-    href: '/cart',
-  },
-  {
-    id: 3,
-    label: 'Wishlist',
-    href: '/wishlist',
-  },
-  {
-    id: 4,
-    label: 'Shop',
-    href: '/shop-with-sidebar',
-  }
-]
-export default function AccountLinks() {
+
+export default async function AccountLinks() {
+  const session = await getServerSession(authOptions)
+  const accountLinks = [
+    {
+      id: 1,
+      label: session ? 'Mi cuenta' : 'Iniciar Sesión o Registrarse',
+      href: session ? '/my-account' : '/login',
+    },
+    {
+      id: 2,
+      label: 'Carrito',
+      href: '/cart',
+    },
+    {
+      id: 3,
+      label: 'Favoritos',
+      href: '/wishlist',
+    },
+    {
+      id: 4,
+      label: 'Tienda',
+      href: '/shop-with-sidebar',
+    }
+  ]
   return (
     <div className="w-full sm:w-auto">
-      <h2 className="mb-7.5 text-custom-1 font-medium text-dark">
-        Account
+      <h2 className="mb-7.5 text-custom-1 font-medium text-white">
+        Cuenta de Usuario
       </h2>
 
       <ul className="flex flex-col gap-3.5">
@@ -34,7 +38,7 @@ export default function AccountLinks() {
           accountLinks.map((link) => (
             <li key={link.id}>
               <Link
-                className="ease-out duration-200 hover:text-primary"
+                className="ease-out duration-200 text-white hover:text-purple-light-2"
                 href={link.href}
               >
                 {link.label}
