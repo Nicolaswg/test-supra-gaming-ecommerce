@@ -10,6 +10,11 @@ const featureData = [
     description: "Pedidos superiores a €200",
   },
   {
+    img: <RefreshCcw className='text-white w-[20px] h-[20px]' />,
+    title: "Devoluciones 1 & 1 ",
+    description: "Cancelaciones después de 1 dia",
+  },
+  {
     img: <ShieldCheck className="text-white w-[20px] h-[20px]" />,
     title: "Pagos 100% Seguros",
     description: "Garantizado de pago seguro",
@@ -29,7 +34,7 @@ const HeroFeature = () => {
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.6, delay: 0.9 }}
     >
-      <div className="flex flex-wrap items-center gap-7.5 xl:gap-12.5 mt-10">
+      <div className="grid grid-cols-2 gap-3.5 xl:gap-7.5 mt-5">
         {featureData.map((item, key) => (
           <div className="flex items-center gap-4" key={key}>
             <div className="text-white">

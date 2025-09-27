@@ -5,8 +5,10 @@ import { ArrowRight, Play, Star } from "lucide-react";
 import Link from "next/link";
 import { useRef } from "react";
 import HeroFeature from "./HeroFeature";
+import HeroBannerItem from "./HeroBannerItem";
 
-export const HeroTitle = () => {
+export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: any, sliders: any } }) => {
+
   const ref = useRef<HTMLDivElement>(null);
   const { scrollYProgress } = useScroll({
     target: ref,
@@ -79,7 +81,19 @@ export const HeroTitle = () => {
                 Ver Video
               </Link>
             </motion.div>
+
             <HeroFeature />
+
+          </motion.div>
+          <motion.div
+            className="relative"
+            style={{ y: cardsY }}
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
+          >
+            {banners ? banners.map((item: any, index: number) => (<HeroBannerItem key={item._id} bannerItem={item} index={index} />)) : null}
+
           </motion.div>
         </div>
       </div>
