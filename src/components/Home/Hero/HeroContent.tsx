@@ -1,27 +1,16 @@
 "use client";
 
-import { motion, useScroll, useTransform } from "framer-motion";
+import { motion } from "framer-motion";
 import { ArrowRight, Play, Star } from "lucide-react";
 import Link from "next/link";
-import { useRef } from "react";
 import HeroFeature from "./HeroFeature";
 import HeroBannerItem from "./HeroBannerItem";
 
 export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: any, sliders: any } }) => {
 
-  const ref = useRef<HTMLDivElement>(null);
-  const { scrollYProgress } = useScroll({
-    target: ref,
-    offset: ["start start", "end start"],
-  });
-
-  const backgroundY = useTransform(scrollYProgress, [0, 1], ["0%", "15%"]);
-  const textY = useTransform(scrollYProgress, [0, 1], ["0%", "25%"]);
-  const cardsY = useTransform(scrollYProgress, [0, 1], ["0%", "-15%"]);
-
   return (
-    <div ref={ref}>
-      <motion.div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/hero/hero-1.jpg')`, y: backgroundY }} />
+    <div>
+      <motion.div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/hero/hero-1.jpg')` }} />
 
       <div className="absolute inset-0 bg-stone/60" />
 
@@ -29,7 +18,6 @@ export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: a
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           <motion.div
             className="space-y-8"
-            style={{ y: textY }}
             initial={{ opacity: 0, x: -50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.8, ease: "easeOut" }}
@@ -87,7 +75,6 @@ export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: a
           </motion.div>
           <motion.div
             className="relative"
-            style={{ y: cardsY }}
             initial={{ opacity: 0, x: 50 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}

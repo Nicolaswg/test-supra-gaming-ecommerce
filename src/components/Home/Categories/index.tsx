@@ -1,17 +1,17 @@
 "use client";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-
-// Import Swiper styles
 import { ChevronLeftIcon, ChevronRightIcon } from "@/assets/icons";
 import { useGetCategoriesQuery } from "@/redux/features/api/category";
 import "swiper/css";
 import "swiper/css/navigation";
 import SingleItem from "./SingleItem";
-
+import { motion, useInView } from "framer-motion";
 
 const Categories = () => {
   const sliderRef = useRef(null);
+  const categoySectionRef = useRef(null);
+  const isInView = useInView(categoySectionRef, { once: true, margin: "-50px" });
 
   const [currentIndex, setCurrentIndex] = useState(0);
   const [isEnd, setIsEnd] = useState(false);
@@ -47,12 +47,18 @@ const Categories = () => {
     }
   }, []);
 
+  console.log("[CATEGORIES]", data)
   return (
-    <section className="overflow-hidden ">
+    <section className="overflow-hidden pb-10 lg:pb-12.5 xl:pb-15 pt-10 sm:pt-10 lg:pt-15 xl:pt-20" ref={categoySectionRef}>
       <div className="w-full px-4 mt-4 mx-auto border-b max-w-7xl sm:px-6 xl:px-0 pb-15 border-gray-3">
         <div className="swiper categories-carousel common-carousel">
           {/* <!-- section title --> */}
-          <div className="flex items-center justify-between mb-10">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
+            transition={{ duration: 0.6, delay: 0.9 }}
+            className="flex items-center justify-between mb-10">
+
             <div>
               <h2 className="text-xl font-semibold xl:text-heading-5 text-dark">
                 Categorias
@@ -60,51 +66,76 @@ const Categories = () => {
             </div>
 
             <div className="flex items-center gap-3">
-              <button
+              <motion.button
                 onClick={handlePrev}
-                className={`swiper-button-prev ${currentIndex === 0 ? "opacity-50 pointer-events-none" : ""
+                className={`swiper-button-prev p-3  ${currentIndex === 0 ? "opacity-50 pointer-events-none" : ""
                   }`}
                 aria-label="previous button"
                 disabled={currentIndex === 0}
+                whileHover={{ scale: 1.05 }}
+                animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
+                whileTap={{ scale: 0.95 }}
               >
 
                 <ChevronLeftIcon />
-              </button>
+              </motion.button>
 
-              <button
+              <motion.button
                 onClick={handleNext}
                 aria-label="next button"
                 className={`swiper-button-next ${isEnd ? "opacity-50 pointer-events-none" : ""
                   }`}
                 disabled={isEnd}
+                whileHover={{ scale: 1.05 }}
+                animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : 20 }}
+                whileTap={{ scale: 0.95 }}
               >
                 <ChevronRightIcon />
-              </button>
+              </motion.button>
             </div>
-          </div>
+          </motion.div>
 
           <Swiper
             ref={sliderRef}
             onSlideChange={onSlideChange}
-            slidesPerView={6}
+            slidesPerView={3}
+            spaceBetween={30}
+            centeredSlides={false}
             breakpoints={{
-              // when window width is >= 640px
               0: {
+                slidesPerView: 1,
+                spaceBetween: 16,
+              },
+              640: {
                 slidesPerView: 2,
+                spaceBetween: 20,
               },
-              1000: {
-                slidesPerView: 4,
-                // spaceBetween: 4,
+              1024: {
+                slidesPerView: 3,
+                spaceBetween: 24,
               },
-              // when window width is >= 768px
-              1200: {
-                slidesPerView: 6,
+              1280: {
+                slidesPerView: 3,
+                spaceBetween: 32,
               },
             }}
+            className="!overflow-visible"
           >
-            {data.map((item) => (
-              <SwiperSlide key={item._id}>
-                <SingleItem item={item} />
+            {data.map((item, index) => (
+              <SwiperSlide key={item._id} className="!h-auto">
+                <motion.div
+                  initial={{ opacity: 0, y: 50, scale: 0.9 }}
+                  animate={{
+                    opacity: isInView ? 1 : 0,
+                    y: isInView ? 0 : 50,
+                    scale: isInView ? 1 : 0.9,
+                  }}
+                  transition={{ duration: 0.6, delay: isInView ? index * 0.15 + 0.3 : 0, ease: "easeOut" }}
+                  className="w-full"
+                >
+                  <SingleItem item={item} />
+
+                </motion.div>
               </SwiperSlide>
             ))}
           </Swiper>

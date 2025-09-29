@@ -400,7 +400,7 @@ input[type="search"]::-webkit-search-results-decoration {
 
 .common-carousel .swiper-button-next,
 .common-carousel .swiper-button-prev {
-  @apply static! h-9 w-9 rounded-full bg-white text-dark border border-gray-3 m-0 ease-out duration-200 hover:text-white hover:bg-gradient-to-r hover:from-[#54044F] hover:to-[#360232];
+  @apply static! h-9 w-9 rounded-full bg-white text-dark border border-gray-3 m-0 ease-out duration-200 hover:text-white transition-colors hover:bg-gradient-to-r hover:from-[#54044F] hover:to-[#360232];
 }
 
 .common-carousel .swiper-button-next svg,

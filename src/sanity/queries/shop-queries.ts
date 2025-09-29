@@ -46,6 +46,7 @@ export const allCategoriesQuery = groq`
       title,
       image,
       slug,
+      description,
       "productCount": count(*[_type == "product" && references(^._id)])
     }`;
 
@@ -59,7 +60,7 @@ export const singleCategoryQuery = groq`
 }
 `;
 
-export const categoryByIdQuery = groq`*[_type == "category" && _id == $id][0] {
+export const categoryByIdQuery = groq`*[_type == "category" && _id == $id] {
   _id,
   title,
 }`;
