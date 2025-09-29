@@ -18,11 +18,17 @@ import { useDispatch } from "react-redux";
 import { useShoppingCart } from "use-shopping-cart";
 import { useAutoOpenCart } from "../Providers/AutoOpenCartProvider";
 import CheckoutBtn from "../Shop/CheckoutBtn";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+import { motion, useInView } from "framer-motion"
 
 // add updated the type here
-const ProductItem = ({ item }: { item: Product }) => {
+const ProductItem = ({ item, isInView, index }: { item: Product, isInView: boolean, index: number }) => {
+
+  const productItemRef = useRef(null);
+  const productItemInView = useInView(productItemRef, { once: true, margin: "-50px" });
+
   const { openModal } = useModalContext();
+
   // const [product, setProduct] = useState({});
   const dispatch = useDispatch<AppDispatch>();
 
@@ -90,27 +96,57 @@ const ProductItem = ({ item }: { item: Product }) => {
   }, []);
 
   return (
-    <div className="group">
-      <div className="relative overflow-hidden flex border items-center justify-center rounded-lg border-gray-2 bg-[#F6F7FB] min-h-[270px] mb-4">
-        <Link
-          href={`${pathUrl.includes("products")
-            ? `${item?.slug?.current}`
-            : `products/${item?.slug?.current}`
-            }`}
+    <motion.div
+      ref={productItemRef}
+      className="group relative bg-white rounded-2xl overflow-hidden shadow-lg hover:shadow-2xl transition-all duration-500"
+      initial={{ opacity: 0, y: 50 }}
+      animate={{
+        opacity: isInView && productItemInView ? 1 : 0,
+        y: isInView && productItemInView ? 0 : 50
+      }}
+      transition={{
+        duration: 0.6,
+        delay: index * 0.2,
+        ease: "easeOut"
+      }}
+      whileHover={{
+        y: -8,
+        transition: { duration: 0.3, ease: "easeOut" }
+      }}
+    >
+      <div className="relative aspect-square overflow-hidden bg-gray-1">
+        <motion.div
+          whileHover={{
+            scale: 1.05
+          }}
+          transition={{
+            duration: 0.4,
+            ease: "easeOut",
+          }}
+          className="w-full h-full"
         >
-          <Image
-            src={
-              item?.previewImages
-                ? imageBuilder(item?.previewImages[0]?.image).url()!
-                : ""
-            }
-            alt={item.name}
-            width={250}
-            height={250}
-          />
-        </Link>
+          <Link
+            href={`${pathUrl.includes("products")
+              ? `${item?.slug?.current}`
+              : `products/${item?.slug?.current}`
+              }`}
+          >
+            <Image
+              src={
+                item?.previewImages
+                  ? imageBuilder(item?.previewImages[0]?.image).url()!
+                  : ""
+              }
+              alt={item.name}
+              fill
+              className="object-cover"
+              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+            />
+          </Link>
+        </motion.div>
 
-        <div className="absolute left-0 bottom-0 translate-y-full w-full flex items-center justify-center gap-2.5 pb-5 ease-linear duration-200 group-hover:translate-y-0">
+        <div
+          className="absolute inset-0 left-0 bottom-0 bg-gradient-to-t from-stone/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity translate-y-full w-full flex items-center justify-center gap-2.5 pb-5 ease-linear duration-300 group-hover:translate-y-0">
           <button
             onClick={() => {
               openModal();
@@ -129,7 +165,7 @@ const ProductItem = ({ item }: { item: Product }) => {
               onClick={() => handleAddToCart()}
               className="inline-flex font-medium text-custom-sm py-[7px] px-5 rounded-full bg-primary text-white ease-out duration-200 hover:bg-primary-dark"
             >
-              Add to cart
+              añadir al carrito
             </button>
           )}
 
@@ -149,26 +185,50 @@ const ProductItem = ({ item }: { item: Product }) => {
         </div>
       </div>
 
-      <h3
-        className="font-medium text-dark ease-out duration-200 hover:text-primary mb-1.5 line-clamp-1"
-        onClick={() => handleProductDetails()}
-      >
-        <Link
-          href={`${pathUrl.includes("products")
-            ? `${item?.slug?.current}`
-            : `products/${item?.slug?.current}`
-            }`}
-        >
-          {" "}
-          {item.name}{" "}
-        </Link>
-      </h3>
+      <div className="p-6 space-y-4">
 
-      <span className="flex items-center gap-2 text-lg font-medium">
-        <span className="text-dark">€{item.discountedPrice}</span>
-        <span className="line-through text-dark-4">€{item.price}</span>
-      </span>
-    </div>
+        <motion.h3
+          className="font-bold text-gray-7 group-hover:text-primary transition-colors duration-300 mb-1.5 line-clamp-1"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView && productItemInView ? 1 : 0 }}
+          transition={{ delay: index * 0.1 + 0.3 }}
+          onClick={() => handleProductDetails()}
+        >
+          <Link
+            href={`${pathUrl.includes("products")
+              ? `${item?.slug?.current}`
+              : `products/${item?.slug?.current}`
+              }`}
+          >
+            {" "}
+            {item.name}{" "}
+          </Link>
+        </motion.h3>
+
+        <motion.p
+          className="text-sm text-gray-5 line-clamp-2"
+          initial={{ opacity: 0 }}
+          animate={{ opacity: isInView && productItemInView ? 1 : 0 }}
+          transition={{ delay: index * 0.1 + 0.4 }}
+        >
+          {item.shortDescription}
+        </motion.p>
+
+        <div className="flex items-center justify-between">
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: isInView && productItemInView ? 1 : 0, x: isInView && productItemInView ? 0 : -20 }}
+            transition={{ delay: index * 0.1 + 0.5 }}
+            className="flex gap-2"
+          >
+            <span className="line-through text-dark-4">€{item.price}</span>
+            <span className="text-primary text-2xl font-bold">€{item.discountedPrice}</span>
+          </motion.div>
+        </div>
+        <span className="flex items-center gap-2 text-lg font-medium">
+        </span>
+      </div>
+    </motion.div>
   );
 };
 

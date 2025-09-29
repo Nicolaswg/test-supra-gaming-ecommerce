@@ -49,8 +49,8 @@ export default function HeroBannerItem({
               ))}
             </div>
             <div className="flex items-center space-x-2">
-              <span className="text-white/60 text-sm line-through">${bannerItem?.product?.price}</span>
-              <span className="text-white font-semibold">${bannerItem?.product.discountedPrice}</span>
+              <span className="text-white/60 text-sm line-through">€{bannerItem?.product?.price}</span>
+              <span className="text-white font-semibold">€{bannerItem?.product.discountedPrice}</span>
             </div>
           </div>
         </Link>

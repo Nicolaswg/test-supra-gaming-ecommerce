@@ -47,7 +47,6 @@ const Categories = () => {
     }
   }, []);
 
-  console.log("[CATEGORIES]", data)
   return (
     <section className="overflow-hidden pb-10 lg:pb-12.5 xl:pb-15 pt-10 sm:pt-10 lg:pt-15 xl:pt-20" ref={categoySectionRef}>
       <div className="w-full px-4 mt-4 mx-auto border-b max-w-7xl sm:px-6 xl:px-0 pb-15 border-gray-3">
@@ -56,7 +55,7 @@ const Categories = () => {
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: isInView ? 1 : 0, y: isInView ? 0 : 20 }}
-            transition={{ duration: 0.6, delay: 0.9 }}
+            transition={{ duration: 0.6, delay: isInView ? 0.15 + 0.3 : 0, ease: "easeOut" }}
             className="flex items-center justify-between mb-10">
 
             <div>
