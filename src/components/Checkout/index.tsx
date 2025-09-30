@@ -75,13 +75,13 @@ export default function CheckoutMain() {
           <EmptyCartIcon className="mx-auto text-primary" />
         </div>
         <h2 className="pb-5 text-2xl font-medium text-center text-dark">
-          No items found in your cart to checkout.
+          no hay productos en tu carrito de compras.
         </h2>
         <Link
           href="/shop-with-sidebar"
           className="w-96 mx-auto flex justify-center font-medium text-white bg-primary py-[13px] px-6 rounded-md ease-out duration-200 hover:bg-primary-dark"
         >
-          Continue Shopping
+          Continuar Comprando
         </Link>
       </div>
     );

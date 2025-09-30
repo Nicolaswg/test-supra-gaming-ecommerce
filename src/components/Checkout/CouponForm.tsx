@@ -33,7 +33,7 @@ export default function CouponForm() {
     <>
       <input
         type="text"
-        placeholder="Enter coupon code"
+        placeholder="Coloca tu cupón"
         className="rounded-full border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20 disabled:opacity-80"
         disabled={alreadyApplied}
         value={coupon}
@@ -46,7 +46,7 @@ export default function CouponForm() {
         className="inline-flex disabled:pointer-events-none disabled:opacity-80 font-medium text-white bg-primary py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary-dark"
         disabled={alreadyApplied || loading}
       >
-        {alreadyApplied ? "Applied" : loading ? "Applying..." : "Apply"}
+        {alreadyApplied ? "Aplicado" : loading ? "Aplicando" : "Aplicar"}
       </button>
     </>
   );

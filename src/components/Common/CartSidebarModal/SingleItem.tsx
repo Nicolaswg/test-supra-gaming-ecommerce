@@ -24,7 +24,7 @@ const SingleItem = ({ item, toggle }: any) => {
               {item.name} ({item.quantity})
             </Link>
           </h3>
-          <p className="text-custom-sm">Price: ${item.price / 100}</p>
+          <p className="text-custom-sm">Price: €{item.price / 100}</p>
         </div>
       </div>
 

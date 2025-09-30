@@ -67,7 +67,7 @@ const CartSidebarModal = () => {
       >
         <div className="sticky top-0 bg-white flex items-center justify-between pb-7 pt-4 sm:pt-7.5 lg:pt-11 border-b border-gray-3 mb-7.5">
           <h2 className="font-medium text-dark text-lg sm:text-2xl">
-            Cart View
+            Carrito
           </h2>
           <button
             onClick={() => handleCartClick()}
@@ -111,7 +111,7 @@ const CartSidebarModal = () => {
             <p className="font-medium text-xl text-dark">Subtotal:</p>
 
             <p className="font-medium text-xl text-dark">
-              ${totalPrice && totalPrice / 100}
+              €{totalPrice && totalPrice / 100}
             </p>
           </div>
 
@@ -121,7 +121,7 @@ const CartSidebarModal = () => {
               href="/cart"
               className="w-full flex justify-center font-medium text-white bg-primary py-[13px] px-6 rounded-full ease-out duration-200 hover:bg-primary-dark"
             >
-              View Cart
+              Ver Carrito
             </Link>
 
             <button

@@ -40,9 +40,9 @@ const Cart = () => {
         <section className="overflow-hidden py-20 bg-gray-2">
           <div className="max-w-7xl  w-full mx-auto px-4 sm:px-8 xl:px-0">
             <div className="flex flex-wrap items-center justify-between gap-5 mb-7.5">
-              <h2 className="font-medium text-dark text-2xl">Your Cart</h2>
+              <h2 className="font-medium text-dark text-2xl">Tu carrito</h2>
               <button onClick={() => clearCart()} className="text-primary">
-                Clear Shopping Cart
+                Vaciar carrito
               </button>
             </div>
 
@@ -52,19 +52,19 @@ const Cart = () => {
                   <thead className="bg-gray-1">
                     <tr>
                       <th className="text-left py-5.5 px-7.5 font-medium text-dark min-w-[400px]">
-                        Product
+                        Producto
                       </th>
                       <th className="text-left py-5.5 px-4 font-medium text-dark min-w-[180px]">
-                        Price
+                        Precio
                       </th>
                       <th className="text-left py-5.5 px-4 font-medium text-dark min-w-[275px]">
-                        Quantity
+                        Cantidad
                       </th>
                       <th className="text-left py-5.5 px-4 font-medium text-dark min-w-[200px]">
                         Subtotal
                       </th>
                       <th className="text-right py-5.5 px-7.5 font-medium text-dark min-w-[100px]">
-                        Action
+                        Accion
                       </th>
                     </tr>
                   </thead>
@@ -135,13 +135,13 @@ const Cart = () => {
               </svg>
             </div>
 
-            <p className="pb-6">Your cart is empty!</p>
+            <p className="pb-6">Tu carrito está vacío!</p>
 
             <Link
               href="/shop-with-sidebar"
               className="w-96 mx-auto flex justify-center font-medium text-white bg-dark py-[13px] px-6 rounded-full ease-out duration-200 hover:bg-opacity-95"
             >
-              Continue Shopping
+              Continuar Comprando
             </Link>
           </div>
         </>

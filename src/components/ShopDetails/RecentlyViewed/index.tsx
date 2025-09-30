@@ -8,8 +8,12 @@ import { useCallback, useRef } from "react";
 import "swiper/css";
 import "swiper/css/navigation";
 import { Swiper, SwiperRef, SwiperSlide } from "swiper/react";
+import { motion, useInView } from "framer-motion";
+
 
 const RecentlyViewedItems = () => {
+  const recentlyViewedRef = useRef(null);
+  const isInView = useInView(recentlyViewedRef, { once: true, margin: "-50px" });
   const { data: products } = useGetProductsQuery(6);
 
   const sliderRef = useRef<SwiperRef>(null);
@@ -27,14 +31,14 @@ const RecentlyViewedItems = () => {
   }, []);
 
   return (
-    <section className="overflow-hidden pt-17.5">
+    <section className="overflow-hidden pt-17.5" ref={recentlyViewedRef}>
       <div className="w-full px-4 mx-auto border-b max-w-7xl sm:px-6 xl:px-0 pb-15 border-gray-3">
         <div className="swiper categories-carousel common-carousel">
           {/* <!-- section title --> */}
           <div className="flex items-center justify-between mb-10">
             <div>
               <h2 className="text-xl font-semibold xl:text-heading-5 text-dark">
-                Recently Viewed Products
+                Productos Vistos Recientemente
               </h2>
             </div>
 
@@ -59,13 +63,13 @@ const RecentlyViewedItems = () => {
 
           <Swiper
             ref={sliderRef}
-            slidesPerView={4}
+            slidesPerView={3}
             spaceBetween={20}
             className="justify-between"
           >
             {products?.map((item, key) => (
-              <SwiperSlide key={key}>
-                <ProductItem item={item} />
+              <SwiperSlide key={key} className="p-4">
+                <ProductItem item={item} key={key} isInView={isInView} index={key} />
               </SwiperSlide>
             ))}
           </Swiper>

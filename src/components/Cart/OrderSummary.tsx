@@ -13,14 +13,14 @@ const OrderSummary = () => {
       {/* <!-- order list box --> */}
       <div className="bg-white shadow-1 rounded-[10px]">
         <div className="border-b border-gray-3 py-5 px-4 sm:px-8.5">
-          <h3 className="font-medium text-xl text-dark">Order Summary</h3>
+          <h3 className="font-medium text-xl text-dark">Resume de compra</h3>
         </div>
 
         <div className="pt-2.5 pb-8.5 px-4 sm:px-8.5">
           {/* <!-- title --> */}
           <div className="flex items-center justify-between py-5 border-b border-gray-3">
             <div>
-              <h4 className="font-medium text-dark">Product</h4>
+              <h4 className="font-medium text-dark">Productos</h4>
             </div>
             <div>
               <h4 className="font-medium text-dark text-right">Subtotal</h4>
@@ -65,7 +65,7 @@ const OrderSummary = () => {
             href="/checkout"
             className="w-full flex justify-center font-medium text-white bg-primary py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary-dark mt-7.5"
           >
-            Process to Checkout
+            Procesar compra
           </Link>
         </div>
       </div>

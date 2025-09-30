@@ -1,4 +1,3 @@
-import ProductItem from "@/components/Common/ProductItem";
 import { getProductsByFilter } from "@/sanity/sanity-shop-utils";
 import NewArrivalTitle from "./NewArrivalTitle";
 import { NewArrivalContent } from "./NewArrivalContent";
