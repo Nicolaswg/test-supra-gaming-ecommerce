@@ -17,7 +17,8 @@ export const BestSellerContent = ({ product }: { product: Product[] }) => {
   const [tappedIndex, setTappedIndex] = useState<number | null>(null);
 
   const getProductsForScreen = (screenSize: "mobile" | "tablet" | "lg" | "xl") => {
-    if (screenSize === "mobile" || screenSize === "tablet") return product.slice(0, 4);
+    if (screenSize === "mobile") return product.slice(0, 4);
+    if (screenSize === "tablet") return product.slice(0, 3);
     if (screenSize === "lg") return product.slice(0, 5);
     return product;
   }
@@ -80,31 +81,31 @@ export const BestSellerContent = ({ product }: { product: Product[] }) => {
             }
           }}
         >
-          <Link href={`/products/${product?.slug?.current!}`} >
-            <div className="bg-[#fff] rounded-top-3xl border-[6px] border-white shadow-2xl overflow-hidden p-3">
-              <div className="relative aspect-square bg-[#f0f2f5] overflow-hidden p-2">
-                <Image
-                  src={imageBuilder(product?.previewImages[0]?.image).url()! || ""}
-                  alt={product.name}
-                  fill
-                  className="object-cover"
-                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
-                />
-              </div>
+          <div className="bg-[#fff] rounded-top-3xl border-[6px] border-white shadow-2xl overflow-hidden p-3">
+            <div className="relative aspect-square bg-[#f0f2f5] overflow-hidden p-2">
+              <Image
+                src={imageBuilder(product?.previewImages[0]?.image).url()! || ""}
+                alt={product.name}
+                fill
+                className="object-cover"
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+              />
             </div>
+          </div>
 
-            <div className="p-6 bg-[#fff]">
-              <h3 className="font-semibold text-xl mb-3 text-gray-7 tracking-tight group-hover:text-primary transition-colors truncate"> {product.name}</h3>
-              <div className="flex items-center justify-between">
-                <motion.div
-                  initial={{ opacity: 0, x: -20 }}
-                  animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
-                  transition={{ delay: index * 0.1 + 0.5 }}
-                  className="flex gap-2"
-                >
-                  <span className="line-through text-dark-4">€{product.price}</span>
-                  <span className="text-primary text-2xl font-bold">€{product.discountedPrice}</span>
-                </motion.div>
+          <div className="p-6 bg-[#fff]">
+            <h3 className="font-semibold text-xl mb-3 text-gray-7 tracking-tight group-hover:text-primary transition-colors truncate"> {product.name}</h3>
+            <div className="flex items-center justify-between">
+              <motion.div
+                initial={{ opacity: 0, x: -20 }}
+                animate={{ opacity: isInView ? 1 : 0, x: isInView ? 0 : -20 }}
+                transition={{ delay: index * 0.1 + 0.5 }}
+                className="flex gap-2"
+              >
+                <span className="line-through text-dark-4">€{product.price}</span>
+                <span className="text-primary text-2xl font-bold">€{product.discountedPrice}</span>
+              </motion.div>
+              <Link href={`/products/${product?.slug?.current!}`} >
                 <motion.button
                   className="w-11 h-11 rounded-full bg-[#f0f2f5] text-[#040609] flex items-center justify-center"
                   whileHover={{ scale: 1.1, rotate: 45 }}
@@ -113,10 +114,10 @@ export const BestSellerContent = ({ product }: { product: Product[] }) => {
                 >
                   <ArrowUpRight className="w-5 h-5" />
                 </motion.button>
-              </div>
+              </Link>
             </div>
+          </div>
 
-          </Link>
         </motion.div>
       )
     })
@@ -137,12 +138,12 @@ export const BestSellerContent = ({ product }: { product: Product[] }) => {
 
       {/* LG screens - 5 cards */}
       <div className="hidden lg:flex xl:hidden relative w-full max-w-6xl h-[450px] items-center justify-center">
-        {renderStackedCards(getProductsForScreen("lg"), 320, 260, false)}
+        {renderStackedCards(getProductsForScreen("lg"), 320, 260, true)}
       </div>
 
       {/* Tablet - 4 cards with tap interaction */}
       <div className="hidden md:flex lg:hidden relative w-full max-w-4xl h-[450px] items-center justify-center">
-        {renderStackedCards(getProductsForScreen("tablet"), 280, 220, true)}
+        {renderStackedCards(getProductsForScreen("tablet"), 280, 300, true)}
       </div>
 
       {/* Mobile - 4 cards in 2x2 grid */}
