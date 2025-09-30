@@ -135,7 +135,7 @@ const SingleItem = ({ item }: { item: Product }) => {
         <div className="absolute right-0 bottom-0  u-w-full flex flex-col gap-2 p-5.5 ease-linear duration-300 group-hover:translate-x-0 translate-x-full">
           <ActionBtn
             handleClick={handleQuickViewUpdate}
-            text="Quick View"
+            text="Ver detalles"
             icon={"quick-view"}
           />
 
@@ -150,7 +150,7 @@ const SingleItem = ({ item }: { item: Product }) => {
               handleClick={() => {
                 handleAddToCart();
               }}
-              text="Add to cart"
+              text="Añadir al carrito"
               icon="cart"
             />
           )}
