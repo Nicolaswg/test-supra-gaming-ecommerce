@@ -10,7 +10,7 @@ const PaymentMethod = ({ amount }: { amount: number }) => {
   return (
     <div className="bg-white shadow-1 rounded-[10px] mt-7.5">
       <div className="border-b border-gray-3 py-5 px-4 sm:px-8.5">
-        <h3 className="font-medium text-xl text-dark">Payment Method</h3>
+        <h3 className="font-medium text-xl text-dark">Método de pago</h3>
       </div>
 
       <div className="p-4 sm:p-8.5">
@@ -59,7 +59,7 @@ const PaymentMethod = ({ amount }: { amount: number }) => {
 
         {errors.paymentMethod && (
           <p className="mt-2 text-sm text-red">
-            Please select a payment method
+            Por favor selecciona un método de pago
           </p>
         )}
 
@@ -70,8 +70,8 @@ const PaymentMethod = ({ amount }: { amount: number }) => {
         )}
         {paymentMethod === "cod" && (
           <p className="mt-5 text-green">
-            You have selected Cash on Delivery. Your order will be processed and
-            payment will be collected upon delivery.
+            Has seleccionado el pago Cash on Delivery. Tu orden sera procesada y
+            el pago sera recogido al momento de la entrega.
           </p>
         )}
       </div>

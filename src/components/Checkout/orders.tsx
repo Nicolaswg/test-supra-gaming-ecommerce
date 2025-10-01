@@ -12,16 +12,16 @@ export default function Orders() {
   return (
     <div className="bg-white shadow-1 rounded-[10px] max-lg:mt-7.5">
       <h3 className="font-medium text-xl text-dark border-b border-gray-3 py-5 px-4 sm:px-8.5">
-        Your Order
+        Tu Orden
       </h3>
 
       <div className="pt-2.5 pb-8.5 px-4 sm:px-8.5">
         <table className="w-full text-dark">
           <thead>
             <tr className="border-b border-gray-3">
-              <th className="py-5 text-base font-medium text-left">Product</th>
+              <th className="py-5 text-base font-medium text-left">Producto</th>
               <th className="py-5 text-base font-medium text-right">
-                Subtotal
+                SubTotal
               </th>
             </tr>
           </thead>
@@ -30,7 +30,7 @@ export default function Orders() {
             {cartCount && cartCount > 0 ? (
               Object.values(cartDetails ?? {}).map((product, key) => (
                 <tr key={key} className="border-b border-gray-3">
-                  <td className="py-5 truncate">{product.name}</td>
+                  <td className="py-5 overflow-hidden"><span className="truncate block max-w-[400px]">{product.name}</span></td>
                   <td className="py-5 text-right">
                     {formatPrice(product.price / 100)}
                   </td>
@@ -39,13 +39,13 @@ export default function Orders() {
             ) : (
               <tr>
                 <td className="py-5 text-center" colSpan={2}>
-                  No items in cart
+                  No hay productos
                 </td>
               </tr>
             )}
 
             <tr className="border-b border-gray-3">
-              <td className="py-5">Shipping Fee</td>
+              <td className="py-5">Coste de envío</td>
               <td className="py-5 text-right">
                 {formatPrice(shippingFee?.price || 0)}
               </td>
@@ -54,7 +54,7 @@ export default function Orders() {
             {!!couponDiscount && (
               <tr className="border-b border-gray-3">
                 <td className="py-5">
-                  Coupon Discount ({watch("couponDiscount")}%)
+                  Coupon de descuento ({watch("couponDiscount")}%)
                 </td>
                 <td className="py-5 text-right">
                   - {formatPrice(couponDiscount)}

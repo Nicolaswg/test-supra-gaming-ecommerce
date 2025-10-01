@@ -16,6 +16,7 @@ import convertToSubcurrency from "@/lib/convertToSubcurrency";
 import { useRouter } from "next/navigation";
 import toast from "react-hot-toast";
 import { useShoppingCart } from "use-shopping-cart";
+import { formatPrice } from "@/utils/formatePrice";
 
 const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
   const { handleSubmit } = useCheckoutForm();
@@ -96,7 +97,6 @@ const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
         })),
       };
 
-      console.log('orderData', orderData)
 
       try {
         const orderResponse = await fetch("/api/order/checkout", {
@@ -183,7 +183,7 @@ const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
           <div className="relative flex flex-col items-center">
             <div className="w-16 h-16 border-4 border-primary border-t-transparent rounded-full animate-spin mb-3.5 text-center"></div>
             <p className="mt-4 text-lg font-semibold text-primary">
-              Processing to checkout...
+              Procesando pago...
             </p>
           </div>
         </div>
@@ -217,7 +217,7 @@ const CheckoutPaymentArea = ({ amount }: { amount: number }) => {
               type="submit"
               className="w-full flex justify-center font-medium text-white bg-primary py-3 px-6 rounded-full ease-out duration-200 hover:bg-primary-dark mt-7.5"
             >
-              {!loading ? `Pay $${amount}` : "Processing..."}
+              {!loading ? `Pagar ${formatPrice(amount)}` : "Procesando..."}
             </button>
             {errorMessage && (
               <p className="mt-2 text-center text-red">{errorMessage}</p>

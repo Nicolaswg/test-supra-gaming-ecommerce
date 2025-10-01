@@ -22,7 +22,7 @@ export default function Shipping() {
         onClick={() => setDropdown(!dropdown)}
         className="cursor-pointer flex items-center gap-2.5 font-medium text-lg text-dark py-5 px-5.5"
       >
-        Ship to a different address?
+        ¿Envias a una dirección diferente?
         <ChevronDown
           className={`fill-current ease-out duration-200 ${dropdown && "rotate-180"
             }`}
@@ -38,7 +38,7 @@ export default function Shipping() {
               htmlFor="shipping-country-name"
               className="block mb-1.5"
             >
-              Country/ Region
+              Pais / Región
               <span className="text-red">*</span>
             </label>
 
@@ -52,7 +52,7 @@ export default function Shipping() {
                 id="shipping-country-name"
                 className="w-full bg-gray-1 rounded-full border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               >
-                <option value="">Select a country</option>
+                <option value="">Selecciona un país</option>
                 <option value="australia">Australia</option>
                 <option value="america">America</option>
                 <option value="england">England</option>
@@ -66,8 +66,8 @@ export default function Shipping() {
               name="shipping.address.street"
               render={({ field }) => (
                 <InputGroup
-                  label="Street Address"
-                  placeholder="House number and street name"
+                  label="Direccion"
+                  placeholder="Calle y numero de casa"
                   required
                   name={field.name}
                   value={field.value}
@@ -80,7 +80,7 @@ export default function Shipping() {
               <input
                 type="text"
                 {...register("shipping.address.apartment")}
-                placeholder="Apartment, suite, unit, etc. (optional)"
+                placeholder="Apartamento, suite, unidad, etc. (opcional)"
                 className="rounded-full mt-5 border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
               />
             </div>
@@ -92,7 +92,7 @@ export default function Shipping() {
               name="shipping.town"
               render={({ field }) => (
                 <InputGroup
-                  label="Town/City"
+                  label="Ciudad"
                   required
                   name={field.name}
                   value={field.value}
@@ -108,7 +108,7 @@ export default function Shipping() {
               name="shipping.country"
               render={({ field }) => (
                 <InputGroup
-                  label="Country"
+                  label="Pais"
                   name={field.name}
                   value={field.value}
                   onChange={field.onChange}
@@ -124,7 +124,7 @@ export default function Shipping() {
               render={({ field }) => (
                 <InputGroup
                   type="tel"
-                  label="Phone"
+                  label="Telefono"
                   required
                   name={field.name}
                   value={field.value}
@@ -139,7 +139,7 @@ export default function Shipping() {
             name="shipping.email"
             render={({ field }) => (
               <InputGroup
-                label="Email Address"
+                label="Dirección de Email"
                 type="email"
                 required
                 name={field.name}

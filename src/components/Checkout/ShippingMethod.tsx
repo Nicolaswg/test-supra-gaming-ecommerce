@@ -22,7 +22,7 @@ export default function ShippingMethod() {
   return (
     <div className="bg-white shadow-1 rounded-[10px] mt-7.5">
       <div className="border-b border-gray-3 py-5 px-4 sm:px-8.5">
-        <h3 className="font-medium text-xl text-dark">Shipping Method</h3>
+        <h3 className="font-medium text-xl text-dark">Método de envío</h3>
       </div>
 
       <div className="p-6">
@@ -33,7 +33,7 @@ export default function ShippingMethod() {
             render={({ field }) => (
               <RadioInput
                 name={field.name}
-                label="Free Shipping"
+                label="Envio Gratuito"
                 value="free"
                 defaultChecked
                 onChange={(e) =>
@@ -85,7 +85,7 @@ export default function ShippingMethod() {
 
         {errors.shippingMethod && (
           <p className="mt-2 text-sm text-red">
-            Please select a shipping method
+            Por favor selecciona un método de envío
           </p>
         )}
       </div>
@@ -110,7 +110,7 @@ function ShippingMethodsCard({ method }: { method: "fedex" | "dhl" }) {
 
         <div className="pl-4 border-l border-gray-4">
           <p className="font-semibold text-dark">${data[method].price}</p>
-          <p className="text-custom-xs">Standard Shipping</p>
+          <p className="text-custom-xs">Envios a todo el mundo</p>
         </div>
       </div>
     </div>

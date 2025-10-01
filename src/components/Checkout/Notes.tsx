@@ -6,7 +6,7 @@ export default function Notes() {
   return (
     <div className="bg-white shadow-1 rounded-[10px] p-4 sm:p-8.5 mt-7.5 break-after-column">
       <label htmlFor="notes" className="block mb-2.5">
-        Other Notes (optional)
+        Informacion adicional (opcional)
       </label>
       <textarea
         {...register("notes")}

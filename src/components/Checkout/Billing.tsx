@@ -12,7 +12,7 @@ export default function Billing() {
 
   return (
     <div>
-      <h2 className="font-medium text-dark text-xl sm:text-2xl mb-5.5">Billing details</h2>
+      <h2 className="font-medium text-dark text-xl sm:text-2xl mb-5.5">Detalles de Facturación</h2>
 
       <div className="bg-white shadow-1 rounded-[10px] p-4 sm:p-8.5">
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-5 sm:gap-8 mb-5">
@@ -22,11 +22,11 @@ export default function Billing() {
             name="billing.firstName"
             render={({ field, fieldState }) => (
               <InputGroup
-                label="First Name"
+                label="Primer Nombre"
                 placeholder="John"
                 required
                 error={!!fieldState.error}
-                errorMessage="First name is required"
+                errorMessage="Primer nombre es obligatorio"
                 name={field.name}
                 value={session.data?.user?.name || field.value}
                 onChange={field.onChange}
@@ -41,10 +41,10 @@ export default function Billing() {
             name="billing.lastName"
             render={({ field, fieldState }) => (
               <InputGroup
-                label="Last Name"
+                label="Apellido"
                 placeholder="Doe"
                 error={!!fieldState.error}
-                errorMessage="Last name is required"
+                errorMessage="Apellido es obligatorio"
                 name={field.name}
                 value={field.value}
                 onChange={field.onChange}
@@ -59,7 +59,7 @@ export default function Billing() {
             name="billing.companyName"
             render={({ field }) => (
               <InputGroup
-                label="Company Name"
+                label="Nombre de la Empresa (opcional)"
                 name={field.name}
                 value={field.value}
                 onChange={field.onChange}
@@ -85,7 +85,7 @@ export default function Billing() {
               required
             >
               <option value="" hidden>
-                Select your country
+                Selecciona tu pais
               </option>
 
               <option value="australia">Australia</option>
@@ -95,7 +95,7 @@ export default function Billing() {
           </div>
 
           {errors.billing?.regionName && (
-            <p className="text-sm text-red mt-1.5">Region is required</p>
+            <p className="text-sm text-red mt-1.5">Region es obligatoria</p>
           )}
         </div>
 
@@ -106,8 +106,8 @@ export default function Billing() {
             name="billing.address.street"
             render={({ field, fieldState }) => (
               <InputGroup
-                label="Street Address"
-                placeholder="House number and street name"
+                label="Dirección"
+                placeholder="Calle y número de casa"
                 required
                 error={!!fieldState.error}
                 errorMessage="Street address is required"
@@ -122,7 +122,7 @@ export default function Billing() {
             <input
               type="text"
               {...register("billing.address.apartment")}
-              placeholder="Apartment, suite, unit, etc. (optional)"
+              placeholder="Apartamento, suite, unidad, etc. (opcional)"
               className="rounded-full mt-5 border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-hidden duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
             />
           </div>
@@ -135,7 +135,7 @@ export default function Billing() {
             name="billing.town"
             render={({ field, fieldState }) => (
               <InputGroup
-                label="Town/City"
+                label="Ciudad"
                 required
                 error={!!fieldState.error}
                 errorMessage="Town is required"
@@ -154,7 +154,7 @@ export default function Billing() {
             name="billing.country"
             render={({ field }) => (
               <InputGroup
-                label="Country"
+                label="Pais"
                 required
                 name={field.name}
                 value={field.value}
@@ -172,7 +172,7 @@ export default function Billing() {
             render={({ field, fieldState }) => (
               <InputGroup
                 type="tel"
-                label="Phone"
+                label="Telefono"
                 required
                 error={!!fieldState.error}
                 errorMessage="Phone number is required"
@@ -191,7 +191,7 @@ export default function Billing() {
             name="billing.email"
             render={({ field, fieldState }) => (
               <InputGroup
-                label="Email Address"
+                label="Dirección de Email"
                 type="email"
                 required
                 error={!!fieldState.error}
@@ -222,7 +222,7 @@ export default function Billing() {
                 <CheckMarkIcon />
               </div>
 
-              <span>Create an Account</span>
+              <span>Crea una cuenta</span>
             </label>
           </div>
         )}

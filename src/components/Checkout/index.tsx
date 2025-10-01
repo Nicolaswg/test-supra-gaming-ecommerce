@@ -93,7 +93,7 @@ export default function CheckoutMain() {
       options={{
         mode: "payment",
         amount: convertToSubcurrency(amount),
-        currency: "usd",
+        currency: "eur",
       }}
     >
       <CheckoutFormProvider
