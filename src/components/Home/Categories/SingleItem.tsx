@@ -38,9 +38,9 @@ const SingleItem = ({ item }: { item: Category }) => {
             initial={{ opacity: 1 }}
             animate={{ opacity: isHovered ? 0 : 1 }}
             transition={{ duration: 0.3 }}
-            className="text-center px-4"
+            className="text-center px-4 w-[200px]"
           >
-            <h3 className="text-white text-lg font-bold tranking-wide">{item.title}</h3>
+            <h3 className="text-white text-2xl break-words font-bold tranking-wide">{item.title}</h3>
           </motion.div>
 
           <motion.div

@@ -12,7 +12,7 @@ export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: a
     <div>
       <motion.div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/hero/hero-1.jpg')` }} />
 
-      <div className="absolute inset-0 bg-stone/60" />
+      <div className="absolute inset-0 bg-stone/80" />
 
       <div className="relative z-10 container mx-auto px-6 lg:px-8 pt-10 lg:pt-22">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -33,13 +33,13 @@ export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: a
                 Productos de Tecnologia y Accesorios
               </motion.span>
               <motion.h1
-                className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white text-balance leading-tight"
+                className="text-2xl sm:text-3xl lg:text-4xl font-bold  text-gray-2 text-balance leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 Mejora tu
-                <span className="text-primary-light block font-akegin ">espacio de trabajo digital</span>
+                <span className="text-primary-light  text-4xl sm:text-5xl lg:text-6xl block font-akegin ">espacio de trabajo digital</span>
               </motion.h1>
 
               <motion.p

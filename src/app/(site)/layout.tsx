@@ -24,7 +24,7 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en" className={cn(poppins.className, fontAkegin.variable)} suppressHydrationWarning>
-      <body>
+      <body className="bg-[#fff]">
         <PreLoader />
 
         <Providers>
