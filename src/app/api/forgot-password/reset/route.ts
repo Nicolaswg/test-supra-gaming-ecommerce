@@ -1,5 +1,6 @@
 import { sendEmail } from "@/lib/email";
 import { prisma } from "@/lib/prismaDB";
+import { Console } from "console";
 import crypto from "crypto";
 import { NextResponse } from "next/server";
 
@@ -60,6 +61,7 @@ export async function POST(request: Request) {
       }
     );
   } catch (error) {
+    console.log(error);
     return NextResponse.json(
       "Ha ocurrido un error. Por favor intenta de nuevo!",
       {
