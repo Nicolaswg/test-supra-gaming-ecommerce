@@ -10,12 +10,12 @@ export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: a
 
   return (
     <div>
-      <motion.div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/hero/hero-1.jpg')` }} />
+      <motion.div className="absolute  inset-0 bg-cover bg-center bg-no-repeat" style={{ backgroundImage: `url('/images/hero/hero-1.jpg')` }} />
 
       <div className="absolute inset-0 bg-stone/80" />
 
       <div className="relative z-10 container mx-auto px-6 lg:px-8 pt-10 lg:pt-22">
-        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
+        <div className="grid grid-cols-1  gap-12 lg:gap-20 items-center">
           <motion.div
             className="space-y-8"
             initial={{ opacity: 0, x: -50 }}
@@ -39,7 +39,7 @@ export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: a
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
                 Mejora tu
-                <span className="text-primary-light  text-4xl sm:text-5xl lg:text-6xl block font-akegin ">espacio de trabajo digital</span>
+                <span className="max-w-4xl  text-4xl sm:text-5xl lg:text-6xl block font-akegin ">espacio de trabajo digital</span>
               </motion.h1>
 
               <motion.p
@@ -73,15 +73,7 @@ export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: a
             <HeroFeature />
 
           </motion.div>
-          <motion.div
-            className="relative"
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6, delay: 0.4, ease: "easeOut" }}
-          >
-            {banners ? banners.map((item: any, index: number) => (<HeroBannerItem key={item._id} bannerItem={item} index={index} />)) : null}
 
-          </motion.div>
         </div>
       </div>
     </div>
