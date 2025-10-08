@@ -10,9 +10,7 @@ export const metadata: Metadata = {
 
 const BlogDetailsWithSidebarPage = async () => {
   const slug = 'cooking-masterclass-creating-delicious-italian-pasta';
-
   const blogData = await getPost(slug);
-
   return (
     <main>
       <BlogDetailsWithSidebar blogData={blogData} />

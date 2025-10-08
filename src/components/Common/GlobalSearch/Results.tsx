@@ -8,7 +8,7 @@ const Results = (props: any) => {
       {(filterValue === 'all' || filterValue === 'products') && (
         <>
           {filterValue === 'all' && (
-            <h2 className="mb-2 text-xl text-dark font-bold">Products</h2>
+            <h2 className="mb-2 text-xl text-dark font-bold">Productos</h2>
           )}
           <Hits
             hitComponent={(props) => {

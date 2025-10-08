@@ -16,7 +16,7 @@ export default async function LatestPosts({ data }: PropsType) {
   return (
     <div className="shadow-1 bg-white rounded-xl mt-7.5">
       <div className="px-4 sm:px-6 py-4.5 border-b border-gray-3">
-        <h2 className="font-medium text-lg text-dark">Recent Posts</h2>
+        <h2 className="font-medium text-lg text-dark">Publicados Recientemente</h2>
       </div>
 
       <div className="p-4 sm:p-6">
@@ -55,13 +55,6 @@ export default async function LatestPosts({ data }: PropsType) {
                         .split(' ')
                         .slice(1)
                         .join(' ')}
-                  </div>
-
-                  {/* <!-- divider --> */}
-                  <div className="block w-px h-4 bg-gray-4"></div>
-
-                  <div className="text-custom-xs ease-out duration-200">
-                    100k Views
                   </div>
                 </div>
               </Link>

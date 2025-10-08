@@ -60,7 +60,7 @@ const GlobalSearchModal = (props: any) => {
                 }}
               >
                 <SearchBox
-                  placeholder="Type anything to search..."
+                  placeholder="Buscar productos, blogs y más..."
                   classNames={{
                     root: "rounded-t-[15px] bg-white p-10 pb-3",
                     form: "sticky top-0 z-999",

@@ -21,47 +21,9 @@ export const menuData: Menu[] = [
   },
   {
     id: 6,
-    title: "Paginas",
+    title: "Carrito",
     newTab: false,
-    path: "/",
-    submenu: [
-      {
-        id: 61,
-        title: "Tienda con Barra Lateral",
-        newTab: false,
-        path: "/shop-with-sidebar",
-      },
-      {
-        id: 62,
-        title: "Tienda sin Barra Lateral",
-        newTab: false,
-        path: "/shop-without-sidebar",
-      },
-      {
-        id: 64,
-        title: "Checkout",
-        newTab: false,
-        path: "/checkout",
-      },
-      {
-        id: 65,
-        title: "Carrito",
-        newTab: false,
-        path: "/cart",
-      },
-      {
-        id: 66,
-        title: "Favoritos",
-        newTab: false,
-        path: "/wishlist",
-      },
-      {
-        id: 67,
-        title: "Contacto",
-        newTab: false,
-        path: "/contact",
-      },
-    ],
+    path: "/cart",
   },
   {
     id: 7,
@@ -80,18 +42,6 @@ export const menuData: Menu[] = [
         title: "Blog Cuadrícula",
         newTab: false,
         path: "/blogs/blog-grid",
-      },
-      {
-        id: 73,
-        title: "Blog detalles con Barra Lateral",
-        newTab: false,
-        path: "/blogs/blog-details-with-sidebar",
-      },
-      {
-        id: 74,
-        title: "Blog detalles",
-        newTab: false,
-        path: "/blogs/blog-details",
       },
     ],
   },

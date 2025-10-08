@@ -13,7 +13,7 @@ const BlogGridWithSidebar = async () => {
 
   return (
     <>
-      <Breadcrumb title={"Blog Grid Sidebar"} pages={["blog grid sidebar"]} />
+      <Breadcrumb title={"Blogs de Supra Gaming"} pages={["blogs"]} />
 
       <section className="py-20 overflow-hidden bg-gray-2">
         <div className="w-full px-4 mx-auto max-w-7xl sm:px-6 xl:px-0">

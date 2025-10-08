@@ -70,7 +70,6 @@ const Header = () => {
               <div className="max-w-[475px] w-full">
                 <form onSubmit={(e) => e.preventDefault()}>
                   <div className="flex gap-2 items-center">
-                    <CustomSelect />
 
                     <div className="relative lg:min-w-[370px] w-full">
                       <input

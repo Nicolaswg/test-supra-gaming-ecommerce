@@ -321,6 +321,7 @@ input[type="search"]::-webkit-search-results-decoration {
 }
 .custom-search {
   border-radius: 99px;
+  width: 100%;
 }
 
 /* The container must be positioned relative: */

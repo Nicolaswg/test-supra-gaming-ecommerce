@@ -35,16 +35,6 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
                 .slice(1)
                 .join(' ')}
           </Link>
-
-          {/* <!-- divider --> */}
-          <span className="block w-px h-4 bg-gray-4"></span>
-
-          <Link
-            href="#"
-            className="text-custom-sm ease-out duration-200 hover:text-primary"
-          >
-            100k Views
-          </Link>
         </span>
 
         <h2 className="font-medium text-dark text-lg sm:text-xl ease-out duration-200 mb-4 hover:text-primary">
@@ -55,7 +45,7 @@ const BlogItem = ({ blog }: { blog: Blog }) => {
           href={`/blogs/${blog?.slug.current}`}
           className="text-custom-sm inline-flex items-center gap-2 py-2 ease-out duration-200 hover:text-primary"
         >
-          Read More
+          Leer más
           <ArrowRightIcon />
         </Link>
       </div>

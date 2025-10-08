@@ -1,4 +1,4 @@
-# Use the official Node.js 18 Alpine image  
+# Use the official Node.js 20 Alpine image  
 FROM node:20-alpine AS base  
   
 # Install dependencies only when needed  
