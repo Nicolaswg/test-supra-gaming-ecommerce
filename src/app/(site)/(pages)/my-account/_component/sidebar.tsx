@@ -15,7 +15,7 @@ import { usePathname } from 'next/navigation';
 
 export default function Sidebar() {
   const { data: session } = useSession();
-
+  console.log(session);
   return (
     <div className="xl:max-w-[370px] w-full bg-white rounded-xl shadow-1">
       <div className="flex xl:flex-col">
@@ -32,7 +32,7 @@ export default function Sidebar() {
             <p className="font-medium text-dark mb-0.5">
               {session?.user?.name}
             </p>
-            <p className="text-custom-xs">Member Since Sep 2020</p>
+            <p className="text-custom-xs hover:text-primary transition-colors duration-75">{session?.user?.email}</p>
           </div>
         </div>
 
@@ -40,27 +40,27 @@ export default function Sidebar() {
           <div className="flex flex-wrap xl:flex-nowrap xl:flex-col gap-4">
             <Link href="/my-account">
               <DashboardIcon />
-              Dashboard
+              Mi Cuenta
             </Link>
 
             <Link href="/my-account/orders">
               <BasketIcon />
-              Orders
+              Ordenes
             </Link>
 
             <Link href="/my-account/downloads">
               <DownloadsIcon />
-              Downloads
+              Descargas
             </Link>
 
             <Link href="/my-account/addresses">
               <HomeIcon />
-              Addresses
+              Direcciones
             </Link>
 
             <Link href="/my-account/account-details">
               <UserIcon />
-              Account Details
+              Detalles de la cuenta
             </Link>
 
             <button
@@ -72,7 +72,7 @@ export default function Sidebar() {
               className="flex items-center rounded-md gap-2.5 py-3 px-4.5 ease-out duration-200 hover:bg-primary hover:text-white text-dark-2 bg-gray-1"
             >
               <LogOutIcon />
-              Logout
+              Cerrar Sesión
             </button>
           </div>
         </div>

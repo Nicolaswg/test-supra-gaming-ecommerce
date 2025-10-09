@@ -133,7 +133,7 @@ const AddressModal = ({
                   rules={{ required: 'Name is required' }}
                   render={({ field, fieldState }) => (
                     <InputGroup
-                      label="Name"
+                      label="Nombre"
                       name={field.name}
                       value={field.value}
                       onChange={field.onChange}
@@ -175,7 +175,7 @@ const AddressModal = ({
                   render={({ field, fieldState }) => (
                     <InputGroup
                       type="tel"
-                      label="Phone"
+                      label="Numero de Telefono"
                       name={field.name}
                       value={field.value}
                       onChange={field.onChange}
@@ -194,7 +194,7 @@ const AddressModal = ({
                   rules={{ required: 'Address is required' }}
                   render={({ field, fieldState }) => (
                     <InputGroup
-                      label="Address"
+                      label="Direccion"
                       name={field.name}
                       value={field.value}
                       onChange={field.onChange}
@@ -212,7 +212,7 @@ const AddressModal = ({
             })}
               disabled={isLoading}
             >
-              Save Changes {isLoading && <Loader />}
+              Guardar Cambios {isLoading && <Loader />}
             </button>
           </form>
         </div>

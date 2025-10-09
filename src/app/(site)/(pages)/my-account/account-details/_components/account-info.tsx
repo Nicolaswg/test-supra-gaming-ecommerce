@@ -65,7 +65,7 @@ export function AccountInfo() {
             render={({ field, fieldState }) => (
               <div className="w-full">
                 <InputGroup
-                  label="First Name"
+                  label="Nombres"
                   placeholder="John"
                   required
                   error={!!fieldState.error}
@@ -84,7 +84,7 @@ export function AccountInfo() {
             render={({ field, fieldState }) => (
               <div className="w-full">
                 <InputGroup
-                  label="Last Name"
+                  label="Apellidos"
                   placeholder="Doe"
                   error={!!fieldState.error}
                   errorMessage="Last name is required"
@@ -99,7 +99,7 @@ export function AccountInfo() {
 
         <div className="mb-5">
           <label htmlFor="country" className="block mb-2.5">
-            Country/ Region <span className="text-red">*</span>
+            País / Región <span className="text-red">*</span>
           </label>
 
           <div className="relative">
@@ -109,7 +109,7 @@ export function AccountInfo() {
               className="w-full bg-gray-1 rounded-md border border-gray-3 text-dark-4 py-3 pl-5 pr-9 duration-200 appearance-none outline-hidden focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-primary/20"
             >
               <option value="" hidden>
-                Select your country
+                selecciona un país
               </option>
 
               {['australia', 'america', 'england'].map((country) => (
@@ -125,7 +125,7 @@ export function AccountInfo() {
           </div>
 
           {errors.country && (
-            <p className="text-sm text-red mt-1.5">Country is required</p>
+            <p className="text-sm text-red mt-1.5">pais es requerido</p>
           )}
         </div>
 
@@ -134,12 +134,11 @@ export function AccountInfo() {
         })}
           disabled={isLoading}
         >
-          Save Changes {isLoading && <Loader />}
+          Guardar Cambios {isLoading && <Loader />}
         </button>
       </form>
       <p className="text-custom-sm mt-5 mb-9">
-        This will be how your name will be displayed in the account section and
-        in reviews
+        Asi se mostrara tu nombre en la sección de cuenta y en las reseñas
       </p>
     </>
   );

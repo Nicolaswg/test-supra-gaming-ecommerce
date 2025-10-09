@@ -48,7 +48,7 @@ export function BillingAddress({ userId }: PropsType) {
     <>
       <div className="xl:max-w-[370px] w-full bg-white shadow-1 rounded-xl">
         <div className="flex items-center justify-between py-5 px-4 sm:pl-7.5 sm:pr-6 border-b border-gray-3">
-          <p className="font-medium text-xl text-dark">Billing Address</p>
+          <p className="font-medium text-xl text-dark">Direccion de Facturacion</p>
 
           <button
             className="text-dark ease-out duration-200 hover:text-primary"
@@ -82,12 +82,12 @@ export function BillingAddress({ userId }: PropsType) {
                 Address: {data?.address}
               </p>
             </div> : <div className='flex flex-col gap-4 items-center'>
-              <p className="text-center text-dark-4">No address set yet</p>
+              <p className="text-center text-dark-4">No tienes una direccion de facturacion añadida</p>
               <button
                 className="inline-flex justify-center font-medium text-white bg-dark py-3 px-6 rounded-lg ease-out duration-200 hover:bg-primary items-center gap-2"
                 onClick={openAddressModal}
               >
-                Add Address</button>
+                Añadir Direccion</button>
             </div>
           }
         </div>
