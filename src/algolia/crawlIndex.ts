@@ -67,9 +67,17 @@ export const structuredAlgoliaHtmlData = async ({
 
 async function addToAlgolia(record: any) {
   try {
-    await index.saveObject(record, {
-      autoGenerateObjectIDIfNotExist: true,
-    });
+    const exists = await index.exists(record.objectID);
+    if (exists) {
+      await index.partialUpdateObject(record);
+      return;
+    } else {
+
+      await index.saveObject(record, {
+        autoGenerateObjectIDIfNotExist: true,
+      });
+
+    }
   } catch (error) {
     // eslint-disable-next-line no-console
     console.log("error in addToAlgolia", error);
