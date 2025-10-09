@@ -25,7 +25,7 @@ export default function HomePage() {
       <BestSeller />
       <CountDown />
       <Testimonials />
-      <Newsletter />
+      {/* <Newsletter /> */}
     </main>
   );
 }

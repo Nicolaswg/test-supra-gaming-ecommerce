@@ -4,9 +4,11 @@ import { motion } from "framer-motion";
 import { ArrowRight, Play, Star } from "lucide-react";
 import Link from "next/link";
 import HeroFeature from "./HeroFeature";
-import HeroBannerItem from "./HeroBannerItem";
 
 export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: any, sliders: any } }) => {
+
+  const heroDescription = "Supra gaming viene a transformar el mundo del gaming y la tecnologia, ofreciendote los mejores productos del mercado."
+    .split(" ")
 
   return (
     <div>
@@ -33,24 +35,30 @@ export const HeroContent = ({ data: { banners, sliders } }: { data: { banners: a
                 Productos de Tecnologia y Accesorios
               </motion.span>
               <motion.h1
-                className="text-2xl sm:text-3xl lg:text-4xl font-bold  text-gray-2 text-balance leading-tight"
+                className="text-xl sm:text-2xl lg:text-3xl font-bold  text-gray-2 text-balance leading-tight"
                 initial={{ opacity: 0, y: 30 }}
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ duration: 0.8, delay: 0.3 }}
               >
-                Mejora tu
-                <span className="max-w-4xl  text-4xl sm:text-5xl lg:text-6xl block font-akegin ">espacio de trabajo digital</span>
+                Bienvenido al 2025
+                <span className="max-w-4xl mt-2 text-4xl sm:text-5xl lg:text-6xl block font-akegin ">La tecnologia del futuro</span>
               </motion.h1>
 
-              <motion.p
+              <p
                 className="text-lg text-white/80 text-pretty max-w-lg leading-relaxed"
-                initial={{ opacity: 0, y: 20 }}
-                animate={{ opacity: 1, y: 0 }}
-                transition={{ duration: 0.6, delay: 0.5 }}
               >
-                Descubre nuestros productos premium de tecnología y accesorios para mejorar tu espacio de trabajo digital
-                para creadores, gamers y aficionados de la tecnología.
-              </motion.p>
+                {heroDescription.map((word, index) => (
+                  <motion.span
+                    initial={{ filter: "blur(10px)", opacity: 0, y: 12 }}
+                    animate={{ filter: "blur(0px)", opacity: 1, y: 0 }}
+                    transition={{ duration: 0.5, delay: 0.5 + index * 0.03 }}
+                    key={index}
+                    className="inline-block mr-1"
+                  >
+                    {word}
+                  </motion.span>
+                ))}
+              </p>
             </div>
 
             <motion.div

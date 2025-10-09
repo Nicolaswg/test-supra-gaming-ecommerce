@@ -4,7 +4,6 @@ import { Product } from "@/types/product";
 import { unstable_cache as cache } from "next/cache";
 import Link from "next/link";
 import BestSellerSectionTitle from "./BestSellerSectionTitle";
-import SingleItem from "./SingleItem";
 import { BestSellerContent } from "./BestSellerContent";
 
 const getBestSeller = cache(
