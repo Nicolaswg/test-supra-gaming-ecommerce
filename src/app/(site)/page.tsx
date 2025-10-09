@@ -5,9 +5,9 @@ import CountDown from "@/components/Home/Countdown";
 import Hero from "@/components/Home/Hero";
 import NewArrival from "@/components/Home/NewArrivals";
 import PromoBanner from "@/components/Home/PromoBanner";
+import Resources from "@/components/Home/Resources";
 import Testimonials from "@/components/Home/Testimonials";
 import type { Metadata } from "next";
-import { useSession } from "next-auth/react";
 
 export const metadata: Metadata = {
   title: "Supra-Gaming |Tienda Online",
@@ -25,6 +25,7 @@ export default function HomePage() {
       <BestSeller />
       <CountDown />
       <Testimonials />
+      <Resources />
       {/* <Newsletter /> */}
     </main>
   );
