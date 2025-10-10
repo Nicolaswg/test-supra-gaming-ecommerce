@@ -15,7 +15,7 @@ const Resources = () => {
       image: "/images/resources/noticias.png",
       gradient: "from-[#872aff]/20 via-[#6a0064]/20 to-[#872aff]/20",
       borderGlow: "shadow-[0_0_30px_rgba(135,42,255,0.5)]",
-      href: "/blog",
+      href: "/blogs/blog-grid-with-sidebar",
       animation: {
         initial: { opacity: 0, x: -100 },
         animate: isInView ? { opacity: 1, x: 0 } : { opacity: 0, x: -100 },
