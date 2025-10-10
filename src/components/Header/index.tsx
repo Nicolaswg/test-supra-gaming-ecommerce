@@ -60,7 +60,7 @@ const Header = () => {
             <div className="flex flex-col w-full gap-5 xl:w-auto sm:flex-row xl:justify-between sm:items-center sm:gap-10">
               <Link className="shrink-0" href="/">
                 <Image
-                  src="/images/logo/logo.svg"
+                  src="/images/logo/supra-gaming-logo.webp"
                   alt="Logo"
                   width={165}
                   height={36}
